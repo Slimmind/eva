@@ -1,0 +1,13 @@
+@import "libs/libs";
+//sections
+@import "sections/style-guide";
+@import "sections/animations";
+@import "sections/font-face";
+@import "sections/header";
+@import "sections/footer";
+@import "sections/wp-styles";
+
+.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+}

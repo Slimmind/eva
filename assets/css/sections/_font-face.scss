@@ -1,0 +1,13 @@
+@import "../libs/variables";
+//
+@font-face {
+	font-family: 'open_sansregular';
+	src: url('#{$path-fonts}/opensans-regular-webfont.eot');
+	src: url('#{$path-fonts}/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('#{$path-fonts}/opensans-regular-webfont.woff2') format('woff2'),
+	url('#{$path-fonts}/opensans-regular-webfont.woff') format('woff'),
+	url('#{$path-fonts}/opensans-regular-webfont.ttf') format('truetype'),
+	url('#{$path-fonts}/opensans-regular-webfont.svg#open_sansregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

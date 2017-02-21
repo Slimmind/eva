@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none !important;
+}
+html, body {
+	width: 100%;
+}
+body {
+  font: 12px/18px sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main {
+  position: relative;
+}
+h1 {
+ 
+}
+h2 {
+  
+}
+h3 {
+  
+}
+h4 {
+  
+}
+h5 {
+  
+}
+h6 {
+  
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+}
+address {
+  font-style: normal;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+::-webkit-inner-spin-button { -webkit-appearance: none;}
+::-webkit-outer-spin-button { -webkit-appearance: none;}
+::-ms-clear {
+  display: none;
+}
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+input[type="tel"],
+input[type="submit"],
+button,
+select,
+textarea {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+::-moz-placeholder {
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+:-ms-input-placeholder {
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+::-webkit-input-placeholder {
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+:focus::-moz-placeholder {
+  opacity: 0;
+}
+:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+select::-ms-expand { /* for IE 11 */
+  display: none;
+}
+textarea {
+  resize: none;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  display: block;
+  @include pos(absolute,0,0);
+  width: 0;
+  height: 0;
+  opacity: 0;
+  &:checked + label {
+    
+  }
+}
+label {
+  cursor: pointer;
+}
+.no-dev {
+
+}
