@@ -2,8 +2,20 @@
 @import "../libs/variables";
 @import "../libs/mixins";
 //sections
+@import "../sections/slick";
+@import "../sections/slick-theme";
+@import "../sections/top-slider";
 
-
+.event-circles {
+  .circle {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 4px solid purple;
+    @include bg(center, center, cover);
+  }
+}
 
 
 

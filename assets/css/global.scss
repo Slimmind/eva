@@ -11,3 +11,11 @@
   height: 100vh;
   overflow: hidden;
 }
+.container {
+  background-color: gray;
+  height: 100vh;
+  li {
+    border: 1px dashed;
+    text-align: center;
+  }
+}
