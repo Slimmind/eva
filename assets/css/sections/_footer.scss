@@ -1,3 +1,32 @@
 .footer_ {
-
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 40px;
+  color: $color-white;
+  background-color: rgba($color-purple, .7);
+  text-align: left;
+  nav {
+    a {
+      position: relative;
+      display: inline-block;
+      color: $color-white;
+      &:after {
+        content: "";
+        @include pos(absolute, $bottom: 0, $left: 0);
+        width: 0;
+        height: 1px;
+        background-color: $color-white;
+        transition: width .3s ease-in;
+      }
+    }
+  }
+}
+.no-dev {
+  .footer_ {
+    nav a:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
 }

@@ -4,15 +4,15 @@
   font: 12px/20px 'open_sansregular', sans-serif;
   .buttons {
     padding: 20px;
-    background-color: $color-dark-gray;
+    background-color: $color-black;
   }
   p {
     margin-bottom: 10px;
     a {
-      color: $color-dark-gray;
+      color: $color-black;
       transition: color .3s ease;
       &:hover {
-        color: $color-green;
+        color: $color-purple;
       }
     }
   }
@@ -22,7 +22,7 @@
     ul,
     ol {
       list-style: none;
-      color: $color-dark-gray;
+      color: $color-black;
       padding: 5px 0 0 20px;
     }
   }

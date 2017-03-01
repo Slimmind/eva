@@ -8,6 +8,7 @@
     }
   }
   .slider-nav {
+    display: none;
     height: 150px;
     .slide {
       width: 100px !important;
@@ -21,5 +22,10 @@
         margin-bottom: 50px;
       }
     }
+  }
+}
+.no-dev {
+  .slider-nav {
+    display: block;
   }
 }

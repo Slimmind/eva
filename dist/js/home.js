@@ -2911,17 +2911,17 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
+        fade: true
+        // asNavFor: '.slider-nav'
       });
-      sliderWrap.find('.slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
-      });
+      // sliderWrap.find('.slider-nav').slick({
+      //   slidesToShow: 3,
+      //   slidesToScroll: 1,
+      //   asNavFor: '.slider-for',
+      //   dots: true,
+      //   centerMode: true,
+      //   focusOnSelect: true
+      // });
     },
     load: function () {
     },

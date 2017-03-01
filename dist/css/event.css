@@ -1990,8 +1990,6 @@ a
 a:hover,
 a:focus
 {
-    text-decoration: underline;
-
     color: #23527c;
 }
 
@@ -9199,6 +9197,48 @@ label
     cursor: pointer;
 }
 
+.footer_
+{
+    overflow: hidden;
+
+    width: 100%;
+    padding-bottom: 40px;
+
+    text-align: left;
+
+    color: #fff;
+    background-color: rgba(102, 51, 153, .7);
+}
+
+.footer_ nav a
+{
+    position: relative;
+
+    display: inline-block;
+
+    color: #fff;
+}
+
+.footer_ nav a:after
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+
+    content: '';
+    transition: width .3s ease-in;
+
+    background-color: #fff;
+}
+
+.no-dev .footer_ nav a:hover:after
+{
+    width: 100%;
+}
+
 .content
 {
     font: 12px/20px 'open_sansregular', sans-serif;
@@ -9208,7 +9248,7 @@ label
 {
     padding: 20px;
 
-    background-color: #666;
+    background-color: #000;
 }
 
 .content p
@@ -9220,12 +9260,12 @@ label
 {
     transition: color .3s ease;
 
-    color: #666;
+    color: #000;
 }
 
 .content p a:hover
 {
-    color: #6ea73b;
+    color: rebeccapurple;
 }
 
 .content ul,
@@ -9243,7 +9283,7 @@ label
 
     list-style: none;
 
-    color: #666;
+    color: #000;
 }
 
 .content ul li
@@ -9356,20 +9396,6 @@ label
     overflow: hidden;
 
     height: 100vh;
-}
-
-.container
-{
-    height: 100vh;
-
-    background-color: gray;
-}
-
-.container li
-{
-    text-align: center;
-
-    border: 1px dashed;
 }
 
 @font-face
