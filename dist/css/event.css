@@ -9513,7 +9513,32 @@ label
 
 @font-face
 {
-    font-family: 'open_sansregular';font-weight: normal;font-style: normal;src: url('../fonts/opensans-regular-webfont.eot');src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans-regular-webfont.woff') format('woff'), url('../fonts/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-family: 'geometriabold';font-weight: normal;font-style: normal;src: url('../fonts/10261-webfont.eot');src: url('../fonts/10261-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/10261-webfont.woff') format('woff'), url('../fonts/10261-webfont.ttf') format('truetype'), url('../fonts/10261-webfont.svg#geometriabold') format('svg');
+}
+
+@font-face
+{
+    font-family: 'geometriamedium';font-weight: normal;font-style: normal;src: url('../fonts/10262-webfont.eot');src: url('../fonts/10262-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/10262-webfont.woff') format('woff'), url('../fonts/10262-webfont.ttf') format('truetype'), url('../fonts/10262-webfont.svg#geometriamedium') format('svg');
+}
+
+@font-face
+{
+    font-family: 'geometriamedium_italic';font-weight: normal;font-style: normal;src: url('../fonts/10263-webfont.eot');src: url('../fonts/10263-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/10263-webfont.woff') format('woff'), url('../fonts/10263-webfont.ttf') format('truetype'), url('../fonts/10263-webfont.svg#geometriamedium_italic') format('svg');
+}
+
+@font-face
+{
+    font-family: 'geometriabold_italic';font-weight: normal;font-style: normal;src: url('../fonts/10264-webfont.eot');src: url('../fonts/10264-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/10264-webfont.woff') format('woff'), url('../fonts/10264-webfont.ttf') format('truetype'), url('../fonts/10264-webfont.svg#geometriabold_italic') format('svg');
+}
+
+@font-face
+{
+    font-family: 'geometrialight';font-weight: normal;font-style: normal;src: url('../fonts/10265-webfont.eot');src: url('../fonts/10265-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/10265-webfont.woff') format('woff'), url('../fonts/10265-webfont.ttf') format('truetype'), url('../fonts/10265-webfont.svg#geometrialight') format('svg');
+}
+
+@font-face
+{
+    font-family: 'geometria_lfheavy';font-weight: normal;font-style: normal;src: url('../fonts/10370-webfont.eot');src: url('../fonts/10370-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/10370-webfont.woff') format('woff'), url('../fonts/10370-webfont.ttf') format('truetype'), url('../fonts/10370-webfont.svg#geometria_lfheavy') format('svg');
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0)
