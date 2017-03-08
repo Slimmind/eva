@@ -1,0 +1,7 @@
+.main-nav {
+  @include pos(fixed,0, $right: 0);
+  width: 240px;
+  height: 100vh;
+  background-color: rgba($color-deep-purple, .9);
+  z-index: 100;
+}

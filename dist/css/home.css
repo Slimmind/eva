@@ -9305,6 +9305,19 @@ label
     display: none;
 }
 
+.main-nav
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+
+    width: 240px;
+    height: 100vh;
+
+    background-color: rgba(44, 32, 52, .9);
+}
+
 .footer_
 {
     overflow: hidden;
@@ -9345,6 +9358,64 @@ label
 .no-dev .footer_ nav a:hover:after
 {
     width: 100%;
+}
+
+.social-links ul
+{
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    -ms-flex-direction: row;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.social-link
+{
+    position: relative;
+
+    background-color: #994ccf;
+}
+
+.social-link svg
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.social-link a
+{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.no-dev .social-link
+{
+    transition: background-color .3s ease;
+}
+
+.no-dev .social-link svg
+{
+    transition: fill .3s ease;
+}
+
+.no-dev .social-link:hover
+{
+    background-color: #fff;
+}
+
+.no-dev .social-link:hover svg
+{
+    fill: #994ccf;
 }
 
 .content

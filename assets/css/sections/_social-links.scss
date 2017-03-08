@@ -1,0 +1,41 @@
+.social-links {
+  ul {
+    @include flex(row, center, center, wrap);
+  }
+}
+.social-link {
+  position: relative;
+  background-color: $color-purple;
+  svg {
+    @include pos(absolute, center, center);
+  }
+  .facebook {
+
+  }
+  .twitter {
+
+  }
+  .google-plus {
+
+  }
+  .vk {
+
+  }
+  a {
+    @include bg(center, center, contain);
+  }
+}
+.no-dev {
+  .social-link {
+    transition: background-color .3s ease;
+    svg {
+      transition: fill .3s ease;
+    }
+    &:hover {
+      background-color: $color-white;
+      svg {
+        fill: $color-purple;
+      }
+    }
+  }
+}
