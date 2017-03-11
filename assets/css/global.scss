@@ -9,10 +9,35 @@
 @import "sections/social-links";
 @import "sections/wp-styles";
 
+main {
+  &:before {
+    content: "";
+    @include pos(absolute, 0,0,0,0);
+    background-color: rgba($color-white, .5);
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+}
 .no-scroll {
-  height: 100vh;
-  overflow: hidden;
+  main {
+    height: 100vh;
+    overflow: hidden;
+    &:before {
+      opacity: 1;
+    }
+  }
 }
 .container {
 
+}
+.logo {
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  @include bg(left, center, contain);
+  a {
+    display: block;
+    height: 100%;
+    text-indent: 9999px;
+  }
 }

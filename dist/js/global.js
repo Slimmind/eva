@@ -5,7 +5,8 @@
   var page = {
     init: function () {
       page.noDev();
-   
+      page.navigation();
+      page.footerDropDown();
     },
     noDev: function () {
       if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
@@ -14,6 +15,22 @@
     },
     isDev: function () {
       return !$('html').hasClass('no-dev') || window.innerWidth < 1280;
+    },
+    navigation: function () {
+      var menuBtn = $('.menu-btn');
+      menuBtn.on('click', function () {
+        $('html').toggleClass('no-scroll');
+        $('.main-nav').toggleClass('open');
+      } );
+    },
+    footerDropDown: function () {
+      var dropBtn = $('.nav-item h3');
+      var footerMenu = $('.nav-item ul');
+      dropBtn.on('click', function () {
+        var $this = $(this);
+        $this.toggleClass('open').closest('.nav-item').siblings('li').find('h3').removeClass('open');
+        $this.siblings('ul').slideToggle().closest('.nav-item').siblings('li').find('ul').slideUp();
+      } );
     },
     load: function () {
     },

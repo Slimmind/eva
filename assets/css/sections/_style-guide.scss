@@ -57,6 +57,12 @@ table {
 ::-ms-clear {
   display: none;
 }
+.form-row {
+  border: 2px solid $color-purple;
+  border-radius: 2px;
+  background-color: $color-white;
+  overflow: hidden;
+}
 input[type="text"],
 input[type="number"],
 input[type="email"],

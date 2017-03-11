@@ -1,7 +1,31 @@
 .main-nav {
-  @include pos(fixed,0, $right: 0);
+  @include pos(fixed, 50px, $right: 0);
   width: 240px;
-  height: 100vh;
+  height: calc(100vh - 50px);
+  padding: 20px;
+  transform: translateX(100vw);
   background-color: rgba($color-deep-purple, .9);
+  text-align: right;
+  transition: transform .3s ease-out;
+  will-change: transform;
+  overflow-y: scroll;
   z-index: 100;
+  &.open {
+    transform: translateX(0);
+  }
+  .main-menu {
+    > li {
+      font: 18px/24px $font-bold;
+      color: $color-purple;
+    }
+    a {
+      display: inline-block;
+      padding: 10px 0;
+      font: 16px/24px $font-light;
+      color: $color-white;
+    }
+  }
+  .social-links {
+    display: inline-block;
+  }
 }

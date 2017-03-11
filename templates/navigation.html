@@ -1,8 +1,21 @@
 <nav class="main-nav">
-  <strong class="logo"><a href="index.html">Event Area</a></strong>
+  <!--<strong class="logo" style="background-image: url('dist/images/logo.png');"><a href="index.html">EentArea</a></strong>-->
   <ul class="main-menu">
-    <li class="navigation">Навигация</li>
-    <li class="search">Поиск мероприятий</li>
+    <li class="navigation">Навигация
+      <ul>
+        <li><a href="javascript:void(0)">Главная</a></li>
+        <li><a href="javascript:void(0)">Афиша</a></li>
+        <li><a href="javascript:void(0)">Рецензии</a></li>
+        <li><a href="javascript:void(0)">Рейтинги</a></li>
+      </ul>
+    </li>
+    <li class="search">Поиск мероприятий
+      <form action="/" id="search">
+        <p class="form-row">
+          <input type="search" placeholder="Поиск по событиям">
+        </p>
+      </form>
+    </li>
     <li class="social">Социальные сети
       <div class="social-links">
         <ul>

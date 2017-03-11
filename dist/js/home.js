@@ -2910,7 +2910,8 @@
       sliderWrap.find('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
+        dots: true,
         fade: true
         // asNavFor: '.slider-nav'
       });

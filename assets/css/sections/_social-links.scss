@@ -1,41 +1,41 @@
 .social-links {
   ul {
-    @include flex(row, center, center, wrap);
+    @include inlined();
+    width: 72px;
+  }
+  li {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
   }
 }
 .social-link {
-  position: relative;
+  position: absolute;
   background-color: $color-purple;
-  svg {
-    @include pos(absolute, center, center);
+  @include bg(center, center, 80%);
+  &.facebook {
+    top: 1px;
+    right: 1px;
+    width: 20px;
+    height: 20px;
   }
-  .facebook {
-
+  &.twitter {
+    right: 1px;
+    bottom: 1px;
+    width: 26px;
+    height: 26px;
   }
-  .twitter {
-
+  &.google-plus {
+    top: 1px;
+    left: 1px;
+    width: 32px;
+    height: 32px;
   }
-  .google-plus {
-
-  }
-  .vk {
-
-  }
-  a {
-    @include bg(center, center, contain);
-  }
-}
-.no-dev {
-  .social-link {
-    transition: background-color .3s ease;
-    svg {
-      transition: fill .3s ease;
-    }
-    &:hover {
-      background-color: $color-white;
-      svg {
-        fill: $color-purple;
-      }
-    }
+  &.vk {
+    top: 1px;
+    left: 1px;
+    width: 34px;
+    height: 34px;
   }
 }

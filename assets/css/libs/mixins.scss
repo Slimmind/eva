@@ -63,7 +63,7 @@
     width: $width;
   }
 }
-@mixin inlineWhiteSpace($font-size, $line-height) {
+@mixin inlined($font-size: null, $line-height: null) {
   font-size: 0;
   line-height: 0;
   letter-spacing: -5px;

@@ -6,26 +6,16 @@
   background-color: rgba($color-white, .8);
   z-index: 100;
   overflow: hidden;
-  .logo {
-    display: inline-block;
-    width: 200px;
-    height: 40px;
-    @include bg(left, center, contain);
-    a {
-      display: block;
-      height: 100%;
-      text-indent: -9999px;
-    }
-  }
 }
 .menu-btn {
-  position: relative;
+  @include pos(fixed, 5px, $right: 5px);
   width: 40px;
   height: 40px;
   float: right;
   background-color: $color-purple;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 9999;
   span {
     @include pos(absolute, calc(50% - 15px), calc(50% - 15px));
     width: 30px;
@@ -34,7 +24,7 @@
     border: 1px solid $color-white;
     &:before {
       content: "";
-      @include pos(absolute, 7px, 11px);
+      @include pos(absolute, 8px, 12px);
       width: 4px;
       height: 12px;
       border: solid $color-white;

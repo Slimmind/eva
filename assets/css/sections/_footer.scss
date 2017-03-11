@@ -9,6 +9,7 @@
     a {
       position: relative;
       display: inline-block;
+      padding: 8px 0;
       color: $color-white;
       &:after {
         content: "";
@@ -18,6 +19,34 @@
         background-color: $color-white;
         transition: width .3s ease-in;
       }
+    }
+  }
+  .nav-item {
+    width: 200px;
+    margin: 0 auto;
+    h3 {
+      position: relative;
+      padding-right: 20px;
+      &:after {
+        content: "";
+        @include pos(absolute, 50%, $right: 0);
+        width: 12px;
+        height: 12px;
+        border: 3px solid $color-transparent;
+        border-right-color: $color-white;
+        border-bottom-color: $color-white;
+        transform: rotate(45deg) translate(-50%, 0);
+        transition: transform .3s ease-in;
+        will-change: transform;
+      }
+      &.open {
+        &:after {
+          transform: rotate(225deg) translate(-50%, -5px);
+        }
+      }
+    }
+    ul {
+      display: none;
     }
   }
 }
