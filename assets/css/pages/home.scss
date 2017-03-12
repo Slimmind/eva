@@ -8,12 +8,57 @@
 
 .event-circles {
   .circle {
+    position: relative;
     width: 280px;
     height: 280px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
     border-radius: 50%;
     border: 4px solid purple;
     @include bg(center, center, cover);
+    overflow: hidden;
+    color: $color-white;
+    text-align: center;
+  }
+  .date {
+    @include pos(absolute, 60%, 0);
+    width: 100%;
+    margin: 0;
+    font: 22px/32px $font-medium;
+    color: $color-purple;
+    text-shadow:
+        -1px -1px 0 $color-white,
+        1px -1px 0 $color-white,
+        -1px 1px 0 $color-white,
+        1px 1px 0 $color-white;
+    time,
+    strong {
+      display: inline-block;
+    }
+    time {
+      margin-right: 20px;
+    }
+    strong {
+      margin-left: 20px;
+      font: 24px/32px $font-bold;
+    }
+  }
+  .description {
+    @include pos(absolute, $bottom: 0, $left: 0);
+    width: 100%;
+    height: 26%;
+    background-color: rgba($color-purple, .5);
+    h3 {
+      margin: 0;
+      padding: 0 40px;
+      @include dots();
+    }
+  }
+  .details {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: $color-purple url('#{$path-svg}/details-icon.svg') no-repeat center center;
+    text-indent: -9999px;
   }
 }
 

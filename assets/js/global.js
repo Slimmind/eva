@@ -28,8 +28,8 @@
       var footerMenu = $('.nav-item ul');
       dropBtn.on('click', function () {
         var $this = $(this);
-        $this.toggleClass('open').closest('.nav-item').siblings('li').find('h3').removeClass('open');
-        $this.siblings('ul').slideToggle().closest('.nav-item').siblings('li').find('ul').slideUp();
+        $this.toggleClass('open').closest('.nav-item').siblings('div').find('h3').removeClass('open');
+        $this.siblings('ul').slideToggle().closest('.nav-item').siblings('div').find('ul').slideUp();
       } );
     },
     load: function () {

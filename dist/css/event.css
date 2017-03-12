@@ -9065,6 +9065,11 @@ main
     min-height: 100%;
 }
 
+h3
+{
+    font: 22px/32px 'geometriabold', sans-serif;
+}
+
 a
 {
     cursor: pointer;
@@ -9401,26 +9406,24 @@ label
 .footer_ .nav-item h3:after
 {
     position: absolute;
-    top: 50%;
+    top: 8px;
     right: 0;
 
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
 
     content: '';
     transition: transform .3s ease-in;
-    transform: rotate(45deg) translate(-50%, 0);
+    transform: rotateX(0deg);
 
-    border: 3px solid transparent;
-    border-right-color: #fff;
-    border-bottom-color: #fff;
+    background: url('../../svg/arrow-bottom.svg') no-repeat center center/contain;
 
     will-change: transform;
 }
 
 .footer_ .nav-item h3.open:after
 {
-    transform: rotate(225deg) translate(-50%, -5px);
+    transform: rotateX(180deg);
 }
 
 .footer_ .nav-item ul

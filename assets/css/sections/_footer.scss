@@ -29,19 +29,17 @@
       padding-right: 20px;
       &:after {
         content: "";
-        @include pos(absolute, 50%, $right: 0);
-        width: 12px;
-        height: 12px;
-        border: 3px solid $color-transparent;
-        border-right-color: $color-white;
-        border-bottom-color: $color-white;
-        transform: rotate(45deg) translate(-50%, 0);
+        @include pos(absolute, 8px, $right: 0);
+        width: 20px;
+        height: 20px;
+        transform: rotateX(0deg);
         transition: transform .3s ease-in;
         will-change: transform;
+        background: url('#{$path-svg}/arrow-bottom.svg') no-repeat center center / contain;
       }
       &.open {
         &:after {
-          transform: rotate(225deg) translate(-50%, -5px);
+          transform: rotateX(180deg);
         }
       }
     }

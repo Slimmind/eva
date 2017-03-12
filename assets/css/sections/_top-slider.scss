@@ -1,8 +1,10 @@
 .top-slider {
+  margin-bottom: 40px;
   .slide {
     @include bg(center, center, cover);
   }
   .slider-for {
+    position: relative;
     .slide {
       height: 70vh;
     }
@@ -23,6 +25,46 @@
       }
     }
   }
+  .slide-content {
+    @include flex(column, center, center, wrap);
+    @include pos(absolute, 0,0,0,0);
+    width: 100%;
+    height: 100%;
+    padding: 0 45px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: $color-purple;
+    z-index: 1;
+    background: radial-gradient(circle, $color-white, $color-transparent);
+    h2 {
+
+    }
+  }
+  .go-to-event {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: $color-purple;
+    color: $color-white;
+    border: 6px solid #f0f0f0;
+    border-radius: 3px;
+  }
+  .ad-link {
+    display: block;
+    width: 100%;
+    height: 50px;
+    @include bg(center, center, contain);
+    text-indent: -9999px;
+  }
+}
+@include mob-landscape {
+.top-slider {
+  .slider-for {
+    .slide {
+      height: 100vh;
+    }
+  }
+}
 }
 .no-dev {
   .slider-nav {
