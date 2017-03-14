@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16.9332mm" height="16.9332mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1693 1693"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+    .fil0 {
+    	fill:#ffffff;
+    }
+  </style>
+ </defs>
+ <g>
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_650677992">
+   <path class="fil0" d="M796 768l-441 0c-63,-1 -50,-18 -50,146l497 0c-12,18 -32,37 -49,51 -45,35 -72,72 -111,102 -20,15 -39,34 -52,53 39,0 152,8 180,-3l289 -276 -290 -275c-23,-12 -147,-4 -185,-4 13,19 191,175 212,206z"/>
+   <path class="fil0" d="M1009 511c0,64 -9,95 16,95l263 0 0 464 -263 0c-25,0 -16,32 -16,95 0,13 4,17 16,17l280 0c44,0 89,-19 89,-62l0 -564c0,-42 -45,-61 -89,-61l-280 0c-12,0 -16,4 -16,16z"/>
+  </g>
+ </g>
+</svg>
