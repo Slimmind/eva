@@ -9121,6 +9121,9 @@ table
     border: 2px solid #994ccf;
     border-radius: 2px;
     background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
 }
 
 input[type='text'],
@@ -9349,6 +9352,16 @@ label
 .main-nav .social-links
 {
     display: inline-block;
+}
+
+.event-search
+{
+    margin-bottom: 40px;
+}
+
+.event-search .form-row
+{
+    padding: 5px 5px 5px 40px;
 }
 
 .footer_
@@ -9664,6 +9677,7 @@ label
 main:before
 {
     position: absolute;
+    z-index: -1;
     top: 0;
     right: 0;
     bottom: 0;
@@ -9685,6 +9699,8 @@ main:before
 
 .no-scroll main:before
 {
+    z-index: 1;
+
     opacity: 1;
 }
 

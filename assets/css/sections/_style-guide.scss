@@ -62,6 +62,7 @@ table {
   border-radius: 2px;
   background-color: $color-white;
   overflow: hidden;
+  @include bg(left, center, contain);
 }
 input[type="text"],
 input[type="number"],
