@@ -8,44 +8,8 @@
   .container {
     position: relative;
   }
-}
-.menu-btn {
-  @include pos(absolute, 5px, $right: 5px);
-  width: 40px;
-  height: 40px;
-  float: right;
-  background-color: $color-purple;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 9999;
-  span {
-    @include pos(absolute, calc(50% - 15px), calc(50% - 15px));
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid $color-white;
-    &:before {
-      content: "";
-      @include pos(absolute, 8px, 12px);
-      width: 4px;
-      height: 12px;
-      border: solid $color-white;
-      border-width: 4px 0;
-    }
-  }
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    top: calc(50% - 6px);
-    left: 11px;
-    width: 4px;
-    height: 12px;
-    border: solid $color-white;
-    border-width: 4px 0;
-  }
-  &:after {
-    left: 25px;
+  .menu-btn {
+    @include pos(absolute, 5px, $right: 5px);
   }
 }
 .header-nav {
@@ -55,9 +19,9 @@
   .header_ {
     height: 130px;
     padding-top: 6px;
-  }
-  .menu-btn {
-    top: 36px;
+    .menu-btn {
+      top: 36px;
+    }
   }
   .header-nav {
     display: block;

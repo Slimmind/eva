@@ -18,9 +18,16 @@
     },
     navigation: function () {
       var menuBtn = $('.menu-btn');
+      var wrap = $('html');
+      var nav = $('.main-nav');
       menuBtn.on('click', function () {
-        $('html').toggleClass('no-scroll');
-        $('.main-nav').toggleClass('open');
+        wrap.toggleClass('no-scroll');
+        nav.toggleClass('open');
+      } );
+      var closeBtn = $('.main-nav .main-menu');
+      closeBtn.on('click', function () {
+        wrap.removeClass('no-scroll');
+        nav.removeClass('open');
       } );
     },
     footerDropDown: function () {

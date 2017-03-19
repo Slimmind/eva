@@ -2895,7 +2895,7 @@
   'use strict';
   var page = {
     init: function () {
-      page.topSlider();
+
     },
     noDev: function () {
       if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
@@ -2910,21 +2910,35 @@
       sliderWrap.find('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        fade: true,
         arrows: true,
-        dots: true,
-        fade: true
-        // asNavFor: '.slider-nav'
+        asNavFor: '.slider-nav',
+        infinite: false,
+        responsive: [
+          {
+            breakpoint: 1280,
+            settings: {
+              dots: true,
+              arrows: true
+            }
+          }
+        ]
       });
-      // sliderWrap.find('.slider-nav').slick({
-      //   slidesToShow: 3,
-      //   slidesToScroll: 1,
-      //   asNavFor: '.slider-for',
-      //   dots: true,
-      //   centerMode: true,
-      //   focusOnSelect: true
-      // });
+      if(!page.isDEv) {
+        console.log('!isDev');
+        sliderWrap.find('.slider-nav').slick({
+          slidesToShow: 9,
+          slidesToScroll: 1,
+          asNavFor: '.slider-for',
+          arrows: false,
+          dots: false,
+          infinite: false,
+          focusOnSelect: true
+        });
+      }
     },
     load: function () {
+      page.topSlider();
     },
     resize: function () {
     },
