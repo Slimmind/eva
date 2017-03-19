@@ -1,6 +1,23 @@
 .event-search {
   margin-bottom: 40px;
-  .form-row {
+  .form-row,
+  label {
     padding: 5px 5px 5px 40px;
+    @include bg(5px, center, auto, 80%);
+  }
+  input[type="search"] {
+    min-width: 280px;
+    max-width: 320px;
+  }
+}
+@include xtab {
+  .event-search {
+    .container {
+      @include flex(row, space-between, center, wrap);
+    }
+    .form-row {
+      min-width: 20%;
+      margin: 0;
+    }
   }
 }

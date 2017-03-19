@@ -13,6 +13,9 @@
   &.open {
     transform: translateX(0);
   }
+  .logo {
+    display: none;
+  }
   .main-menu {
     > li {
       font: 18px/24px $font-bold;
@@ -27,5 +30,13 @@
   }
   .social-links {
     display: inline-block;
+  }
+}
+.no-dev {
+  .main-nav {
+    height: 100vh;
+    .logo {
+      display: block;
+    }
   }
 }

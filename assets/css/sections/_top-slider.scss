@@ -27,7 +27,7 @@
   }
   .slide-content {
     @include flex(column, center, center, wrap);
-    @include pos(absolute, 0,0,0,0);
+    @include pos(absolute, 0, $right: 0);
     width: 100%;
     height: 100%;
     padding: 0 45px;
@@ -37,9 +37,6 @@
     color: $color-purple;
     z-index: 1;
     background: radial-gradient(circle, $color-white, $color-transparent);
-    h2 {
-
-    }
   }
   .go-to-event {
     display: inline-block;
@@ -67,7 +64,20 @@
 }
 }
 .no-dev {
-  .slider-nav {
-    display: block;
+  .top-slider {
+    .slider-nav {
+      display: block;
+    }
+    .slide {
+      overflow: hidden;
+    }
+    .slide-content {
+      width: 50%;
+      text-align: right;
+      background: linear-gradient(90deg, $color-transparent, $color-white);
+      h2 {
+        font-size: 66px;
+      }
+    }
   }
 }

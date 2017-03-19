@@ -23,7 +23,7 @@
     @include pos(absolute, 60%, 0);
     width: 100%;
     margin: 0;
-    font: 22px/32px $font-medium;
+    font: 20px/32px $font-medium;
     color: $color-purple;
     text-shadow:
         -1px -1px 0 $color-white,
@@ -46,19 +46,126 @@
     @include pos(absolute, $bottom: 0, $left: 0);
     width: 100%;
     height: 26%;
-    background-color: rgba($color-purple, .5);
+    background-color: rgba($color-purple, .9);
     h3 {
       margin: 0;
       padding: 0 40px;
       @include dots();
     }
   }
+  address,
+  .category,
+  .price {
+    display: none;
+  }
   .details {
-    display: block;
+    @include pos(absolute, $bottom: 0, $left: 0);
     width: 100%;
     height: 40px;
     background: $color-purple url('#{$path-svg}/join.svg') no-repeat center center;
     text-indent: -9999px;
+  }
+  .buttons {
+    text-align: center;
+  }
+}
+.about {
+  margin-bottom: 20px;
+}
+@include lap {
+  .event-circles {
+    .circle {
+      width: 370px;
+      height: 370px;
+    }
+    .date {
+      top: 45%;
+      time {
+        margin-right: 70px;
+      }
+      strong {
+        margin-left: 70px;
+        font-size: 28px;
+      }
+    }
+    .description {
+      height: 150px;
+    }
+    address,
+    .category,
+    .price {
+      margin-bottom: 5px;
+      display: block;
+    }
+    address {
+      font: 13px/16px $font-medium;
+    }
+    .category {
+      font: 10px/14px $font-light;
+    }
+    .price {
+      font: 12px/14px $font-bold;
+      strong {
+        font-weight: normal;
+      }
+    }
+    .details {
+      height: 45px;
+    }
+  }
+  .about {
+    p {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
+.no-dev {
+  .event-circles {
+    .circle {
+      &:after {
+        content: "";
+        @include pos(absolute,0,0,0,0);
+        background-color: rgba($color-white, .5);
+        opacity: 0;
+        transition: opacity .3s ease;
+        z-index: 0;
+      }
+    }
+    .date,
+    .description,
+    .details {
+      z-index: 1;
+    }
+    .date {
+      top: 220px;
+      transition: transform .3s ease-in;
+      will-change: tranform;
+    }
+    .description {
+      transform: translateY(40px);
+      transition: transform .3s ease-in;
+      will-change: tranform;
+    }
+    .details {
+      transform: translateY(45px);
+      transition: transform .3s ease-in .3s;
+      will-change: tranform;
+    }
+    .circle:hover {
+      &:after {
+        opacity: 1;
+      }
+      .date {
+        transform: translateY(-60px);
+      }
+      .description {
+        transform: translateY(0);
+      }
+      .details {
+        transform: translateY(0);
+      }
+    }
   }
 }
 

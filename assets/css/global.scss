@@ -3,6 +3,7 @@
 @import "sections/style-guide";
 @import "sections/animations";
 @import "sections/font-face";
+@import "sections/jcf";
 @import "sections/header";
 @import "sections/navigation";
 @import "sections/event-search";
@@ -11,6 +12,7 @@
 @import "sections/wp-styles";
 
 main {
+  @include bg(center, center, cover);
   &:before {
     content: "";
     @include pos(absolute, 0,0,0,0);
@@ -42,5 +44,31 @@ main {
     display: block;
     height: 100%;
     text-indent: 9999px;
+  }
+}
+.show-more {
+  font: 24px/32px $font-light;
+  background-color: $color-purple;
+  border: 4px solid $color-light-purple;
+  border-radius: 10px;
+}
+@include lap {
+  .show-more {
+    font-size: 50px;
+    line-height: 72px;
+  }
+}
+.no-dev {
+  .show-more {
+    transition-property: border-color, background-color;
+    transition: .3s ease;
+    &:hover {
+      border-color: $color-purple;
+      background-color: $color-light-purple;
+    }
+  }
+  .logo {
+    width: 260px;
+    height: 85px;
   }
 }
