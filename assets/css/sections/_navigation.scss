@@ -24,16 +24,28 @@
     > li {
       font: 18px/24px $font-bold;
       color: $color-purple;
+      ul {
+        padding-top: 10px;
+      }
     }
     a {
       display: inline-block;
-      padding: 10px 0;
+      padding: 8px 0;
       font: 16px/24px $font-light;
       color: $color-white;
     }
   }
   .social-links {
     display: inline-block;
+  }
+  .event-search {
+    margin-bottom: 20px;
+    padding-top: 10px;
+    font-size: 12px;
+    text-align: left;
+  }
+  .navigation {
+    margin-bottom: 20px;
   }
 }
 .no-dev {

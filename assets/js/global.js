@@ -26,9 +26,16 @@
       } );
       var closeBtn = $('.main-nav .main-menu');
       closeBtn.on('click', function () {
+
+      } );
+      $(document).on('click', function (event) {
+        if ($(event.target).closest('input').length ||
+          $(event.target).closest('label').length ||
+          $(event.target).closest('.menu-btn').length ||
+          $(event.target).closest('select').length) return;
         wrap.removeClass('no-scroll');
         nav.removeClass('open');
-      } );
+      });
     },
     footerDropDown: function () {
       var dropBtn = $('.nav-item h3');

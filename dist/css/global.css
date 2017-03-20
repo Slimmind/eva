@@ -9730,13 +9730,18 @@ body > .jcf-select-drop.jcf-drop-flipped
     color: #994ccf;
 }
 
+.main-nav .main-menu > li ul
+{
+    padding-top: 10px;
+}
+
 .main-nav .main-menu a
 {
     font: 16px/24px 'geometria_lightlight', sans-serif;
 
     display: inline-block;
 
-    padding: 10px 0;
+    padding: 8px 0;
 
     color: #fff;
 }
@@ -9744,6 +9749,21 @@ body > .jcf-select-drop.jcf-drop-flipped
 .main-nav .social-links
 {
     display: inline-block;
+}
+
+.main-nav .event-search
+{
+    font-size: 12px;
+
+    margin-bottom: 20px;
+    padding-top: 10px;
+
+    text-align: left;
+}
+
+.main-nav .navigation
+{
+    margin-bottom: 20px;
 }
 
 .no-dev .main-nav
@@ -9770,23 +9790,24 @@ body > .jcf-select-drop.jcf-drop-flipped
 
 .event-search
 {
+    font: 12px/18px 'geometria_lightlight', sans-serif;
+
     margin-bottom: 40px;
+
+    color: #994ccf;
 }
 
 .event-search .form-row,
 .event-search label
 {
+    font-weight: normal;
+
+    margin-bottom: 10px;
     padding: 5px 5px 5px 40px;
 
     background-repeat: no-repeat;
     background-position: 5px center;
     background-size: auto 80%;
-}
-
-.event-search input[type='search']
-{
-    min-width: 280px;
-    max-width: 320px;
 }
 
 .footer_
@@ -9886,7 +9907,7 @@ body > .jcf-select-drop.jcf-drop-flipped
     font-size: 0;
     line-height: 0;
 
-    width: 72px;
+    width: 120px;
 
     letter-spacing: -5px;
 }
@@ -9904,8 +9925,8 @@ body > .jcf-select-drop.jcf-drop-flipped
 
     display: inline-block;
 
-    width: 36px;
-    height: 36px;
+    width: 60px;
+    height: 60px;
 }
 
 .social-link
@@ -9923,8 +9944,8 @@ body > .jcf-select-drop.jcf-drop-flipped
     top: 1px;
     right: 1px;
 
-    width: 20px;
-    height: 20px;
+    width: 29px;
+    height: 29px;
 }
 
 .social-link.twitter
@@ -9932,8 +9953,8 @@ body > .jcf-select-drop.jcf-drop-flipped
     right: 1px;
     bottom: 1px;
 
-    width: 26px;
-    height: 26px;
+    width: 39px;
+    height: 39px;
 }
 
 .social-link.google-plus
@@ -9941,8 +9962,8 @@ body > .jcf-select-drop.jcf-drop-flipped
     top: 1px;
     left: 1px;
 
-    width: 32px;
-    height: 32px;
+    width: 49px;
+    height: 49px;
 }
 
 .social-link.vk
@@ -9950,8 +9971,8 @@ body > .jcf-select-drop.jcf-drop-flipped
     top: 1px;
     left: 1px;
 
-    width: 34px;
-    height: 34px;
+    width: 58px;
+    height: 58px;
 }
 
 .content
@@ -11503,7 +11524,7 @@ main:before
 
 @media screen and (min-width: 1024px)
 {
-    .event-search .container
+    .event-search form
     {
         display: -ms-flexbox;
         display: flex;
@@ -11522,6 +11543,12 @@ main:before
     {
         min-width: 20%;
         margin: 0;
+    }
+
+    .event-search input[type='search']
+    {
+        min-width: 280px;
+        max-width: 320px;
     }
 
     .footer_ nav

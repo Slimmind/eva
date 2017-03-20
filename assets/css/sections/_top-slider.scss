@@ -15,16 +15,20 @@
   }
   .slider-nav {
     display: none;
+    width: 1000px;
     height: 150px;
     text-align: center;
-    .slide {
+    figure {
       position: relative;
-      display: inline-block;
-      width: 100px !important;
+      display: block;
+      width: 100px;
       height: 100px;
+      margin-right: auto;
+      margin-left: auto;
       border-radius: 50%;
       border: 4px solid $color-white;
       overflow: hidden;
+      @include bg(center, center, cover);
       &:before {
         content: "";
         @include pos(absolute,0,0,0,0);
@@ -33,17 +37,17 @@
         opacity: 1;
         transition: opacity .3s ease;
       }
-      &.slick-current {
-        &:before {
-          opacity: 0;
-        }
+    }
+    .slick-current {
+      figure:before {
+        opacity: 0;
       }
-      &:nth-child(odd){
-        margin-top: 50px;
-      }
-      &:nth-child(even){
-        margin-bottom: 50px;
-      }
+    }
+    .slide:nth-child(odd){
+      padding-top: 50px;
+    }
+    .slide:nth-child(even){
+      padding-bottom: 50px;
     }
   }
   .slide-content {
@@ -108,7 +112,7 @@
     }
     .slider-nav {
       display: block;
-      @include pos(absolute, $bottom: 20px, $left: 0);
+      @include pos(absolute, $bottom: 20px, $left: calc(50% - 500px));
       .slick-track {
         margin: 0 auto;
       }

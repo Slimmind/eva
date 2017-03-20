@@ -1,13 +1,13 @@
 .social-links {
   ul {
     @include inlined();
-    width: 72px;
+    width: 120px;
   }
   li {
     position: relative;
     display: inline-block;
-    width: 36px;
-    height: 36px;
+    width: 60px;
+    height: 60px;
   }
 }
 .social-link {
@@ -17,25 +17,25 @@
   &.facebook {
     top: 1px;
     right: 1px;
-    width: 20px;
-    height: 20px;
+    width: 29px;
+    height: 29px;
   }
   &.twitter {
     right: 1px;
     bottom: 1px;
-    width: 26px;
-    height: 26px;
+    width: 39px;
+    height: 39px;
   }
   &.google-plus {
     top: 1px;
     left: 1px;
-    width: 32px;
-    height: 32px;
+    width: 49px;
+    height: 49px;
   }
   &.vk {
     top: 1px;
     left: 1px;
-    width: 34px;
-    height: 34px;
+    width: 58px;
+    height: 58px;
   }
 }

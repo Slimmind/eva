@@ -34,7 +34,6 @@
         ]
       });
       if(!page.isDEv) {
-        console.log('!isDev');
         sliderWrap.find('.slider-nav').slick({
           slidesToShow: 9,
           slidesToScroll: 1,
@@ -42,7 +41,15 @@
           arrows: false,
           dots: false,
           infinite: false,
-          focusOnSelect: true
+          focusOnSelect: true,
+          responsive: [
+            {
+              breakpoint: 1600,
+              settings: {
+                slidesToShow: 7
+              }
+            }
+          ]
         });
       }
     },
