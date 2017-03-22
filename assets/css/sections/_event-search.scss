@@ -9,15 +9,30 @@
     font-weight: normal;
     @include bg(5px, center, auto, 80%);
   }
+  .city,
+  .rubric {
+    padding: 0;
+    @include bg(5px, center, auto, 80%);
+    select {
+      padding: 5px 5px 5px 40px;
+    }
+  }
+  .search-wrap {
+    padding: 5px 40px 5px 5px;
+    @include bg(right 5px, center, auto, 80%);
+  }
 }
 @include xtab {
   .event-search {
     form {
       @include flex(row, space-between, center, wrap);
     }
-    .form-row {
+    .form-row{
       min-width: 20%;
       margin: 0;
+    }
+    label {
+      margin-bottom: 0;
     }
     input[type="search"] {
       min-width: 280px;

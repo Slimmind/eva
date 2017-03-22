@@ -10,7 +10,7 @@
     height: 60px;
   }
 }
-.social-link {
+a.social-link {
   position: absolute;
   background-color: $color-purple;
   @include bg(center, center, 80%);
