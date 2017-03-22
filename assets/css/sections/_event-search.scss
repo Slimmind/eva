@@ -4,7 +4,8 @@
   color: $color-purple;
   .form-row,
   label {
-    margin-bottom: 10px;
+    width: 280px;
+    margin: 0 auto 10px;
     padding: 5px 5px 5px 40px;
     font-weight: normal;
     @include bg(5px, center, auto, 80%);
@@ -27,15 +28,13 @@
     form {
       @include flex(row, space-between, center, wrap);
     }
-    .form-row{
-      min-width: 20%;
+    .form-row,
+    label {
+      max-width: 18%;
       margin: 0;
     }
-    label {
-      margin-bottom: 0;
-    }
-    input[type="search"] {
-      min-width: 280px;
+    .search-wrap {
+      //min-width: 320px;
       max-width: 320px;
     }
   }

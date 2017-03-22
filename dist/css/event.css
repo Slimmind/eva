@@ -9643,13 +9643,6 @@ body > .jcf-select-drop.jcf-drop-flipped
 .no-dev .header_ .menu-btn
 {
     top: 36px;
-
-    transition: background-color .3s ease;
-}
-
-.no-dev .header_ .menu-btn:hover
-{
-    background-color: #b363eb;
 }
 
 .no-dev .header-nav
@@ -9816,6 +9809,8 @@ body > .jcf-select-drop.jcf-drop-flipped
 .main-nav .event-search .form-row,
 .main-nav .event-search label
 {
+    width: 100%;
+    max-width: 100%;
     margin-bottom: 10px;
 }
 
@@ -9885,7 +9880,8 @@ body > .jcf-select-drop.jcf-drop-flipped
 {
     font-weight: normal;
 
-    margin-bottom: 10px;
+    width: 280px;
+    margin: 0 auto 10px;
     padding: 5px 5px 5px 40px;
 
     background-repeat: no-repeat;
@@ -10010,7 +10006,7 @@ body > .jcf-select-drop.jcf-drop-flipped
     width: 100%;
 }
 
-.social-links ul
+div.social-links ul
 {
     font-size: 0;
     line-height: 0;
@@ -10020,14 +10016,14 @@ body > .jcf-select-drop.jcf-drop-flipped
     letter-spacing: -5px;
 }
 
-.social-links ul > *
+div.social-links ul > *
 {
     display: inline-block;
 
     letter-spacing: normal;
 }
 
-.social-links li
+div.social-links li
 {
     position: relative;
 
@@ -10035,9 +10031,11 @@ body > .jcf-select-drop.jcf-drop-flipped
 
     width: 60px;
     height: 60px;
+
+    vertical-align: top;
 }
 
-a.social-link
+div.social-links .social-link
 {
     position: absolute;
 
@@ -10047,7 +10045,7 @@ a.social-link
     background-size: 80%;
 }
 
-a.social-link.facebook
+div.social-links .social-link.facebook
 {
     top: 1px;
     right: 1px;
@@ -10056,7 +10054,7 @@ a.social-link.facebook
     height: 29px;
 }
 
-a.social-link.twitter
+div.social-links .social-link.twitter
 {
     right: 1px;
     bottom: 1px;
@@ -10065,7 +10063,7 @@ a.social-link.twitter
     height: 39px;
 }
 
-a.social-link.google-plus
+div.social-links .social-link.google-plus
 {
     top: 1px;
     left: 1px;
@@ -10074,7 +10072,7 @@ a.social-link.google-plus
     height: 49px;
 }
 
-a.social-link.vk
+div.social-links .social-link.vk
 {
     top: 1px;
     left: 1px;
@@ -10383,6 +10381,18 @@ main:before
 {
     width: 260px;
     height: 85px;
+}
+
+.no-dev .menu-btn
+{
+    top: 36px;
+
+    transition: background-color .3s ease;
+}
+
+.no-dev .menu-btn:hover
+{
+    background-color: #b363eb;
 }
 
 @font-face
@@ -11647,20 +11657,15 @@ main:before
             flex-wrap: wrap;
     }
 
-    .event-search .form-row
+    .event-search .form-row,
+    .event-search label
     {
-        min-width: 20%;
+        max-width: 18%;
         margin: 0;
     }
 
-    .event-search label
+    .event-search .search-wrap
     {
-        margin-bottom: 0;
-    }
-
-    .event-search input[type='search']
-    {
-        min-width: 280px;
         max-width: 320px;
     }
 
