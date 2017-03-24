@@ -29,6 +29,7 @@
       border: 4px solid $color-white;
       overflow: hidden;
       @include bg(center, center, cover);
+      cursor: pointer;
       &:before {
         content: "";
         @include pos(absolute,0,0,0,0);

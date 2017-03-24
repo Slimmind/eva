@@ -9072,7 +9072,7 @@ h2
 
 h3
 {
-    font: 22px/32px 'geometriabold', sans-serif;
+    font: 22px/28px 'geometriabold', sans-serif;
 }
 
 a
@@ -10630,6 +10630,8 @@ main:before
     margin-right: auto;
     margin-left: auto;
 
+    cursor: pointer;
+
     border: 4px solid #fff;
     border-radius: 50%;
     background-repeat: no-repeat;
@@ -10779,7 +10781,10 @@ main:before
 {
     position: relative;
 
+    display: -ms-flexbox;
+    display: flex;
     overflow: hidden;
+        flex-direction: column;
 
     width: 280px;
     height: 280px;
@@ -10793,21 +10798,28 @@ main:before
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+
+    -ms-flex-direction: column;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .event-circles .date
 {
     font: 20px/32px 'geometriamedium', sans-serif;
 
-    position: absolute;
-    top: 60%;
-    left: 0;
-
     width: 100%;
     margin: 0;
 
     color: #994ccf;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
 }
 
 .event-circles .date time,
@@ -10830,12 +10842,25 @@ main:before
 
 .event-circles .description
 {
+    position: relative;
+
+    width: 100%;
+
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.event-circles .description:before
+{
     position: absolute;
+    z-index: -1;
     bottom: 0;
     left: 0;
 
     width: 100%;
-    height: 26%;
+    height: 100%;
+
+    content: '';
 
     background-color: rgba(153, 76, 207, .9);
 }
@@ -10860,9 +10885,7 @@ main:before
 
 .event-circles .details
 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    display: block;
 
     width: 100%;
     height: 40px;
@@ -10905,13 +10928,18 @@ main:before
     z-index: 1;
 }
 
-.no-dev .event-circles .date
+.no-dev .event-circles .date time
 {
-    top: 220px;
+    font-size: 28px;
 
-    transition: transform .3s ease-in;
+    margin-right: 30px;
+}
 
-    will-change: tranform;
+.no-dev .event-circles .date strong
+{
+    font-size: 38px;
+
+    margin-left: 30px;
 }
 
 .no-dev .event-circles .description
@@ -10922,30 +10950,12 @@ main:before
     will-change: tranform;
 }
 
-.no-dev .event-circles .details
-{
-    transition: transform .3s ease-in .3s;
-    transform: translateY(45px);
-
-    will-change: tranform;
-}
-
 .no-dev .event-circles .circle:hover:after
 {
     opacity: 1;
 }
 
-.no-dev .event-circles .circle:hover .date
-{
-    transform: translateY(-60px);
-}
-
 .no-dev .event-circles .circle:hover .description
-{
-    transform: translateY(0);
-}
-
-.no-dev .event-circles .circle:hover .details
 {
     transform: translateY(0);
 }
@@ -12229,7 +12239,7 @@ main:before
 
     .event-search .search-wrap
     {
-        max-width: 320px;
+        max-width: 240px;
     }
 
     .footer_ nav
@@ -12618,6 +12628,11 @@ main:before
         width: 50px;
     }
 
+    .event-search .search-wrap
+    {
+        max-width: 280px;
+    }
+
     .content
     {
         font-size: 14px;
@@ -12652,24 +12667,24 @@ main:before
 
     .event-circles .date
     {
-        top: 45%;
+        margin-top: -35px;
     }
 
     .event-circles .date time
     {
-        margin-right: 70px;
+        margin-right: 60px;
     }
 
     .event-circles .date strong
     {
         font-size: 28px;
 
-        margin-left: 70px;
+        margin-left: 60px;
     }
 
     .event-circles .description
     {
-        height: 150px;
+        height: 140px;
     }
 
     .event-circles address,
@@ -12694,6 +12709,8 @@ main:before
     .event-circles .price
     {
         font: 12px/14px 'geometriabold', sans-serif;
+
+        margin-bottom: 15px;
     }
 
     .event-circles .price strong
@@ -12715,6 +12732,11 @@ main:before
 
 @media screen and (min-width: 1600px)
 {
+    .event-search .search-wrap
+    {
+        max-width: 320px;
+    }
+
     .content img,
     .content iframe
     {

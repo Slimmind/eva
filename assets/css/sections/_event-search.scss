@@ -34,7 +34,20 @@
       margin: 0;
     }
     .search-wrap {
-      //min-width: 320px;
+      max-width: 240px;
+    }
+  }
+}
+@include lap {
+  .event-search {
+    .search-wrap {
+      max-width: 280px;
+    }
+  }
+}
+@include desk {
+  .event-search {
+    .search-wrap {
       max-width: 320px;
     }
   }

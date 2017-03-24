@@ -9072,7 +9072,7 @@ h2
 
 h3
 {
-    font: 22px/32px 'geometriabold', sans-serif;
+    font: 22px/28px 'geometriabold', sans-serif;
 }
 
 a
@@ -11666,7 +11666,7 @@ main:before
 
     .event-search .search-wrap
     {
-        max-width: 320px;
+        max-width: 240px;
     }
 
     .footer_ nav
@@ -12055,6 +12055,11 @@ main:before
         width: 50px;
     }
 
+    .event-search .search-wrap
+    {
+        max-width: 280px;
+    }
+
     .content
     {
         font-size: 14px;
@@ -12084,6 +12089,11 @@ main:before
 
 @media screen and (min-width: 1600px)
 {
+    .event-search .search-wrap
+    {
+        max-width: 320px;
+    }
+
     .content img,
     .content iframe
     {
