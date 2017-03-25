@@ -1,11 +1,11 @@
 .footer_ {
   width: 100%;
   overflow: hidden;
-  padding-bottom: 40px;
   color: $color-white;
   background-color: rgba($color-purple, .7);
   text-align: left;
   nav {
+    margin-bottom: 20px;
     a {
       position: relative;
       display: inline-block;
@@ -46,6 +46,28 @@
     }
     ul {
       display: none;
+    }
+  }
+  .footer-bottom {
+    padding-bottom: 20px;
+    color: $color-purple;
+  }
+  .footer-nav,
+  .shop-nav {
+    a {
+      display: inline-block;
+      padding: 8px 5px;
+      font: 12px/16px $font-light;
+      color: $color-purple;
+    }
+  }
+}
+@include tab {
+  .footer_ {
+    .footer-bottom {
+      .logo {
+        margin-top: 64px;
+      }
     }
   }
 }

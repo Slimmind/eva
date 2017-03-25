@@ -9067,12 +9067,17 @@ main
 
 h2
 {
-    font: 24px/32px 'geometria_lightlight', sans-serif;
+    font: 24px/32px 'open_sanslight', sans-serif;
 }
 
 h3
 {
-    font: 22px/28px 'geometriabold', sans-serif;
+    font: 22px/28px 'open_sansbold', sans-serif;
+}
+
+h5
+{
+    font: 16px/24px 'open_sansbold', sans-serif;
 }
 
 a
@@ -9396,7 +9401,7 @@ label
 
 .jcf-select .jcf-select-text
 {
-    font: 16px/54px 'geometriabold', sans-serif;
+    font: 16px/54px 'open_sansbold', sans-serif;
 
     display: block;
     overflow: hidden;
@@ -9553,7 +9558,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 
 .jcf-list .jcf-option
 {
-    font: 15px/26px 'geometriabold', sans-serif;
+    font: 15px/26px 'open_sansbold', sans-serif;
 
     position: relative;
 
@@ -9667,7 +9672,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 
 .no-dev .header-nav a
 {
-    font: 26px/40px 'geometria_lightlight', sans-serif;
+    font: 26px/40px 'open_sanslight', sans-serif;
 
     position: relative;
 
@@ -9763,7 +9768,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 
 .main-nav .main-menu > li
 {
-    font: 18px/24px 'geometriabold', sans-serif;
+    font: 18px/24px 'open_sansbold', sans-serif;
 
     color: #994ccf;
 }
@@ -9775,7 +9780,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 
 .main-nav .main-menu a
 {
-    font: 16px/24px 'geometria_lightlight', sans-serif;
+    font: 16px/24px 'open_sanslight', sans-serif;
 
     position: relative;
 
@@ -9868,7 +9873,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 
 .event-search
 {
-    font: 12px/18px 'geometria_lightlight', sans-serif;
+    font: 12px/18px 'open_sanslight', sans-serif;
 
     margin-bottom: 40px;
 
@@ -9919,7 +9924,6 @@ body > .jcf-select-drop.jcf-drop-flipped
     overflow: hidden;
 
     width: 100%;
-    padding-bottom: 40px;
 
     text-align: left;
 
@@ -9927,9 +9931,14 @@ body > .jcf-select-drop.jcf-drop-flipped
     background-color: rgba(153, 76, 207, .7);
 }
 
+.footer_ nav
+{
+    margin-bottom: 20px;
+}
+
 .footer_ nav a
 {
-    font: 12px/18px 'geometriamedium', sans-serif;
+    font: 12px/18px 'open_sanssemibold', sans-serif;
 
     position: relative;
 
@@ -9994,6 +10003,25 @@ body > .jcf-select-drop.jcf-drop-flipped
 .footer_ .nav-item ul
 {
     display: none;
+}
+
+.footer_ .footer-bottom
+{
+    padding-bottom: 20px;
+
+    color: #994ccf;
+}
+
+.footer_ .footer-nav a,
+.footer_ .shop-nav a
+{
+    font: 12px/16px 'open_sanslight', sans-serif;
+
+    display: inline-block;
+
+    padding: 8px 5px;
+
+    color: #994ccf;
 }
 
 .no-dev .footer_ nav a
@@ -10295,7 +10323,7 @@ main:before
 
 .show-more
 {
-    font: 24px/32px 'geometria_lightlight', sans-serif;
+    font: 24px/32px 'open_sanslight', sans-serif;
 
     border: 4px solid #b363eb;
     border-radius: 10px;
@@ -10810,7 +10838,7 @@ main:before
 
 .event-circles .date
 {
-    font: 20px/32px 'geometriamedium', sans-serif;
+    font: 20px/32px 'open_sanssemibold', sans-serif;
 
     width: 100%;
     margin: 0;
@@ -10835,7 +10863,7 @@ main:before
 
 .event-circles .date strong
 {
-    font: 24px/32px 'geometriabold', sans-serif;
+    font: 24px/32px 'open_sansbold', sans-serif;
 
     margin-left: 20px;
 }
@@ -10967,32 +10995,22 @@ main:before
 
 @font-face
 {
-    font-family: 'geometriabold';font-weight: normal;font-style: normal;src: url('../fonts/10261-webfont.eot');src: url('../fonts/10261-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/10261-webfont.woff') format('woff'), url('../fonts/10261-webfont.ttf') format('truetype'), url('../fonts/10261-webfont.svg#geometriabold') format('svg');
+    font-family: 'open_sansbold';font-weight: normal;font-style: normal;src: url('../fonts/opensans-bold-webfont.eot');src: url('../fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-bold-webfont.woff2') format('woff2'), url('../fonts/opensans-bold-webfont.woff') format('woff'), url('../fonts/opensans-bold-webfont.ttf') format('truetype'), url('../fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
 }
 
 @font-face
 {
-    font-family: 'geometriamedium';font-weight: normal;font-style: normal;src: url('../fonts/10262-webfont.eot');src: url('../fonts/10262-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/10262-webfont.woff') format('woff'), url('../fonts/10262-webfont.ttf') format('truetype'), url('../fonts/10262-webfont.svg#geometriamedium') format('svg');
+    font-family: 'open_sanslight';font-weight: normal;font-style: normal;src: url('../fonts/opensans-light-webfont.eot');src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-light-webfont.woff2') format('woff2'), url('../fonts/opensans-light-webfont.woff') format('woff'), url('../fonts/opensans-light-webfont.ttf') format('truetype'), url('../fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
 }
 
 @font-face
 {
-    font-family: 'geometriamedium_italic';font-weight: normal;font-style: normal;src: url('../fonts/10263-webfont.eot');src: url('../fonts/10263-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/10263-webfont.woff') format('woff'), url('../fonts/10263-webfont.ttf') format('truetype'), url('../fonts/10263-webfont.svg#geometriamedium_italic') format('svg');
+    font-family: 'open_sanssemibold';font-weight: normal;font-style: normal;src: url('../fonts/opensans-semibold-webfont.eot');src: url('../fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-semibold-webfont.woff2') format('woff2'), url('../fonts/opensans-semibold-webfont.woff') format('woff'), url('../fonts/opensans-semibold-webfont.ttf') format('truetype'), url('../fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
 }
 
 @font-face
 {
-    font-family: 'geometriabold_italic';font-weight: normal;font-style: normal;src: url('../fonts/10264-webfont.eot');src: url('../fonts/10264-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/10264-webfont.woff') format('woff'), url('../fonts/10264-webfont.ttf') format('truetype'), url('../fonts/10264-webfont.svg#geometriabold_italic') format('svg');
-}
-
-@font-face
-{
-    font-family: 'geometria_lightlight';font-weight: normal;font-style: normal;src: url('../fonts/geometria-light-webfont.eot');src: url('../fonts/geometria-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/geometria-light-webfont.woff2') format('woff2'), url('../fonts/geometria-light-webfont.woff') format('woff'), url('../fonts/geometria-light-webfont.ttf') format('truetype'), url('../fonts/geometria-light-webfont.svg#geometria_lightlight') format('svg');
-}
-
-@font-face
-{
-    font-family: 'geometria_lfheavy';font-weight: normal;font-style: normal;src: url('../fonts/10370-webfont.eot');src: url('../fonts/10370-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/10370-webfont.woff') format('woff'), url('../fonts/10370-webfont.ttf') format('truetype'), url('../fonts/10370-webfont.svg#geometria_lfheavy') format('svg');
+    font-family: 'open_sansregular';font-weight: normal;font-style: normal;src: url('../fonts/opensans-regular-webfont.eot');src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans-regular-webfont.woff') format('woff'), url('../fonts/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0)
@@ -11832,6 +11850,11 @@ main:before
     {
         width: 100%;
         margin-left: 0;
+    }
+
+    .footer_ .footer-bottom .logo
+    {
+        margin-top: 64px;
     }
 
     .content img,
@@ -12698,17 +12721,17 @@ main:before
 
     .event-circles address
     {
-        font: 13px/16px 'geometriamedium', sans-serif;
+        font: 13px/16px 'open_sanssemibold', sans-serif;
     }
 
     .event-circles .category
     {
-        font: 10px/14px 'geometria_lightlight', sans-serif;
+        font: 10px/14px 'open_sanslight', sans-serif;
     }
 
     .event-circles .price
     {
-        font: 12px/14px 'geometriabold', sans-serif;
+        font: 12px/14px 'open_sansbold', sans-serif;
 
         margin-bottom: 15px;
     }

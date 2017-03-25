@@ -9,8 +9,9 @@ $color-deep-purple: #2c2034;
 $color-light-purple: #b363eb;
 $color-transparent: rgba(0,0,0,0);
 
-$font-bold: 'geometriabold', sans-serif;
-$font-bold-italic: 'geometriabold_italic', serif;
-$font-medium: 'geometriamedium', sans-serif;
-$font-medium-italic: 'geometriamedium_italic', serif;
-$font-light: 'geometria_lightlight', sans-serif;
+$font-bold: 'open_sansbold', sans-serif;
+//$font-bold-italic: 'geometriabold_italic', serif;
+$font-medium: 'open_sanssemibold', sans-serif;
+//$font-medium-italic: 'geometriamedium_italic', serif;
+$font-regular: 'open_sansregular', sans-serif;
+$font-light: 'open_sanslight', sans-serif;
