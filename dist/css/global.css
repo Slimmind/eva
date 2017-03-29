@@ -9724,8 +9724,11 @@ body > .jcf-select-drop.jcf-drop-flipped
 
     color: #fff;
     border-radius: 6px;
-    background: url('../../svg/login.svg') no-repeat 5px center/auto 30px;
     background-color: #994ccf;
+    background-image: url('../../svg/login.svg');
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: auto 30px;
     box-shadow: inset 0 0 10px 1px rgba(44, 32, 52, .8);
 }
 
