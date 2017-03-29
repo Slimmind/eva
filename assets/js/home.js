@@ -4,7 +4,7 @@
   'use strict';
   var page = {
     init: function () {
-
+      page.topSlider();
     },
     noDev: function () {
       if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
@@ -54,7 +54,7 @@
       }
     },
     load: function () {
-      page.topSlider();
+
     },
     resize: function () {
     },

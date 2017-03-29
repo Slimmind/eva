@@ -1,6 +1,14 @@
 .top-slider {
   position: relative;
   margin-bottom: 40px;
+  padding-bottom: 30px;
+  &:before {
+   content: "";
+    @include pos(absolute, $bottom: 0, $left: 0);
+    width: 100%;
+    height: 30px;
+    background: url('#{$path-images}/top-slider-bg.jpg') no-repeat center center / cover;
+  }
   .slide {
     @include bg(center, center, cover);
   }
@@ -81,26 +89,54 @@
   }
 }
 @include mob-landscape {
-.top-slider {
-  .slider-for {
-    .slide {
-      height: 100vh;
+  .top-slider {
+    .slider-for {
+      .slide {
+        height: 100vh;
+      }
     }
   }
 }
+@include lap {
+  .top-slider {
+    .slide-content {
+      text-align: right;
+      align-items: flex-end;
+      h2 {
+        margin-top: -30px;
+      }
+      time,
+      address {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+@include desk {
+  .top-slider {
+    .slide-content {
+      h2 {
+        margin-top: 0;
+      }
+    }
+  }
 }
 .no-dev {
   .top-slider {
-    .slide {
-      overflow: hidden;
+    padding-bottom: 49px;
+    &:before {
+      height: 49px;
+    }
+    .slider-for {
+      .slide {
+        height: calc(100vh - 49px);
+        overflow: hidden;
+      }
     }
     .slide-content {
-      width: 50%;
-      text-align: right;
+      width: 70%;
       background: linear-gradient(90deg, $color-transparent, $color-white);
-      h2 {
-        font-size: 66px;
-      }
     }
     .slick-arrow {
       @include pos(absolute, calc(100% - 120px));
@@ -113,7 +149,7 @@
     }
     .slider-nav {
       display: block;
-      @include pos(absolute, $bottom: 20px, $left: calc(50% - 500px));
+      @include pos(absolute, $bottom: 60px, $left: calc(50% - 500px));
       .slick-track {
         margin: 0 auto;
       }
