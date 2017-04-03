@@ -23,7 +23,16 @@
   }
   .search-wrap {
     padding: 5px 40px 5px 5px;
-    @include bg(right 5px, center, auto, 80%);
+    input[type="submit"] {
+      display: block;
+      @include pos(absolute, 0, $right: 0);
+      width: 34px;
+      height: 100%;
+      @include bg(right 5px, center, auto, 80%);
+      text-indent: -9999px;
+      border-left: 1px solid $color-purple;
+      background-color: rgba($color-purple, .3);
+    }
   }
 }
 @include xtab {
@@ -51,6 +60,16 @@
   .event-search {
     .search-wrap {
       max-width: 320px;
+    }
+  }
+}
+.no-dev {
+  .search-wrap {
+    input[type="submit"] {
+      transition: backkground-color .3s ease;
+      &:hover {
+        background-color: $color-transparent;
+      }
     }
   }
 }

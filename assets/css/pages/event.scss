@@ -2,6 +2,127 @@
 @import "../libs/variables";
 @import "../libs/mixins";
 //sections
+/* EVENT'S STYLES */
+.wrapper {
+  padding-top: 50px;
+}
+
+.event-rescription {
+  overflow: hidden;
+}
+.back-link {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: rebeccapurple;
+  text-align: center;
+}
+.event-description figure {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 4px solid rebeccapurple;
+}
+.info-block {
+  margin-bottom: 20px;
+  border-bottom: 2px dashed #cdcdcd;
+}
+.location,
+.place,
+.time,
+.date {
+  padding: 5px 5px 5px 30px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px auto;
+}
+.rate {
+  color: rebeccapurple;
+}
+.rate strong {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: normal;
+}
+.range {
+  display: inline-block;
+}
+.range span {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  border: 1px solid rebeccapurple;
+}
+.range span.fill {
+  background-color: rebeccapurple;
+}
+.range .at-40 {
+  height: 12px
+}
+.range .at-60 {
+  height: 18px;
+}
+.range .at-80 {
+  height: 24px;
+}
+.range .at-100 {
+  height: 30px;
+}
+.like,
+.dislike {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+}
+.like {
+  padding: 5px 30px 5px 5px;
+  background-position: right center;
+  color: #127F00;
+}
+.dislike {
+  padding: 5px 5px 5px 30px;
+  background-position: left center;
+  color: #7F0000;
+}
+.event-availability .shop {
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: rgba(120, 0, 250, .3);
+  border: solid rgba(0,0,0,.2);
+  border-width: 2px 0;
+  text-align: center;
+}
+.event-availability .shop h3 {
+  margin: 0 0 10px;
+}
+.event-availability .event-title {
+  display: block;
+}
+.event-availability .location,
+.event-availability .time,
+.event-availability .date {
+  display: inline-block;
+}
+.shop-logo {
+  max-width: 280px;
+  margin: 0 auto;
+}
+.shop-logo a {
+  display: block;
+  height: 100%;
+}
+
+
+.no-dev .shop-logo a {
+  opacity: .7;
+  transition: opacity .3s ease;
+}
+.no-dev .shop-logo a:hover {
+  opacity: 1;
+}
 
 
 

@@ -9933,10 +9933,36 @@ body > .jcf-select-drop.jcf-drop-flipped
 .event-search .search-wrap
 {
     padding: 5px 40px 5px 5px;
+}
 
+.event-search .search-wrap input[type='submit']
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 34px;
+    height: 100%;
+
+    text-indent: -9999px;
+
+    border-left: 1px solid #994ccf;
+    background-color: rgba(153, 76, 207, .3);
     background-repeat: no-repeat;
     background-position: right 5px center;
     background-size: auto 80%;
+}
+
+.no-dev .search-wrap input[type='submit']
+{
+    transition: backkground-color .3s ease;
+}
+
+.no-dev .search-wrap input[type='submit']:hover
+{
+    background-color: transparent;
 }
 
 .footer_

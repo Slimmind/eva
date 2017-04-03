@@ -93,6 +93,7 @@
     .circle {
       width: 370px;
       height: 370px;
+      overflow: visible;
     }
     .date {
       margin-top: -35px;
@@ -106,6 +107,7 @@
     }
     .description {
       height: 140px;
+      clip-path: circle(181px at 181px 0%);
     }
     address,
     .category,
@@ -172,7 +174,7 @@
       will-change: tranform;
     }
     .details {
-      transform: translateY(45px);
+      transform: translateY(40px);
       transition: transform .5s ease .2s;
     }
     .circle:hover {
