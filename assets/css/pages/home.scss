@@ -93,7 +93,8 @@
     .circle {
       width: 370px;
       height: 370px;
-      overflow: visible;
+      overflow: hidden;
+      -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
     }
     .date {
       margin-top: -35px;
@@ -106,8 +107,10 @@
       }
     }
     .description {
-      height: 140px;
-      clip-path: circle(181px at 181px 0%);
+      @include pos(absolute, $bottom: 0, $left: calc(50% - 185px));
+      //height: 185px;
+      //clip-path: circle(181px at 181px 0%);
+      transform: translateY(60px);
     }
     address,
     .category,

@@ -2,11 +2,9 @@
 @import "../libs/variables";
 @import "../libs/mixins";
 //sections
-/* EVENT'S STYLES */
 .wrapper {
   padding-top: 50px;
 }
-
 .event-rescription {
   overflow: hidden;
 }
@@ -15,14 +13,14 @@
   padding: 5px 10px;
   border-radius: 5px;
   color: #fff;
-  background-color: rebeccapurple;
+  background-color: $color-purple;
   text-align: center;
 }
 .event-description figure {
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  border: 4px solid rebeccapurple;
+  border: 4px solid $color-purple;
 }
 .info-block {
   margin-bottom: 20px;
@@ -33,12 +31,10 @@
 .time,
 .date {
   padding: 5px 5px 5px 30px;
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 20px auto;
+  @include bg(left, center, 20px auto);
 }
 .rate {
-  color: rebeccapurple;
+  color: $color-purple;
 }
 .rate strong {
   font-size: 36px;
@@ -47,29 +43,29 @@
 }
 .range {
   display: inline-block;
-}
-.range span {
-  display: inline-block;
-  vertical-align: bottom;
-  width: 6px;
-  height: 6px;
-  border-radius: 6px;
-  border: 1px solid rebeccapurple;
-}
-.range span.fill {
-  background-color: rebeccapurple;
-}
-.range .at-40 {
-  height: 12px
-}
-.range .at-60 {
-  height: 18px;
-}
-.range .at-80 {
-  height: 24px;
-}
-.range .at-100 {
-  height: 30px;
+  span {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    border: 1px solid $color-purple;
+    &.fill {
+      background-color: $color-purple;
+    }
+    &.at-40 {
+      height: 12px
+    }
+    &.at-60 {
+      height: 18px;
+    }
+    &.at-80 {
+      height: 24px;
+    }
+    &.at-100 {
+      height: 30px;
+    }
+  }
 }
 .like,
 .dislike {
@@ -94,17 +90,17 @@
   border: solid rgba(0,0,0,.2);
   border-width: 2px 0;
   text-align: center;
-}
-.event-availability .shop h3 {
-  margin: 0 0 10px;
-}
-.event-availability .event-title {
-  display: block;
-}
-.event-availability .location,
-.event-availability .time,
-.event-availability .date {
-  display: inline-block;
+  .shop h3 {
+    margin: 0 0 10px;
+  }
+  .event-title {
+    display: block;
+  }
+  .location,
+  .time,
+  .date {
+    display: inline-block;
+  }
 }
 .shop-logo {
   max-width: 280px;
@@ -114,14 +110,30 @@
   display: block;
   height: 100%;
 }
-
-
-.no-dev .shop-logo a {
-  opacity: .7;
-  transition: opacity .3s ease;
+.filled-heading {
+  margin-bottom: 10px;
+  padding: 10px 15px 8px;
+  border-radius: 10px 10px 0 0;
+  color: $color-white;
+  background-color: $color-purple;
+  border-bottom: 3px solid $color-deep-purple;
+  text-transform: uppercase;
 }
-.no-dev .shop-logo a:hover {
-  opacity: 1;
+.reviews {
+  .likes {
+    span {
+      font-family: $font-medium;
+    }
+  }
+}
+.no-dev {
+  .shop-logo a {
+    opacity: .7;
+    transition: opacity .3s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 

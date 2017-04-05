@@ -9075,6 +9075,11 @@ h3
     font: 22px/28px 'open_sansbold', sans-serif;
 }
 
+h4
+{
+    font: 18px/24px 'open_sanssemibold', sans-serif;
+}
+
 h5
 {
     font: 16px/24px 'open_sansbold', sans-serif;
@@ -12790,10 +12795,12 @@ main:before
 
     .event-circles .circle
     {
-        overflow: visible;
+        overflow: hidden;
 
         width: 370px;
         height: 370px;
+
+        -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
     }
 
     .event-circles .date
@@ -12815,10 +12822,11 @@ main:before
 
     .event-circles .description
     {
-        height: 140px;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 185px);
 
-        -webkit-clip-path: circle(181px at 181px 0%);
-                clip-path: circle(181px at 181px 0%);
+        transform: translateY(60px);
     }
 
     .event-circles address,
