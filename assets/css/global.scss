@@ -7,6 +7,7 @@
 @import "sections/header";
 @import "sections/navigation";
 @import "sections/event-search";
+@import "sections/event-circle";
 @import "sections/footer";
 @import "sections/social-links";
 @import "sections/wp-styles";
@@ -96,24 +97,27 @@ main {
     font-size: 50px;
     line-height: 72px;
   }
+  .no-dev {
+    .logo {
+      width: 260px;
+      height: 85px;
+    }
+    .menu-btn {
+      top: 36px;
+      transition: background-color .3s ease;
+      &:hover {
+        background-color: $color-light-purple;
+      }
+    }
+  }
 }
+
 .no-dev {
   .show-more {
     transition-property: border-color, background-color;
     transition: .3s ease;
     &:hover {
       border-color: $color-purple;
-      background-color: $color-light-purple;
-    }
-  }
-  .logo {
-    width: 260px;
-    height: 85px;
-  }
-  .menu-btn {
-    top: 36px;
-    transition: background-color .3s ease;
-    &:hover {
       background-color: $color-light-purple;
     }
   }

@@ -15,60 +15,62 @@
 .header-nav {
   display: none;
 }
-.no-dev {
-  .header_ {
-    height: 130px;
-    padding-top: 6px;
-    .menu-btn {
-      top: 36px;
-    }
-  }
-  .header-nav {
-    display: block;
-    float: right;
-    padding: 36px 50px 0 0;
-    li {
-      display: inline-block;
-      margin-right: 30px;
-      &:last-child {
-        margin-right: 0;
+@include lap {
+  .no-dev {
+    .header_ {
+      height: 130px;
+      padding-top: 6px;
+      .menu-btn {
+        top: 36px;
       }
     }
-    a {
-      position: relative;
-      display: inline-block;
-      font: 26px/40px $font-light;
-      color: $color-purple;
-      &:after {
-        content: "";
-        @include pos(absolute, $bottom: 0, $left: 0);
-        width: 0;
-        height: 1px;
-        background-color: $color-purple;
-        transition: width .3s ease;
-      }
-      &:hover:after {
-        width: 100%;
-      }
-    }
-    .login {
-      a {
+    .header-nav {
+      display: block;
+      float: right;
+      padding: 36px 50px 0 0;
+      li {
         display: inline-block;
-        padding: 0 10px 0 40px;
-        border-radius: 6px;
-        box-shadow: inset 0 0 10px 1px rgba($color-deep-purple, .8);
-        color: $color-white;
-        background-color: $color-purple;
-        background-image: url('#{$path-svg}/login.svg');
-        transition-property: background-color, box-shadow;
-        transition: .3s ease;
-        @include bg(5px, center, auto, 30px);
-        &:after {
-          display: none;
+        margin-right: 30px;
+        &:last-child {
+          margin-right: 0;
         }
-        &:hover {
-          background-color: $color-deep-purple;
-          box-shadow: inset 0 0 10px 3px rgba($color-purple, .8);
+      }
+      a {
+        position: relative;
+        display: inline-block;
+        font: 26px/40px $font-light;
+        color: $color-purple;
+        &:after {
+          content: "";
+          @include pos(absolute, $bottom: 0, $left: 0);
+          width: 0;
+          height: 1px;
+          background-color: $color-purple;
+          transition: width .3s ease;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+      }
+      .login {
+        a {
+          display: inline-block;
+          padding: 0 10px 0 40px;
+          border-radius: 6px;
+          box-shadow: inset 0 0 10px 1px rgba($color-deep-purple, .8);
+          color: $color-white;
+          background-color: $color-purple;
+          background-image: url('#{$path-svg}/login.svg');
+          transition-property: background-color, box-shadow;
+          transition: .3s ease;
+          @include bg(5px, center, auto, 30px);
+          &:after {
+            display: none;
+          }
+          &:hover {
+            background-color: $color-deep-purple;
+            box-shadow: inset 0 0 10px 3px rgba($color-purple, .8);
+          }
         }
       }
     }

@@ -120,10 +120,84 @@
   text-transform: uppercase;
 }
 .reviews {
+  h4 {
+    margin: 0 0 5px;
+  }
   .likes {
+    padding: 0 10px;
     span {
       font-family: $font-medium;
     }
+  }
+  article {
+    border: 2px solid $color-purple;
+    h5 {
+      margin: 0;
+      padding: 8px 10px;
+      background-color: $color-purple;
+      color: $color-deep-purple;
+    }
+    h6 {
+      padding: 0 10px;
+    }
+  }
+  header {
+    border-bottom: 2px solid $color-purple;
+  }
+  .text {
+    padding: 5px 10px;
+    color: $color-deep-purple;
+    font-family: $font-medium;
+  }
+  .controls {
+    overflow: hidden;
+    button {
+      width: 50%;
+      padding: 0 5px;
+      float: left;
+    }
+  }
+  footer {
+    border-top: 2px solid $color-purple;
+    .expand-comment {
+      background-color: $color-purple;
+      color: $color-white;
+    }
+    .add-comment {
+      padding-left: 45px;
+      background: url('#{$path-svg}/plus.svg') no-repeat 5px center / 30px 30px;
+      color: $color-purple;
+      text-align: left;
+    }
+  }
+  .comment-form {
+    display: none;
+    margin-bottom: 20px;
+    .form-row {
+      height: 90px;
+      margin: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    textarea {
+      padding: 5px 10px;
+      font: 12px/18px $font-bold;
+      background-color: rgba($color-deep-purple, .5);
+      color: $color-white;
+    }
+    button {
+      padding: 10px 5px;
+      background-color: rgba($color-green, .5);
+      color: $color-white;
+      &[type="reset"] {
+        background-color: rgba($color-red, .5);
+      }
+    }
+  }
+}
+.similar-events {
+  .row {
+    background-color: rgba($color-deep-purple, .1);
   }
 }
 .no-dev {
