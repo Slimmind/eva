@@ -58,33 +58,35 @@
     margin-bottom: 20px;
   }
 }
-.no-dev {
-  .main-nav {
-    width: 365px;
-    height: 100vh;
-    top: 0;
-    .menu-btn {
-      display: block;
-      float: left;
-    }
-    .logo {
-      display: block;
-      width: 240px;
-      float: right;
-    }
-    .main-menu {
-      a {
-        padding: 5px 0;
-        &:after {
-          content: "";
-          @include pos(absolute, $bottom: 0, $left: 0);
-          width: 0;
-          height: 1px;
-          background-color: $color-purple;
-          transition: width .3s ease;
-        }
-        &:hover:after {
-          width: 100%;
+@include lap {
+  .no-dev {
+    .main-nav {
+      width: 365px;
+      height: 100vh;
+      top: 0;
+      .menu-btn {
+        display: block;
+        float: left;
+      }
+      .logo {
+        display: block;
+        width: 240px;
+        float: right;
+      }
+      .main-menu {
+        a {
+          padding: 5px 0;
+          &:after {
+            content: "";
+            @include pos(absolute, $bottom: 0, $left: 0);
+            width: 0;
+            height: 1px;
+            background-color: $color-purple;
+            transition: width .3s ease;
+          }
+          &:hover:after {
+            width: 100%;
+          }
         }
       }
     }
