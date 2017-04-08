@@ -1,486 +1,614 @@
 <!DOCTYPE html>
-<html lang="en" class="no-devq">
+<html lang="en" class="no-dev">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport"
-        content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <link rel="shortcut icon" href="dist/images/apple-icon.png"
-        type="image/x-icon">
-  <link rel="icon" href="dist/images/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="dist/images/apple-icon.png"/>
-  <meta content="telephone=no" name="format-detection">
-  <title>EventArea</title>
-  <link rel="stylesheet" href="dist/css/event.css"/>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+				content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link rel="shortcut icon" href="dist/images/apple-icon.png"
+				type="image/x-icon">
+	<link rel="icon" href="dist/images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="dist/images/apple-icon.png"/>
+	<meta content="telephone=no" name="format-detection">
+	<title>EventArea</title>
+	<link rel="stylesheet" href="dist/css/event.css"/>
 </head>
 <body>
 <main class="wrapper">
 
-  <header class="header_">
-    <div class="container">
-      <strong class="logo" style="background-image: url('dist/images/logo.png');"><a href="index.html">EentArea</a></strong>
-      <nav class="header-nav">
-        <ul>
-          <li><a href="javascript:void(0)">Главная</a></li>
-          <li><a href="javascript:void(0)">Афиша</a></li>
-          <li><a href="javascript:void(0)">Рецензии</a></li>
-          <li><a href="javascript:void(0)">Рейтинги</a></li>
-          <li class="login"><a href="javascript:void(0)">Войти</a></li>
-        </ul>
-      </nav>
-      <div class="menu-btn">
-        <span></span>
-      </div>
-    </div>
-  </header>
+	<header class="header_">
+	  <div class="container">
+	    <strong class="logo" style="background-image: url('dist/images/logo.png');"><a href="index.html">EentArea</a></strong>
+	    <nav class="header-nav">
+	      <ul>
+	        <li><a href="javascript:void(0)">Главная</a></li>
+	        <li><a href="javascript:void(0)">Афиша</a></li>
+	        <li><a href="javascript:void(0)">Рецензии</a></li>
+	        <li><a href="javascript:void(0)">Рейтинги</a></li>
+	        <li class="login"><a href="javascript:void(0)">Войти</a></li>
+	      </ul>
+	    </nav>
+	    <div class="menu-btn">
+	      <span></span>
+	    </div>
+	  </div>
+	</header>
 
-  <nav class="main-nav">
-    <div class="menu-btn">
-      <span></span>
-    </div>
-    <strong class="logo" style="background-image: url('dist/images/logo.png');"><a href="index.html">EentArea</a></strong>
-    <ul class="main-menu">
-      <li class="navigation">Навигация
-        <ul>
-          <li><a href="javascript:void(0)">Главная</a></li>
-          <li><a href="javascript:void(0)">Афиша</a></li>
-          <li><a href="javascript:void(0)">Рецензии</a></li>
-          <li><a href="javascript:void(0)">Рейтинги</a></li>
-        </ul>
-      </li>
-      <li class="search">Поиск мероприятий
-  
-        <div class="event-search">
-          <form>
-            <div class="form-row city" style="background-image: url('svg/earth.svg');">
-              <select name="city" id="nav-city">
-                <option value="city-1">City-1</option>
-                <option value="city-2">City-2</option>
-                <option value="city-3">City-3</option>
-                <option value="city-4">City-4</option>
-                <option value="city-5">City-5</option>
-                <option value="city-6">City-6</option>
-                <option value="city-7">City-7</option>
-                <option value="city-8">City-8</option>
-                <option value="city-9">City-9</option>
-                <option value="city-10">City-10</option>
-              </select>
-            </div>
-            <div class="form-row rubric" style="background-image: url('svg/kubi.svg');">
-              <select name="rubric" id="nav-rubric">
-                <option value="rubric-1">Rubric-1</option>
-                <option value="rubric-2">Rubric-2</option>
-                <option value="rubric-3">Rubric-3</option>
-                <option value="rubric-4">Rubric-4</option>
-                <option value="rubric-5">Rubric-5</option>
-                <option value="rubric-6">Rubric-6</option>
-                <option value="rubric-7">Rubric-7</option>
-                <option value="rubric-8">Rubric-8</option>
-                <option value="rubric-9">Rubric-9</option>
-                <option value="rubric-10">Rubric-10</option>
-              </select>
-            </div>
-            <div class="form-row search-wrap">
-              <input type="search" name="search" placeholder="Поиск по событиям">
-              <input type="submit" value="search" style="background-image: url('svg/search.svg');">
-            </div>
-            <input type="radio" id="nav-new" name="kind-of-event" checked>
-            <label style="background-image: url('svg/new.svg');" for="nav-new">Новые</label>
-            <input type="radio" id="nav-most-popular" name="kind-of-event">
-            <label style="background-image: url('svg/comsing.svg');" for="nav-most-popular">Самые обсуждаемые</label>
-          </form>
-        </div>
-  
-      </li>
-      <li class="social">Социальные сети
-        <div class="social-links">
-          <ul>
-            <li>
-  
-              <a href="javascript:void(0)" class="social-link twitter" style="background-image: url('svg/twitter.svg')">
-                <!--<svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.0" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">-->
-                  <!--<path d="M31.993,6.077C30.816,6.6,29.552,6.953,28.223,7.11c1.355-0.812,2.396-2.098,2.887-3.63  c-1.269,0.751-2.673,1.299-4.168,1.592C25.744,3.797,24.038,3,22.149,3c-3.625,0-6.562,2.938-6.562,6.563  c0,0.514,0.057,1.016,0.169,1.496C10.301,10.785,5.465,8.172,2.227,4.201c-0.564,0.97-0.888,2.097-0.888,3.3  c0,2.278,1.159,4.286,2.919,5.464c-1.075-0.035-2.087-0.329-2.972-0.821c-0.001,0.027-0.001,0.056-0.001,0.082  c0,3.181,2.262,5.834,5.265,6.437c-0.55,0.149-1.13,0.23-1.729,0.23c-0.424,0-0.834-0.041-1.234-0.117  c0.834,2.606,3.259,4.504,6.13,4.558c-2.245,1.76-5.075,2.811-8.15,2.811c-0.53,0-1.053-0.031-1.566-0.092  C2.905,27.913,6.355,29,10.062,29c12.072,0,18.675-10.001,18.675-18.675c0-0.284-0.008-0.568-0.02-0.85  C30,8.55,31.112,7.395,31.993,6.077z" fill="#ffffff"/>-->
-                <!--</svg>-->
-              </a>
-  
-            </li>
-            <li>
-  
-              <a href="javascript:void(0)" class="social-link vk" style="background-image: url('svg/vk.svg');">
-                <!--<svg height="508px" version="1.1" viewBox="0 0 777 508" width="777px" xmlns="http://www.w3.org/2000/svg">-->
-                  <!--<g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">-->
-                    <!--<path d="M0.849684267,37.7112682 C-4.46720912,5.26682385 152.381103,25.3544974 152.381103,25.3544974 C152.381103,25.3544974 243.432877,254.010586 279.321897,254.010582 C315.210917,254.010578 297.931019,60.1164021 297.931019,60.1164021 C297.931019,60.1164021 253.402048,48.5291005 253.402049,30.7619048 C253.402051,12.994709 297.931019,0.634920635 297.931019,0.634920635 C297.931019,0.634920635 413.168963,0.634922188 428.859482,0.634920635 C444.55,0.634919061 450.794241,26.1269854 450.794257,43.1216931 C450.794272,60.1164008 450.794257,250.920635 450.794257,250.920635 L486.683277,250.920635 C486.683277,250.920635 518.630315,199.572804 543.837269,147.407407 C569.044225,95.2420119 599.664634,25.3544974 599.664634,25.3544974 L751.860664,25.3544974 C751.860664,25.3544974 779.774347,26.1209492 776.451289,49.2985698 C771.930545,80.8298057 670.67553,230.566247 649.510495,281.817088 C633.559819,320.441427 716.517779,372.719686 751.860664,428.589575 C774.798669,464.849881 776.451289,507.386243 776.451289,507.386243 L595.679561,507.386243 L505.289803,402.325025 C505.289803,402.325025 486.683277,394.603175 472.059228,405.414972 C457.43518,416.22677 456.773164,437.859416 456.773164,437.859416 L456.773164,507.386243 L315.210917,507.386243 C315.210917,507.386243 206.879245,470.306878 115.16286,308.084656 C23.4464649,145.862436 6.16657616,70.1557126 0.849684267,37.7112682 Z" fill="#ffffff" id="vkontakte"/>-->
-                  <!--</g>-->
-                <!--</svg>-->
-              </a>
-  
-            </li>
-            <li>
-  
-              <a href="javascript:void(0)" class="social-link facebook" style="background-image: url('svg/facebook.svg');">
-                <!--<svg height="56.6934px" id="Layer_1" style="enable-background:new 0 0 56.6934 56.6934;" version="1.1" viewBox="0 0 56.6934 56.6934" width="56.6934px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">-->
-                  <!--<g>-->
-                    <!--<path fill="#ffffff" d="M19.6671,25.7867c-0.0075,1.7935,0,3.5869,0.0076,5.3803c3.0067,0.098,6.0208,0.0527,9.0275,0.098   c-1.3262,6.6689-10.3989,8.8315-15.199,4.4761C8.5674,31.9206,8.801,23.5412,13.9327,19.992   c3.5869-2.8635,8.6884-2.1552,12.2752,0.324c1.4092-1.3036,2.7278-2.6977,4.0013-4.1445   c-2.984-2.3812-6.6462-4.0767-10.5421-3.8958c-8.1307-0.2713-15.6059,6.8497-15.7415,14.9805   c-0.52,6.6462,3.8506,13.1644,10.0222,15.5155c6.1489,2.3661,14.031,0.7535,17.957-4.77c2.5922-3.4889,3.1498-7.98,2.8484-12.1999   C29.7194,25.7641,24.6933,25.7716,19.6671,25.7867z"/>-->
-                    <!--<path fill="#ffffff"  d="M49.0704,25.7641c-0.0151-1.4996-0.0226-3.0067-0.0301-4.5062c-1.4996,0-2.9916,0-4.4836,0   c-0.0151,1.4996-0.0301,2.9991-0.0377,4.5062c-1.5071,0.0075-3.0067,0.0151-4.5062,0.0302c0,1.4995,0,2.9915,0,4.4836   c1.4995,0.0151,3.0066,0.0302,4.5062,0.0452c0.0151,1.4996,0.0151,2.9991,0.0302,4.4987c1.4996,0,2.9916,0,4.4911,0   c0.0075-1.4996,0.015-2.9991,0.0301-4.5062c1.5071-0.0151,3.0067-0.0226,4.5062-0.0377c0-1.4921,0-2.9916,0-4.4836   C52.0771,25.7792,50.57,25.7792,49.0704,25.7641z"/>-->
-                  <!--</g>-->
-                <!--</svg>-->
-              </a>
-  
-            </li>
-            <li>
-  
-              <a href="javascript:void(0)" class="social-link google-plus" style="background-image: url('svg/google-plus.svg');">
-                <!--<svg height="56.6934px" id="Layer_1" style="enable-background:new 0 0 56.6934 56.6934;" version="1.1" viewBox="0 0 56.6934 56.6934" width="56.6934px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">-->
-                  <!--<g>-->
-                    <!--<path fill="#ffffff" d="M19.6671,25.7867c-0.0075,1.7935,0,3.5869,0.0076,5.3803c3.0067,0.098,6.0208,0.0527,9.0275,0.098   c-1.3262,6.6689-10.3989,8.8315-15.199,4.4761C8.5674,31.9206,8.801,23.5412,13.9327,19.992   c3.5869-2.8635,8.6884-2.1552,12.2752,0.324c1.4092-1.3036,2.7278-2.6977,4.0013-4.1445   c-2.984-2.3812-6.6462-4.0767-10.5421-3.8958c-8.1307-0.2713-15.6059,6.8497-15.7415,14.9805   c-0.52,6.6462,3.8506,13.1644,10.0222,15.5155c6.1489,2.3661,14.031,0.7535,17.957-4.77c2.5922-3.4889,3.1498-7.98,2.8484-12.1999   C29.7194,25.7641,24.6933,25.7716,19.6671,25.7867z"/>-->
-                    <!--<path fill="#ffffff"  d="M49.0704,25.7641c-0.0151-1.4996-0.0226-3.0067-0.0301-4.5062c-1.4996,0-2.9916,0-4.4836,0   c-0.0151,1.4996-0.0301,2.9991-0.0377,4.5062c-1.5071,0.0075-3.0067,0.0151-4.5062,0.0302c0,1.4995,0,2.9915,0,4.4836   c1.4995,0.0151,3.0066,0.0302,4.5062,0.0452c0.0151,1.4996,0.0151,2.9991,0.0302,4.4987c1.4996,0,2.9916,0,4.4911,0   c0.0075-1.4996,0.015-2.9991,0.0301-4.5062c1.5071-0.0151,3.0067-0.0226,4.5062-0.0377c0-1.4921,0-2.9916,0-4.4836   C52.0771,25.7792,50.57,25.7792,49.0704,25.7641z"/>-->
-                  <!--</g>-->
-                <!--</svg>-->
-              </a>
-  
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-  </nav>
+	<nav class="main-nav">
+	  <div class="menu-btn">
+	    <span></span>
+	  </div>
+	  <strong class="logo" style="background-image: url('dist/images/logo.png');"><a href="index.html">EentArea</a></strong>
+	  <ul class="main-menu">
+	    <li class="navigation">Навигация
+	      <ul>
+	        <li><a href="javascript:void(0)">Главная</a></li>
+	        <li><a href="javascript:void(0)">Афиша</a></li>
+	        <li><a href="javascript:void(0)">Рецензии</a></li>
+	        <li><a href="javascript:void(0)">Рейтинги</a></li>
+	      </ul>
+	    </li>
+	    <li class="search">Поиск мероприятий
+	
+	      <div class="event-search">
+	        <form>
+	          <div class="form-row city" style="background-image: url('svg/earth.svg');">
+	            <select name="city" id="nav-city">
+	              <option value="city-1">City-1</option>
+	              <option value="city-2">City-2</option>
+	              <option value="city-3">City-3</option>
+	              <option value="city-4">City-4</option>
+	              <option value="city-5">City-5</option>
+	              <option value="city-6">City-6</option>
+	              <option value="city-7">City-7</option>
+	              <option value="city-8">City-8</option>
+	              <option value="city-9">City-9</option>
+	              <option value="city-10">City-10</option>
+	            </select>
+	          </div>
+	          <div class="form-row rubric" style="background-image: url('svg/kubi.svg');">
+	            <select name="rubric" id="nav-rubric">
+	              <option value="rubric-1">Rubric-1</option>
+	              <option value="rubric-2">Rubric-2</option>
+	              <option value="rubric-3">Rubric-3</option>
+	              <option value="rubric-4">Rubric-4</option>
+	              <option value="rubric-5">Rubric-5</option>
+	              <option value="rubric-6">Rubric-6</option>
+	              <option value="rubric-7">Rubric-7</option>
+	              <option value="rubric-8">Rubric-8</option>
+	              <option value="rubric-9">Rubric-9</option>
+	              <option value="rubric-10">Rubric-10</option>
+	            </select>
+	          </div>
+	          <div class="form-row search-wrap">
+	            <input type="search" name="search" placeholder="Поиск по событиям">
+	            <input type="submit" value="search" style="background-image: url('svg/search.svg');">
+	          </div>
+	          <input type="radio" id="nav-new" name="kind-of-event" checked>
+	          <label style="background-image: url('svg/new.svg');" for="nav-new">Новые</label>
+	          <input type="radio" id="nav-most-popular" name="kind-of-event">
+	          <label style="background-image: url('svg/comsing.svg');" for="nav-most-popular">Самые обсуждаемые</label>
+	        </form>
+	      </div>
+	
+	    </li>
+	    <li class="social">Социальные сети
+	      <div class="social-links">
+	        <ul>
+	          <li>
+	
+	            <a href="javascript:void(0)" class="social-link twitter" style="background-image: url('svg/twitter.svg')">
+	              <!--<svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.0" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">-->
+	                <!--<path d="M31.993,6.077C30.816,6.6,29.552,6.953,28.223,7.11c1.355-0.812,2.396-2.098,2.887-3.63  c-1.269,0.751-2.673,1.299-4.168,1.592C25.744,3.797,24.038,3,22.149,3c-3.625,0-6.562,2.938-6.562,6.563  c0,0.514,0.057,1.016,0.169,1.496C10.301,10.785,5.465,8.172,2.227,4.201c-0.564,0.97-0.888,2.097-0.888,3.3  c0,2.278,1.159,4.286,2.919,5.464c-1.075-0.035-2.087-0.329-2.972-0.821c-0.001,0.027-0.001,0.056-0.001,0.082  c0,3.181,2.262,5.834,5.265,6.437c-0.55,0.149-1.13,0.23-1.729,0.23c-0.424,0-0.834-0.041-1.234-0.117  c0.834,2.606,3.259,4.504,6.13,4.558c-2.245,1.76-5.075,2.811-8.15,2.811c-0.53,0-1.053-0.031-1.566-0.092  C2.905,27.913,6.355,29,10.062,29c12.072,0,18.675-10.001,18.675-18.675c0-0.284-0.008-0.568-0.02-0.85  C30,8.55,31.112,7.395,31.993,6.077z" fill="#ffffff"/>-->
+	              <!--</svg>-->
+	            </a>
+	
+	          </li>
+	          <li>
+	
+	            <a href="javascript:void(0)" class="social-link vk" style="background-image: url('svg/vk.svg');">
+	              <!--<svg height="508px" version="1.1" viewBox="0 0 777 508" width="777px" xmlns="http://www.w3.org/2000/svg">-->
+	                <!--<g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">-->
+	                  <!--<path d="M0.849684267,37.7112682 C-4.46720912,5.26682385 152.381103,25.3544974 152.381103,25.3544974 C152.381103,25.3544974 243.432877,254.010586 279.321897,254.010582 C315.210917,254.010578 297.931019,60.1164021 297.931019,60.1164021 C297.931019,60.1164021 253.402048,48.5291005 253.402049,30.7619048 C253.402051,12.994709 297.931019,0.634920635 297.931019,0.634920635 C297.931019,0.634920635 413.168963,0.634922188 428.859482,0.634920635 C444.55,0.634919061 450.794241,26.1269854 450.794257,43.1216931 C450.794272,60.1164008 450.794257,250.920635 450.794257,250.920635 L486.683277,250.920635 C486.683277,250.920635 518.630315,199.572804 543.837269,147.407407 C569.044225,95.2420119 599.664634,25.3544974 599.664634,25.3544974 L751.860664,25.3544974 C751.860664,25.3544974 779.774347,26.1209492 776.451289,49.2985698 C771.930545,80.8298057 670.67553,230.566247 649.510495,281.817088 C633.559819,320.441427 716.517779,372.719686 751.860664,428.589575 C774.798669,464.849881 776.451289,507.386243 776.451289,507.386243 L595.679561,507.386243 L505.289803,402.325025 C505.289803,402.325025 486.683277,394.603175 472.059228,405.414972 C457.43518,416.22677 456.773164,437.859416 456.773164,437.859416 L456.773164,507.386243 L315.210917,507.386243 C315.210917,507.386243 206.879245,470.306878 115.16286,308.084656 C23.4464649,145.862436 6.16657616,70.1557126 0.849684267,37.7112682 Z" fill="#ffffff" id="vkontakte"/>-->
+	                <!--</g>-->
+	              <!--</svg>-->
+	            </a>
+	
+	          </li>
+	          <li>
+	
+	            <a href="javascript:void(0)" class="social-link facebook" style="background-image: url('svg/facebook.svg');">
+	              <!--<svg height="56.6934px" id="Layer_1" style="enable-background:new 0 0 56.6934 56.6934;" version="1.1" viewBox="0 0 56.6934 56.6934" width="56.6934px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">-->
+	                <!--<g>-->
+	                  <!--<path fill="#ffffff" d="M19.6671,25.7867c-0.0075,1.7935,0,3.5869,0.0076,5.3803c3.0067,0.098,6.0208,0.0527,9.0275,0.098   c-1.3262,6.6689-10.3989,8.8315-15.199,4.4761C8.5674,31.9206,8.801,23.5412,13.9327,19.992   c3.5869-2.8635,8.6884-2.1552,12.2752,0.324c1.4092-1.3036,2.7278-2.6977,4.0013-4.1445   c-2.984-2.3812-6.6462-4.0767-10.5421-3.8958c-8.1307-0.2713-15.6059,6.8497-15.7415,14.9805   c-0.52,6.6462,3.8506,13.1644,10.0222,15.5155c6.1489,2.3661,14.031,0.7535,17.957-4.77c2.5922-3.4889,3.1498-7.98,2.8484-12.1999   C29.7194,25.7641,24.6933,25.7716,19.6671,25.7867z"/>-->
+	                  <!--<path fill="#ffffff"  d="M49.0704,25.7641c-0.0151-1.4996-0.0226-3.0067-0.0301-4.5062c-1.4996,0-2.9916,0-4.4836,0   c-0.0151,1.4996-0.0301,2.9991-0.0377,4.5062c-1.5071,0.0075-3.0067,0.0151-4.5062,0.0302c0,1.4995,0,2.9915,0,4.4836   c1.4995,0.0151,3.0066,0.0302,4.5062,0.0452c0.0151,1.4996,0.0151,2.9991,0.0302,4.4987c1.4996,0,2.9916,0,4.4911,0   c0.0075-1.4996,0.015-2.9991,0.0301-4.5062c1.5071-0.0151,3.0067-0.0226,4.5062-0.0377c0-1.4921,0-2.9916,0-4.4836   C52.0771,25.7792,50.57,25.7792,49.0704,25.7641z"/>-->
+	                <!--</g>-->
+	              <!--</svg>-->
+	            </a>
+	
+	          </li>
+	          <li>
+	
+	            <a href="javascript:void(0)" class="social-link google-plus" style="background-image: url('svg/google-plus.svg');">
+	              <!--<svg height="56.6934px" id="Layer_1" style="enable-background:new 0 0 56.6934 56.6934;" version="1.1" viewBox="0 0 56.6934 56.6934" width="56.6934px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">-->
+	                <!--<g>-->
+	                  <!--<path fill="#ffffff" d="M19.6671,25.7867c-0.0075,1.7935,0,3.5869,0.0076,5.3803c3.0067,0.098,6.0208,0.0527,9.0275,0.098   c-1.3262,6.6689-10.3989,8.8315-15.199,4.4761C8.5674,31.9206,8.801,23.5412,13.9327,19.992   c3.5869-2.8635,8.6884-2.1552,12.2752,0.324c1.4092-1.3036,2.7278-2.6977,4.0013-4.1445   c-2.984-2.3812-6.6462-4.0767-10.5421-3.8958c-8.1307-0.2713-15.6059,6.8497-15.7415,14.9805   c-0.52,6.6462,3.8506,13.1644,10.0222,15.5155c6.1489,2.3661,14.031,0.7535,17.957-4.77c2.5922-3.4889,3.1498-7.98,2.8484-12.1999   C29.7194,25.7641,24.6933,25.7716,19.6671,25.7867z"/>-->
+	                  <!--<path fill="#ffffff"  d="M49.0704,25.7641c-0.0151-1.4996-0.0226-3.0067-0.0301-4.5062c-1.4996,0-2.9916,0-4.4836,0   c-0.0151,1.4996-0.0301,2.9991-0.0377,4.5062c-1.5071,0.0075-3.0067,0.0151-4.5062,0.0302c0,1.4995,0,2.9915,0,4.4836   c1.4995,0.0151,3.0066,0.0302,4.5062,0.0452c0.0151,1.4996,0.0151,2.9991,0.0302,4.4987c1.4996,0,2.9916,0,4.4911,0   c0.0075-1.4996,0.015-2.9991,0.0301-4.5062c1.5071-0.0151,3.0067-0.0226,4.5062-0.0377c0-1.4921,0-2.9916,0-4.4836   C52.0771,25.7792,50.57,25.7792,49.0704,25.7641z"/>-->
+	                <!--</g>-->
+	              <!--</svg>-->
+	            </a>
+	
+	          </li>
+	        </ul>
+	      </div>
+	    </li>
+	  </ul>
+	</nav>
 
-  <div class="event-description">
-    <div class="container">
-      <article>
-        <figure class="circle" style="background-image: url('dist/images/event-1.jpg')"></figure>
-        <div class="info-block">
-          <ul class="event-info">
-            <li class="event-title">
-              <h3>Evanescence</h3>
-            </li>
-            <li class="location" style="background-image: url('svg/position.svg');">Sentrum</li>
-            <li class="time" style="background-image: url('svg/time.svg');">23:00</li>
-            <li class="date" style="background-image: url('svg/calendar.svg');"><time datetime="">27 декабря 2017</time></li>
-          </ul>
-          <ul class="event-rate">
-            <li>
-              <h5>Место в рейтинге</h5>
-            </li>
-            <li class="rate">
-              <div class="range">
-                <span class="at-20 fill"></span>
-                <span class="at-40 fill"></span>
-                <span class="at-60 fill"></span>
-                <span class="at-80 fill"></span>
-                <span class="at-100 fill"></span>
-              </div>
-              <strong>25</strong>
-            </li>
-            <li>Ваш голос</li>
-            <li class="likes">
-              <a href="javascript:void(0)" class="like" style="background-image: url('svg/like.svg');">14587</a>
-              <a href="javascript:void(0)" class="dislike" style="background-image: url('svg/dislike.svg');">14023</a>
-            </li>
-          </ul>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit!</p>
-        <a href="javascript:void(0)" class="back-link">Вернуться к списку мероприятий</a>
-      </article>
-    </div>
-  </div>
-  <div class="event-availability">
-    <div class="container">
-      <h4>Мероприятие досупно к продаже в:</h4>
-      <div class="shop">
-        <ul class="event-info">
-          <li class="event-title">
-            <h3>Evanescence</h3>
-          </li>
-          <li class="location" style="background-image: url('svg/position.svg');">Sentrum</li>
-          <li class="time" style="background-image: url('svg/time.svg');">23:00</li>
-          <li class="date" style="background-image: url('svg/calendar.svg');"><time datetime="">27 декабря 2017</time></li>
-        </ul>
-        <figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png" alt="" /></a></figure>
-      </div>
-      <div class="shop">
-        <ul class="event-info">
-          <li class="event-title">
-            <h3>Evanescence</h3>
-          </li>
-          <li class="location" style="background-image: url('svg/position.svg');">Sentrum</li>
-          <li class="time" style="background-image: url('svg/time.svg');">23:00</li>
-          <li class="date" style="background-image: url('svg/calendar.svg');"><time datetime="">27 декабря 2017</time></li>
-        </ul>
-        <figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png" alt="" /></a></figure>
-      </div>
-      <div class="shop">
-        <ul class="event-info">
-          <li class="event-title">
-            <h3>Evanescence</h3>
-          </li>
-          <li class="location" style="background-image: url('svg/position.svg');">Sentrum</li>
-          <li class="time" style="background-image: url('svg/time.svg');">23:00</li>
-          <li class="date" style="background-image: url('svg/calendar.svg');"><time datetime="">27 декабря 2017</time></li>
-        </ul>
-        <figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png" alt="" /></a></figure>
-      </div>
-      <div class="shop">
-        <ul class="event-info">
-          <li class="event-title">
-            <h3>Evanescence</h3>
-          </li>
-          <li class="location" style="background-image: url('svg/position.svg');">Sentrum</li>
-          <li class="time" style="background-image: url('svg/time.svg');">23:00</li>
-          <li class="date" style="background-image: url('svg/calendar.svg');"><time datetime="">27 декабря 2017</time></li>
-        </ul>
-        <figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png" alt="" /></a></figure>
-      </div>
-    </div>
-  </div>
-  <div class="reviews">
-    <div class="container">
-      <h4 class="filled-heading">Рецензии</h4>
-      <article>
-        <header>
-          <h5 class="user-name">Нестаченко Андрей</h5>
-          <h6 class="heading">Заголовок</h6>
-          <div class="likes">
-            <span>Полезный отзыв?</span>
-            <a href="javascript:void(0)" class="like" style="background-image: url('svg/like.svg');">14587</a>
-            <a href="javascript:void(0)" class="dislike" style="background-image: url('svg/dislike.svg');">14023</a>
-          </div>
-        </header>
-        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut commodi culpa, dicta dolores doloribus eius, et explicabo impedit in ipsum modi nemo nostrum odio placeat quae quasi quia rerum ut, voluptates. Aspernatur consectetur consequuntur cumque cupiditate deserunt earum, enim, eum illo maiores obcaecati odit quas reiciendis reprehenderit tempore voluptates?</div>
-        <div class="comment-form">
-          <form>
-            <p class="form-row"><textarea name="new-commet" id="" rows="5" placeholder="Ваш комментарий..."></textarea>
-            </p>
-            <div class="controls">
-              <button class="reset-comment" type="reset">Очистить поле</button>
-              <button class="send-comment">Отправить</button>
-            </div>
-          </form>
-        </div>
-        <footer class="controls">
-          <button class="expand-comment">Комментарии пользователей</button>
-          <button class="add-comment">Добавить комментарий</button>
-        </footer>
-      </article>
-    </div>
-  </div>
-  <div class="similar-events">
-    <div class="container">
-      <h4 class="filled-heading">Похожие мероприятия</h4>
-      <ul>
-        <li class="event-wrap">
-          <div class="circle" style="background-image: url('dist/images/event-1.jpg')">
-            <div class="description">
-              <p class="date">
-                <time datetime="2017-07-17T19:00">17/07/2017</time>
-                <strong class="beginning">19:00</strong>
-              </p>
-              <h3>Evanescence</h3>
-              <address>Киев, Plaza</address>
-              <p class="category">Готик-метал, Альтернативный рок</p>
-              <p class="price">Цена: <strong class="min-price">500</strong> - <strong class="max-price">5300</strong>грн.</p>
-              <a href="event.html" class="details">Details</a>
-            </div>
-          </div>
-        </li>
-        <li class="event-wrap">
-          <div class="circle" style="background-image: url('dist/images/event-1.jpg')">
-            <div class="description">
-              <p class="date">
-                <time datetime="2017-07-17T19:00">17/07/2017</time>
-                <strong class="beginning">19:00</strong>
-              </p>
-              <h3>Evanescence</h3>
-              <address>Киев, Plaza</address>
-              <p class="category">Готик-метал, Альтернативный рок</p>
-              <p class="price">Цена: <strong class="min-price">500</strong> - <strong class="max-price">5300</strong>грн.</p>
-              <a href="event.html" class="details">Details</a>
-            </div>
-          </div>
-        </li>
-        <li class="event-wrap">
-          <div class="circle" style="background-image: url('dist/images/event-1.jpg')">
-            <div class="description">
-              <p class="date">
-                <time datetime="2017-07-17T19:00">17/07/2017</time>
-                <strong class="beginning">19:00</strong>
-              </p>
-              <h3>Evanescence</h3>
-              <address>Киев, Plaza</address>
-              <p class="category">Готик-метал, Альтернативный рок</p>
-              <p class="price">Цена: <strong class="min-price">500</strong> - <strong class="max-price">5300</strong>грн.</p>
-              <a href="event.html" class="details">Details</a>
-            </div>
-          </div>
-        </li>
-        <li class="event-wrap">
-          <div class="circle" style="background-image: url('dist/images/event-1.jpg')">
-            <div class="description">
-              <p class="date">
-                <time datetime="2017-07-17T19:00">17/07/2017</time>
-                <strong class="beginning">19:00</strong>
-              </p>
-              <h3>Evanescence</h3>
-              <address>Киев, Plaza</address>
-              <p class="category">Готик-метал, Альтернативный рок</p>
-              <p class="price">Цена: <strong class="min-price">500</strong> - <strong class="max-price">5300</strong>грн.</p>
-              <a href="event.html" class="details">Details</a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+	<div class="container">
 
-  <footer class="footer_">
-  	<div class="container">
-  		<nav>
-  			<div class="nav-item">
-  				<h3>Театр</h3>
-  				<ul>
-  					<li><a href="javascript:void(0)">Балет</a></li>
-  					<li><a href="javascript:void(0)">Опера</a></li>
-  					<li><a href="javascript:void(0)">Трагедия</a></li>
-  					<li><a href="javascript:void(0)">Пантомима</a></li>
-  					<li><a href="javascript:void(0)">Комедия</a></li>
-  					<li><a href="javascript:void(0)">Биография</a></li>
-  					<li><a href="javascript:void(0)">Сказка</a></li>
-  				</ul>
-  			</div>
-  			<div class="nav-item">
-  				<h3>Концерты</h3>
-  				<ul>
-  					<li><a href="javascript:void(0)">Рок</a></li>
-  					<li><a href="javascript:void(0)">Поп</a></li>
-  					<li><a href="javascript:void(0)">Фанк</a></li>
-  					<li><a href="javascript:void(0)">Поп-рок</a></li>
-  					<li><a href="javascript:void(0)">Альтернативный рок</a></li>
-  					<li><a href="javascript:void(0)">Классика</a></li>
-  					<li><a href="javascript:void(0)">Синти-поп</a></li>
-  				</ul>
-  			</div>
-  			<div class="nav-item">
-  				<h3>Фестивали</h3>
-  				<ul>
-  					<li><a href="javascript:void(0)">Рок</a></li>
-  					<li><a href="javascript:void(0)">Дэнс</a></li>
-  					<li><a href="javascript:void(0)">Хардкор</a></li>
-  					<li><a href="javascript:void(0)">Джаз</a></li>
-  					<li><a href="javascript:void(0)">Фолк</a></li>
-  					<li><a href="javascript:void(0)">Фестиваль</a></li>
-  				</ul>
-  			</div>
-  			<div class="nav-item">
-  				<h3>Детям</h3>
-  				<ul>
-  					<li><a href="javascript:void(0)">Классика</a></li>
-  					<li><a href="javascript:void(0)">Музыкальный спектакль</a></li>
-  					<li><a href="javascript:void(0)">Экскурсия</a></li>
-  					<li><a href="javascript:void(0)">Большая перемена</a></li>
-  					<li><a href="javascript:void(0)">Мюзикл</a></li>
-  					<li><a href="javascript:void(0)">Балет</a></li>
-  					<li><a href="javascript:void(0)">Цирк</a></li>
-  				</ul>
-  			</div>
-  			<div class="nav-item">
-  				<h3>Спорт</h3>
-  				<ul>
-  					<li><a href="javascript:void(0)">Футбол</a></li>
-  					<li><a href="javascript:void(0)">Баскетбол</a></li>
-  					<li><a href="javascript:void(0)">Фигурное катание</a></li>
-  					<li><a href="javascript:void(0)">Хоккей</a></li>
-  					<li><a href="javascript:void(0)">Бокс</a></li>
-  					<li><a href="javascript:void(0)">Гонки</a></li>
-  					<li><a href="javascript:void(0)">Танцы</a></li>
-  				</ul>
-  			</div>
-  		</nav>
-  	</div>
-  	<div class="footer-bottom" style="background-image: url(dist/images/footer-bottom-bg.jpg)">
-  		<div class="container">
-  			<div class="row">
-  				<div class="col-xs-12 col-sm-6 col-lg-3">
-  					<div class="footer-nav">
-  						<h5>Hавигация</h5>
-  						<ul>
-  							<li><a href="javascript:void(0)">Главная</a></li>
-  							<li><a href="javascript:void(0)">Афиши</a></li>
-  							<li><a href="javascript:void(0)">Рецензии</a></li>
-  							<li><a href="javascript:void(0)">Рейтинги</a></li>
-  						</ul>
-  					</div>
-  				</div>
-  				<div class="col-xs-12 col-sm-6 col-lg-3">
-  					<div class="shop-nav">
-  						<h5>Интеренет магазинам</h5>
-  						<ul>
-  							<li><a href="javascript:void(0)">Публичная оферта</a></li>
-  							<li><a href="javascript:void(0)">О нас</a></li>
-  							<li><a href="javascript:void(0)">Подключить интернет-магазин</a></li>
-  							<li><a href="javascript:void(0)">Разместить рекламу</a></li>
-  						</ul>
-  					</div>
-  				</div>
-  				<div class="col-xs-12 col-sm-6 col-lg-3">
-  					<div class="footer-social social-links">
-  						<h5>Мы в социальных сетях</h5>
-  						<ul>
-  							<li>
-  
-  								<a href="javascript:void(0)" class="social-link twitter" style="background-image: url('svg/twitter.svg')">
-  								  <!--<svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.0" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">-->
-  								    <!--<path d="M31.993,6.077C30.816,6.6,29.552,6.953,28.223,7.11c1.355-0.812,2.396-2.098,2.887-3.63  c-1.269,0.751-2.673,1.299-4.168,1.592C25.744,3.797,24.038,3,22.149,3c-3.625,0-6.562,2.938-6.562,6.563  c0,0.514,0.057,1.016,0.169,1.496C10.301,10.785,5.465,8.172,2.227,4.201c-0.564,0.97-0.888,2.097-0.888,3.3  c0,2.278,1.159,4.286,2.919,5.464c-1.075-0.035-2.087-0.329-2.972-0.821c-0.001,0.027-0.001,0.056-0.001,0.082  c0,3.181,2.262,5.834,5.265,6.437c-0.55,0.149-1.13,0.23-1.729,0.23c-0.424,0-0.834-0.041-1.234-0.117  c0.834,2.606,3.259,4.504,6.13,4.558c-2.245,1.76-5.075,2.811-8.15,2.811c-0.53,0-1.053-0.031-1.566-0.092  C2.905,27.913,6.355,29,10.062,29c12.072,0,18.675-10.001,18.675-18.675c0-0.284-0.008-0.568-0.02-0.85  C30,8.55,31.112,7.395,31.993,6.077z" fill="#ffffff"/>-->
-  								  <!--</svg>-->
-  								</a>
-  
-  							</li>
-  							<li>
-  
-  								<a href="javascript:void(0)" class="social-link vk" style="background-image: url('svg/vk.svg');">
-  								  <!--<svg height="508px" version="1.1" viewBox="0 0 777 508" width="777px" xmlns="http://www.w3.org/2000/svg">-->
-  								    <!--<g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">-->
-  								      <!--<path d="M0.849684267,37.7112682 C-4.46720912,5.26682385 152.381103,25.3544974 152.381103,25.3544974 C152.381103,25.3544974 243.432877,254.010586 279.321897,254.010582 C315.210917,254.010578 297.931019,60.1164021 297.931019,60.1164021 C297.931019,60.1164021 253.402048,48.5291005 253.402049,30.7619048 C253.402051,12.994709 297.931019,0.634920635 297.931019,0.634920635 C297.931019,0.634920635 413.168963,0.634922188 428.859482,0.634920635 C444.55,0.634919061 450.794241,26.1269854 450.794257,43.1216931 C450.794272,60.1164008 450.794257,250.920635 450.794257,250.920635 L486.683277,250.920635 C486.683277,250.920635 518.630315,199.572804 543.837269,147.407407 C569.044225,95.2420119 599.664634,25.3544974 599.664634,25.3544974 L751.860664,25.3544974 C751.860664,25.3544974 779.774347,26.1209492 776.451289,49.2985698 C771.930545,80.8298057 670.67553,230.566247 649.510495,281.817088 C633.559819,320.441427 716.517779,372.719686 751.860664,428.589575 C774.798669,464.849881 776.451289,507.386243 776.451289,507.386243 L595.679561,507.386243 L505.289803,402.325025 C505.289803,402.325025 486.683277,394.603175 472.059228,405.414972 C457.43518,416.22677 456.773164,437.859416 456.773164,437.859416 L456.773164,507.386243 L315.210917,507.386243 C315.210917,507.386243 206.879245,470.306878 115.16286,308.084656 C23.4464649,145.862436 6.16657616,70.1557126 0.849684267,37.7112682 Z" fill="#ffffff" id="vkontakte"/>-->
-  								    <!--</g>-->
-  								  <!--</svg>-->
-  								</a>
-  
-  							</li>
-  							<li>
-  
-  								<a href="javascript:void(0)" class="social-link facebook" style="background-image: url('svg/facebook.svg');">
-  								  <!--<svg height="56.6934px" id="Layer_1" style="enable-background:new 0 0 56.6934 56.6934;" version="1.1" viewBox="0 0 56.6934 56.6934" width="56.6934px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">-->
-  								    <!--<g>-->
-  								      <!--<path fill="#ffffff" d="M19.6671,25.7867c-0.0075,1.7935,0,3.5869,0.0076,5.3803c3.0067,0.098,6.0208,0.0527,9.0275,0.098   c-1.3262,6.6689-10.3989,8.8315-15.199,4.4761C8.5674,31.9206,8.801,23.5412,13.9327,19.992   c3.5869-2.8635,8.6884-2.1552,12.2752,0.324c1.4092-1.3036,2.7278-2.6977,4.0013-4.1445   c-2.984-2.3812-6.6462-4.0767-10.5421-3.8958c-8.1307-0.2713-15.6059,6.8497-15.7415,14.9805   c-0.52,6.6462,3.8506,13.1644,10.0222,15.5155c6.1489,2.3661,14.031,0.7535,17.957-4.77c2.5922-3.4889,3.1498-7.98,2.8484-12.1999   C29.7194,25.7641,24.6933,25.7716,19.6671,25.7867z"/>-->
-  								      <!--<path fill="#ffffff"  d="M49.0704,25.7641c-0.0151-1.4996-0.0226-3.0067-0.0301-4.5062c-1.4996,0-2.9916,0-4.4836,0   c-0.0151,1.4996-0.0301,2.9991-0.0377,4.5062c-1.5071,0.0075-3.0067,0.0151-4.5062,0.0302c0,1.4995,0,2.9915,0,4.4836   c1.4995,0.0151,3.0066,0.0302,4.5062,0.0452c0.0151,1.4996,0.0151,2.9991,0.0302,4.4987c1.4996,0,2.9916,0,4.4911,0   c0.0075-1.4996,0.015-2.9991,0.0301-4.5062c1.5071-0.0151,3.0067-0.0226,4.5062-0.0377c0-1.4921,0-2.9916,0-4.4836   C52.0771,25.7792,50.57,25.7792,49.0704,25.7641z"/>-->
-  								    <!--</g>-->
-  								  <!--</svg>-->
-  								</a>
-  
-  							</li>
-  							<li>
-  
-  								<a href="javascript:void(0)" class="social-link google-plus" style="background-image: url('svg/google-plus.svg');">
-  								  <!--<svg height="56.6934px" id="Layer_1" style="enable-background:new 0 0 56.6934 56.6934;" version="1.1" viewBox="0 0 56.6934 56.6934" width="56.6934px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">-->
-  								    <!--<g>-->
-  								      <!--<path fill="#ffffff" d="M19.6671,25.7867c-0.0075,1.7935,0,3.5869,0.0076,5.3803c3.0067,0.098,6.0208,0.0527,9.0275,0.098   c-1.3262,6.6689-10.3989,8.8315-15.199,4.4761C8.5674,31.9206,8.801,23.5412,13.9327,19.992   c3.5869-2.8635,8.6884-2.1552,12.2752,0.324c1.4092-1.3036,2.7278-2.6977,4.0013-4.1445   c-2.984-2.3812-6.6462-4.0767-10.5421-3.8958c-8.1307-0.2713-15.6059,6.8497-15.7415,14.9805   c-0.52,6.6462,3.8506,13.1644,10.0222,15.5155c6.1489,2.3661,14.031,0.7535,17.957-4.77c2.5922-3.4889,3.1498-7.98,2.8484-12.1999   C29.7194,25.7641,24.6933,25.7716,19.6671,25.7867z"/>-->
-  								      <!--<path fill="#ffffff"  d="M49.0704,25.7641c-0.0151-1.4996-0.0226-3.0067-0.0301-4.5062c-1.4996,0-2.9916,0-4.4836,0   c-0.0151,1.4996-0.0301,2.9991-0.0377,4.5062c-1.5071,0.0075-3.0067,0.0151-4.5062,0.0302c0,1.4995,0,2.9915,0,4.4836   c1.4995,0.0151,3.0066,0.0302,4.5062,0.0452c0.0151,1.4996,0.0151,2.9991,0.0302,4.4987c1.4996,0,2.9916,0,4.4911,0   c0.0075-1.4996,0.015-2.9991,0.0301-4.5062c1.5071-0.0151,3.0067-0.0226,4.5062-0.0377c0-1.4921,0-2.9916,0-4.4836   C52.0771,25.7792,50.57,25.7792,49.0704,25.7641z"/>-->
-  								    <!--</g>-->
-  								  <!--</svg>-->
-  								</a>
-  
-  							</li>
-  						</ul>
-  					</div>
-  				</div>
-  				<div class="col-xs-12 col-sm-6 col-lg-3">
-  					<strong class="logo" style="background-image: url('dist/images/logo.png');"><a href="index.html">EentArea</a></strong>
-  				</div>
-  			</div>
-  		</div>
-  	</div>
-  </footer>
+		<div class="event-search">
+			<form>
+				<div class="form-row city" style="background-image: url('svg/earth.svg');">
+					<select name="city" id="city">
+						<option value="city-1">City-1</option>
+						<option value="city-2">City-2</option>
+						<option value="city-3">City-3</option>
+						<option value="city-4">City-4</option>
+						<option value="city-5">City-5</option>
+						<option value="city-6">City-6</option>
+						<option value="city-7">City-7</option>
+						<option value="city-8">City-8</option>
+						<option value="city-9">City-9</option>
+						<option value="city-10">City-10</option>
+					</select>
+				</div>
+				<div class="form-row rubric" style="background-image: url('svg/kubi.svg');">
+					<select name="rubric" id="rubric">
+						<option value="rubric-1">Rubric-1</option>
+						<option value="rubric-2">Rubric-2</option>
+						<option value="rubric-3">Rubric-3</option>
+						<option value="rubric-4">Rubric-4</option>
+						<option value="rubric-5">Rubric-5</option>
+						<option value="rubric-6">Rubric-6</option>
+						<option value="rubric-7">Rubric-7</option>
+						<option value="rubric-8">Rubric-8</option>
+						<option value="rubric-9">Rubric-9</option>
+						<option value="rubric-10">Rubric-10</option>
+					</select>
+				</div>
+				<div class="form-row search-wrap">
+					<input type="search" name="search" placeholder="Поиск по событиям">
+					<input type="submit" value="search" style="background-image: url('svg/search.svg');">
+				</div>
+				<p class="form-row">
+					<input type="radio" id="new" name="kind-of-event" checked>
+					<label style="background-image: url('svg/new.svg');" for="new">Новые</label>
+				</p>
+				<p class="form-row">
+					<input type="radio" id="most-popular" name="kind-of-event">
+					<label style="background-image: url('svg/comsing.svg');" for="most-popular">Самые обсуждаемые</label>
+				</p>
+			</form>
+		</div>
+
+		<div class="event-description">
+			<article>
+				<figure class="circle" style="background-image: url('dist/images/event-1.jpg')"></figure>
+				<div class="info-block">
+					<ul class="event-info">
+						<li class="event-title">
+							<h3>Evanescence</h3>
+						</li>
+						<li class="location" style="background-image: url('svg/position.svg');">Sentrum</li>
+						<li class="time" style="background-image: url('svg/time.svg');">23:00</li>
+						<li class="date" style="background-image: url('svg/calendar.svg');">
+							<time datetime="">27 декабря 2017</time>
+						</li>
+					</ul>
+					<ul class="event-rate">
+						<li>
+							<h5>Место в рейтинге</h5>
+						</li>
+						<li class="rate">
+							<div class="range">
+								<span class="at-20 fill"></span>
+								<span class="at-40 fill"></span>
+								<span class="at-60 fill"></span>
+								<span class="at-80 fill"></span>
+								<span class="at-100 fill"></span>
+							</div>
+							<strong>25</strong>
+						</li>
+						<li>Ваш голос</li>
+						<li class="likes">
+							<a href="javascript:void(0)" class="like" style="background-image: url('svg/like.svg');">14587</a>
+							<a href="javascript:void(0)" class="dislike" style="background-image: url('svg/dislike.svg');">14023</a>
+						</li>
+					</ul>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit!</p>
+				<a href="javascript:void(0)" class="back-link">Вернуться к списку мероприятий</a>
+			</article>
+		</div>
+		<div class="event-availability">
+			<h4>Мероприятие досупно к продаже в:</h4>
+			<div class="shop">
+				<ul class="event-info">
+					<li class="event-title">
+						<h3>Evanescence</h3>
+					</li>
+					<li class="location" style="background-image: url('svg/position.svg');">Sentrum</li>
+					<li class="time" style="background-image: url('svg/time.svg');">23:00</li>
+					<li class="date" style="background-image: url('svg/calendar.svg');">
+						<time datetime="">27 декабря 2017</time>
+					</li>
+				</ul>
+				<figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png" alt=""/></a>
+				</figure>
+			</div>
+			<div class="shop">
+				<ul class="event-info">
+					<li class="event-title">
+						<h3>Evanescence</h3>
+					</li>
+					<li class="location" style="background-image: url('svg/position.svg');">Sentrum</li>
+					<li class="time" style="background-image: url('svg/time.svg');">23:00</li>
+					<li class="date" style="background-image: url('svg/calendar.svg');">
+						<time datetime="">27 декабря 2017</time>
+					</li>
+				</ul>
+				<figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png" alt=""/></a>
+				</figure>
+			</div>
+			<div class="shop">
+				<ul class="event-info">
+					<li class="event-title">
+						<h3>Evanescence</h3>
+					</li>
+					<li class="location" style="background-image: url('svg/position.svg');">Sentrum</li>
+					<li class="time" style="background-image: url('svg/time.svg');">23:00</li>
+					<li class="date" style="background-image: url('svg/calendar.svg');">
+						<time datetime="">27 декабря 2017</time>
+					</li>
+				</ul>
+				<figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png" alt=""/></a>
+				</figure>
+			</div>
+			<div class="shop">
+				<ul class="event-info">
+					<li class="event-title">
+						<h3>Evanescence</h3>
+					</li>
+					<li class="location" style="background-image: url('svg/position.svg');">Sentrum</li>
+					<li class="time" style="background-image: url('svg/time.svg');">23:00</li>
+					<li class="date" style="background-image: url('svg/calendar.svg');">
+						<time datetime="">27 декабря 2017</time>
+					</li>
+				</ul>
+				<figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png" alt=""/></a>
+				</figure>
+			</div>
+		</div>
+		<div class="reviews">
+			<h4 class="filled-heading">Рецензии</h4>
+			<article>
+				<header>
+					<h5 class="user-name">Нестаченко Андрей</h5>
+					<h6 class="heading">Заголовок</h6>
+					<div class="likes">
+						<span>Полезный отзыв?</span>
+						<a href="javascript:void(0)" class="like" style="background-image: url('svg/like.svg');">14587</a>
+						<a href="javascript:void(0)" class="dislike" style="background-image: url('svg/dislike.svg');">14023</a>
+					</div>
+				</header>
+				<div
+						class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut commodi culpa, dicta dolores doloribus eius, et explicabo impedit in ipsum modi nemo nostrum odio placeat quae quasi quia rerum ut, voluptates. Aspernatur consectetur consequuntur cumque cupiditate deserunt earum, enim, eum illo maiores obcaecati odit quas reiciendis reprehenderit tempore voluptates?
+				</div>
+				<div class="comment-form">
+					<form>
+						<p class="form-row"><textarea name="new-commet" id="" rows="5" placeholder="Ваш комментарий..."></textarea>
+						</p>
+						<div class="controls">
+							<div class="buttons">
+								<button class="reset-comment" type="reset">Очистить поле</button>
+								<button class="send-comment">Отправить</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<footer class="controls">
+					<div class="buttons">
+						<button class="expand-comment">Комментарии пользователей</button>
+						<button class="add-comment">Добавить комментарий</button>
+					</div>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<h5 class="user-name">Нестаченко Андрей</h5>
+					<h6 class="heading">Заголовок</h6>
+					<div class="likes">
+						<span>Полезный отзыв?</span>
+						<a href="javascript:void(0)" class="like" style="background-image: url('svg/like.svg');">14587</a>
+						<a href="javascript:void(0)" class="dislike" style="background-image: url('svg/dislike.svg');">14023</a>
+					</div>
+				</header>
+				<div
+						class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut commodi culpa, dicta dolores doloribus eius, et explicabo impedit in ipsum modi nemo nostrum odio placeat quae quasi quia rerum ut, voluptates. Aspernatur consectetur consequuntur cumque cupiditate deserunt earum, enim, eum illo maiores obcaecati odit quas reiciendis reprehenderit tempore voluptates?
+				</div>
+				<div class="comment-form">
+					<form>
+						<p class="form-row"><textarea name="new-commet" rows="5" placeholder="Ваш комментарий..."></textarea>
+						</p>
+						<div class="controls">
+							<div class="buttons">
+								<button class="reset-comment" type="reset">Очистить поле</button>
+								<button class="send-comment">Отправить</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<footer class="controls">
+					<div class="buttons">
+						<button class="expand-comment">Комментарии пользователей</button>
+						<button class="add-comment">Добавить комментарий</button>
+					</div>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<h5 class="user-name">Нестаченко Андрей</h5>
+					<h6 class="heading">Заголовок</h6>
+					<div class="likes">
+						<span>Полезный отзыв?</span>
+						<a href="javascript:void(0)" class="like" style="background-image: url('svg/like.svg');">14587</a>
+						<a href="javascript:void(0)" class="dislike" style="background-image: url('svg/dislike.svg');">14023</a>
+					</div>
+				</header>
+				<div
+						class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut commodi culpa, dicta dolores doloribus eius, et explicabo impedit in ipsum modi nemo nostrum odio placeat quae quasi quia rerum ut, voluptates. Aspernatur consectetur consequuntur cumque cupiditate deserunt earum, enim, eum illo maiores obcaecati odit quas reiciendis reprehenderit tempore voluptates?
+				</div>
+				<div class="comment-form">
+					<form>
+						<p class="form-row"><textarea name="new-commet" rows="5" placeholder="Ваш комментарий..."></textarea>
+						</p>
+						<div class="controls">
+							<div class="buttons">
+								<button class="reset-comment" type="reset">Очистить поле</button>
+								<button class="send-comment">Отправить</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<footer class="controls">
+					<div class="buttons">
+						<button class="expand-comment">Комментарии пользователей</button>
+						<button class="add-comment">Добавить комментарий</button>
+					</div>
+				</footer>
+			</article>
+		</div>
+		<div class="similar-events">
+			<h4 class="filled-heading">Похожие мероприятия</h4>
+			<ul>
+				<li class="event-wrap">
+					<div class="circle" style="background-image: url('dist/images/event-1.jpg')">
+						<div class="description">
+							<p class="date">
+								<time datetime="2017-07-17T19:00">17/07/2017</time>
+								<strong class="beginning">19:00</strong>
+							</p>
+							<h3>Evanescence</h3>
+							<address>Киев, Plaza</address>
+							<p class="category">Готик-метал, Альтернативный рок</p>
+							<p class="price">Цена: <strong class="min-price">500</strong> - <strong class="max-price">5300</strong>грн.
+							</p>
+							<a href="event.html" class="details">Details</a>
+						</div>
+					</div>
+				</li>
+				<li class="event-wrap">
+					<div class="circle" style="background-image: url('dist/images/event-1.jpg')">
+						<div class="description">
+							<p class="date">
+								<time datetime="2017-07-17T19:00">17/07/2017</time>
+								<strong class="beginning">19:00</strong>
+							</p>
+							<h3>Evanescence</h3>
+							<address>Киев, Plaza</address>
+							<p class="category">Готик-метал, Альтернативный рок</p>
+							<p class="price">Цена: <strong class="min-price">500</strong> - <strong class="max-price">5300</strong>грн.
+							</p>
+							<a href="event.html" class="details">Details</a>
+						</div>
+					</div>
+				</li>
+				<li class="event-wrap">
+					<div class="circle" style="background-image: url('dist/images/event-1.jpg')">
+						<div class="description">
+							<p class="date">
+								<time datetime="2017-07-17T19:00">17/07/2017</time>
+								<strong class="beginning">19:00</strong>
+							</p>
+							<h3>Evanescence</h3>
+							<address>Киев, Plaza</address>
+							<p class="category">Готик-метал, Альтернативный рок</p>
+							<p class="price">Цена: <strong class="min-price">500</strong> - <strong class="max-price">5300</strong>грн.
+							</p>
+							<a href="event.html" class="details">Details</a>
+						</div>
+					</div>
+				</li>
+				<li class="event-wrap">
+					<div class="circle" style="background-image: url('dist/images/event-1.jpg')">
+						<div class="description">
+							<p class="date">
+								<time datetime="2017-07-17T19:00">17/07/2017</time>
+								<strong class="beginning">19:00</strong>
+							</p>
+							<h3>Evanescence</h3>
+							<address>Киев, Plaza</address>
+							<p class="category">Готик-метал, Альтернативный рок</p>
+							<p class="price">Цена: <strong class="min-price">500</strong> - <strong class="max-price">5300</strong>грн.
+							</p>
+							<a href="event.html" class="details">Details</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<footer class="footer_">
+		<div class="container">
+			<nav class="footer-nav">
+				<div class="nav-item">
+					<h3>Театр</h3>
+					<ul>
+						<li><a href="javascript:void(0)">Балет</a></li>
+						<li><a href="javascript:void(0)">Опера</a></li>
+						<li><a href="javascript:void(0)">Трагедия</a></li>
+						<li><a href="javascript:void(0)">Пантомима</a></li>
+						<li><a href="javascript:void(0)">Комедия</a></li>
+						<li><a href="javascript:void(0)">Биография</a></li>
+						<li><a href="javascript:void(0)">Сказка</a></li>
+					</ul>
+				</div>
+				<div class="nav-item">
+					<h3>Концерты</h3>
+					<ul>
+						<li><a href="javascript:void(0)">Рок</a></li>
+						<li><a href="javascript:void(0)">Поп</a></li>
+						<li><a href="javascript:void(0)">Фанк</a></li>
+						<li><a href="javascript:void(0)">Поп-рок</a></li>
+						<li><a href="javascript:void(0)">Альтернативный рок</a></li>
+						<li><a href="javascript:void(0)">Классика</a></li>
+						<li><a href="javascript:void(0)">Синти-поп</a></li>
+					</ul>
+				</div>
+				<div class="nav-item">
+					<h3>Фестивали</h3>
+					<ul>
+						<li><a href="javascript:void(0)">Рок</a></li>
+						<li><a href="javascript:void(0)">Дэнс</a></li>
+						<li><a href="javascript:void(0)">Хардкор</a></li>
+						<li><a href="javascript:void(0)">Джаз</a></li>
+						<li><a href="javascript:void(0)">Фолк</a></li>
+						<li><a href="javascript:void(0)">Фестиваль</a></li>
+					</ul>
+				</div>
+				<div class="nav-item">
+					<h3>Детям</h3>
+					<ul>
+						<li><a href="javascript:void(0)">Классика</a></li>
+						<li><a href="javascript:void(0)">Музыкальный спектакль</a></li>
+						<li><a href="javascript:void(0)">Экскурсия</a></li>
+						<li><a href="javascript:void(0)">Большая перемена</a></li>
+						<li><a href="javascript:void(0)">Мюзикл</a></li>
+						<li><a href="javascript:void(0)">Балет</a></li>
+						<li><a href="javascript:void(0)">Цирк</a></li>
+					</ul>
+				</div>
+				<div class="nav-item">
+					<h3>Спорт</h3>
+					<ul>
+						<li><a href="javascript:void(0)">Футбол</a></li>
+						<li><a href="javascript:void(0)">Баскетбол</a></li>
+						<li><a href="javascript:void(0)">Фигурное катание</a></li>
+						<li><a href="javascript:void(0)">Хоккей</a></li>
+						<li><a href="javascript:void(0)">Бокс</a></li>
+						<li><a href="javascript:void(0)">Гонки</a></li>
+						<li><a href="javascript:void(0)">Танцы</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="footer-bottom" style="background-image: url(dist/images/footer-bottom-bg.jpg)">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-lg-3">
+						<div class="footer-bottom-nav">
+							<h5>Hавигация</h5>
+							<ul>
+								<li><a href="javascript:void(0)">Главная</a></li>
+								<li><a href="javascript:void(0)">Афиши</a></li>
+								<li><a href="javascript:void(0)">Рецензии</a></li>
+								<li><a href="javascript:void(0)">Рейтинги</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-lg-3">
+						<div class="shop-nav">
+							<h5>Интеренет магазинам</h5>
+							<ul>
+								<li><a href="javascript:void(0)">Публичная оферта</a></li>
+								<li><a href="javascript:void(0)">О нас</a></li>
+								<li><a href="javascript:void(0)">Подключить интернет-магазин</a></li>
+								<li><a href="javascript:void(0)">Разместить рекламу</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-lg-3">
+						<div class="footer-social social-links">
+							<h5>Мы в социальных сетях</h5>
+							<ul>
+								<li>
+	
+									<a href="javascript:void(0)" class="social-link twitter" style="background-image: url('svg/twitter.svg')">
+									  <!--<svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.0" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">-->
+									    <!--<path d="M31.993,6.077C30.816,6.6,29.552,6.953,28.223,7.11c1.355-0.812,2.396-2.098,2.887-3.63  c-1.269,0.751-2.673,1.299-4.168,1.592C25.744,3.797,24.038,3,22.149,3c-3.625,0-6.562,2.938-6.562,6.563  c0,0.514,0.057,1.016,0.169,1.496C10.301,10.785,5.465,8.172,2.227,4.201c-0.564,0.97-0.888,2.097-0.888,3.3  c0,2.278,1.159,4.286,2.919,5.464c-1.075-0.035-2.087-0.329-2.972-0.821c-0.001,0.027-0.001,0.056-0.001,0.082  c0,3.181,2.262,5.834,5.265,6.437c-0.55,0.149-1.13,0.23-1.729,0.23c-0.424,0-0.834-0.041-1.234-0.117  c0.834,2.606,3.259,4.504,6.13,4.558c-2.245,1.76-5.075,2.811-8.15,2.811c-0.53,0-1.053-0.031-1.566-0.092  C2.905,27.913,6.355,29,10.062,29c12.072,0,18.675-10.001,18.675-18.675c0-0.284-0.008-0.568-0.02-0.85  C30,8.55,31.112,7.395,31.993,6.077z" fill="#ffffff"/>-->
+									  <!--</svg>-->
+									</a>
+	
+								</li>
+								<li>
+	
+									<a href="javascript:void(0)" class="social-link vk" style="background-image: url('svg/vk.svg');">
+									  <!--<svg height="508px" version="1.1" viewBox="0 0 777 508" width="777px" xmlns="http://www.w3.org/2000/svg">-->
+									    <!--<g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">-->
+									      <!--<path d="M0.849684267,37.7112682 C-4.46720912,5.26682385 152.381103,25.3544974 152.381103,25.3544974 C152.381103,25.3544974 243.432877,254.010586 279.321897,254.010582 C315.210917,254.010578 297.931019,60.1164021 297.931019,60.1164021 C297.931019,60.1164021 253.402048,48.5291005 253.402049,30.7619048 C253.402051,12.994709 297.931019,0.634920635 297.931019,0.634920635 C297.931019,0.634920635 413.168963,0.634922188 428.859482,0.634920635 C444.55,0.634919061 450.794241,26.1269854 450.794257,43.1216931 C450.794272,60.1164008 450.794257,250.920635 450.794257,250.920635 L486.683277,250.920635 C486.683277,250.920635 518.630315,199.572804 543.837269,147.407407 C569.044225,95.2420119 599.664634,25.3544974 599.664634,25.3544974 L751.860664,25.3544974 C751.860664,25.3544974 779.774347,26.1209492 776.451289,49.2985698 C771.930545,80.8298057 670.67553,230.566247 649.510495,281.817088 C633.559819,320.441427 716.517779,372.719686 751.860664,428.589575 C774.798669,464.849881 776.451289,507.386243 776.451289,507.386243 L595.679561,507.386243 L505.289803,402.325025 C505.289803,402.325025 486.683277,394.603175 472.059228,405.414972 C457.43518,416.22677 456.773164,437.859416 456.773164,437.859416 L456.773164,507.386243 L315.210917,507.386243 C315.210917,507.386243 206.879245,470.306878 115.16286,308.084656 C23.4464649,145.862436 6.16657616,70.1557126 0.849684267,37.7112682 Z" fill="#ffffff" id="vkontakte"/>-->
+									    <!--</g>-->
+									  <!--</svg>-->
+									</a>
+	
+								</li>
+								<li>
+	
+									<a href="javascript:void(0)" class="social-link facebook" style="background-image: url('svg/facebook.svg');">
+									  <!--<svg height="56.6934px" id="Layer_1" style="enable-background:new 0 0 56.6934 56.6934;" version="1.1" viewBox="0 0 56.6934 56.6934" width="56.6934px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">-->
+									    <!--<g>-->
+									      <!--<path fill="#ffffff" d="M19.6671,25.7867c-0.0075,1.7935,0,3.5869,0.0076,5.3803c3.0067,0.098,6.0208,0.0527,9.0275,0.098   c-1.3262,6.6689-10.3989,8.8315-15.199,4.4761C8.5674,31.9206,8.801,23.5412,13.9327,19.992   c3.5869-2.8635,8.6884-2.1552,12.2752,0.324c1.4092-1.3036,2.7278-2.6977,4.0013-4.1445   c-2.984-2.3812-6.6462-4.0767-10.5421-3.8958c-8.1307-0.2713-15.6059,6.8497-15.7415,14.9805   c-0.52,6.6462,3.8506,13.1644,10.0222,15.5155c6.1489,2.3661,14.031,0.7535,17.957-4.77c2.5922-3.4889,3.1498-7.98,2.8484-12.1999   C29.7194,25.7641,24.6933,25.7716,19.6671,25.7867z"/>-->
+									      <!--<path fill="#ffffff"  d="M49.0704,25.7641c-0.0151-1.4996-0.0226-3.0067-0.0301-4.5062c-1.4996,0-2.9916,0-4.4836,0   c-0.0151,1.4996-0.0301,2.9991-0.0377,4.5062c-1.5071,0.0075-3.0067,0.0151-4.5062,0.0302c0,1.4995,0,2.9915,0,4.4836   c1.4995,0.0151,3.0066,0.0302,4.5062,0.0452c0.0151,1.4996,0.0151,2.9991,0.0302,4.4987c1.4996,0,2.9916,0,4.4911,0   c0.0075-1.4996,0.015-2.9991,0.0301-4.5062c1.5071-0.0151,3.0067-0.0226,4.5062-0.0377c0-1.4921,0-2.9916,0-4.4836   C52.0771,25.7792,50.57,25.7792,49.0704,25.7641z"/>-->
+									    <!--</g>-->
+									  <!--</svg>-->
+									</a>
+	
+								</li>
+								<li>
+	
+									<a href="javascript:void(0)" class="social-link google-plus" style="background-image: url('svg/google-plus.svg');">
+									  <!--<svg height="56.6934px" id="Layer_1" style="enable-background:new 0 0 56.6934 56.6934;" version="1.1" viewBox="0 0 56.6934 56.6934" width="56.6934px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">-->
+									    <!--<g>-->
+									      <!--<path fill="#ffffff" d="M19.6671,25.7867c-0.0075,1.7935,0,3.5869,0.0076,5.3803c3.0067,0.098,6.0208,0.0527,9.0275,0.098   c-1.3262,6.6689-10.3989,8.8315-15.199,4.4761C8.5674,31.9206,8.801,23.5412,13.9327,19.992   c3.5869-2.8635,8.6884-2.1552,12.2752,0.324c1.4092-1.3036,2.7278-2.6977,4.0013-4.1445   c-2.984-2.3812-6.6462-4.0767-10.5421-3.8958c-8.1307-0.2713-15.6059,6.8497-15.7415,14.9805   c-0.52,6.6462,3.8506,13.1644,10.0222,15.5155c6.1489,2.3661,14.031,0.7535,17.957-4.77c2.5922-3.4889,3.1498-7.98,2.8484-12.1999   C29.7194,25.7641,24.6933,25.7716,19.6671,25.7867z"/>-->
+									      <!--<path fill="#ffffff"  d="M49.0704,25.7641c-0.0151-1.4996-0.0226-3.0067-0.0301-4.5062c-1.4996,0-2.9916,0-4.4836,0   c-0.0151,1.4996-0.0301,2.9991-0.0377,4.5062c-1.5071,0.0075-3.0067,0.0151-4.5062,0.0302c0,1.4995,0,2.9915,0,4.4836   c1.4995,0.0151,3.0066,0.0302,4.5062,0.0452c0.0151,1.4996,0.0151,2.9991,0.0302,4.4987c1.4996,0,2.9916,0,4.4911,0   c0.0075-1.4996,0.015-2.9991,0.0301-4.5062c1.5071-0.0151,3.0067-0.0226,4.5062-0.0377c0-1.4921,0-2.9916,0-4.4836   C52.0771,25.7792,50.57,25.7792,49.0704,25.7641z"/>-->
+									    <!--</g>-->
+									  <!--</svg>-->
+									</a>
+	
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-lg-3">
+						<strong class="logo" style="background-image: url('dist/images/logo.png');"><a href="index.html">EentArea</a></strong>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 
 </main><!-- WRAPPER END -->

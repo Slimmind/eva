@@ -10043,12 +10043,12 @@ body > .jcf-select-drop.jcf-drop-flipped
     background-color: rgba(153, 76, 207, .7);
 }
 
-.footer_ nav
+.footer_ .footer-nav
 {
-    margin-bottom: 20px;
+    padding: 25px 0 15px;
 }
 
-.footer_ nav a
+.footer_ .footer-nav a
 {
     font: 12px/18px 'open_sanssemibold', sans-serif;
 
@@ -10061,7 +10061,7 @@ body > .jcf-select-drop.jcf-drop-flipped
     color: #fff;
 }
 
-.footer_ nav a:after
+.footer_ .footer-nav a:after
 {
     position: absolute;
     bottom: 0;
@@ -10119,12 +10119,12 @@ body > .jcf-select-drop.jcf-drop-flipped
 
 .footer_ .footer-bottom
 {
-    padding-bottom: 20px;
+    padding: 20px 0;
 
     color: #994ccf;
 }
 
-.footer_ .footer-nav a,
+.footer_ .footer-bottom-nav a,
 .footer_ .shop-nav a
 {
     font: 12px/16px 'open_sanslight', sans-serif;
@@ -10136,12 +10136,12 @@ body > .jcf-select-drop.jcf-drop-flipped
     color: #994ccf;
 }
 
-.no-dev .footer_ nav a
+.no-dev .footer_ .footer-nav a
 {
     font-size: 16px;
 }
 
-.no-dev .footer_ nav a:hover:after
+.no-dev .footer_ .footer-nav a:hover:after
 {
     width: 100%;
 }

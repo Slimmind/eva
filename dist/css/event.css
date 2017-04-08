@@ -10043,12 +10043,12 @@ body > .jcf-select-drop.jcf-drop-flipped
     background-color: rgba(153, 76, 207, .7);
 }
 
-.footer_ nav
+.footer_ .footer-nav
 {
-    margin-bottom: 20px;
+    padding: 25px 0 15px;
 }
 
-.footer_ nav a
+.footer_ .footer-nav a
 {
     font: 12px/18px 'open_sanssemibold', sans-serif;
 
@@ -10061,7 +10061,7 @@ body > .jcf-select-drop.jcf-drop-flipped
     color: #fff;
 }
 
-.footer_ nav a:after
+.footer_ .footer-nav a:after
 {
     position: absolute;
     bottom: 0;
@@ -10119,12 +10119,12 @@ body > .jcf-select-drop.jcf-drop-flipped
 
 .footer_ .footer-bottom
 {
-    padding-bottom: 20px;
+    padding: 20px 0;
 
     color: #994ccf;
 }
 
-.footer_ .footer-nav a,
+.footer_ .footer-bottom-nav a,
 .footer_ .shop-nav a
 {
     font: 12px/16px 'open_sanslight', sans-serif;
@@ -10136,12 +10136,12 @@ body > .jcf-select-drop.jcf-drop-flipped
     color: #994ccf;
 }
 
-.no-dev .footer_ nav a
+.no-dev .footer_ .footer-nav a
 {
     font-size: 16px;
 }
 
-.no-dev .footer_ nav a:hover:after
+.no-dev .footer_ .footer-nav a:hover:after
 {
     width: 100%;
 }
@@ -10524,9 +10524,13 @@ main:before
 
 .event-description
 {
+    font-family: 'open_sanssemibold', sans-serif;
+
     overflow: hidden;
 
     margin-bottom: 30px;
+
+    color: #2c2034;
 }
 
 .event-description figure
@@ -10548,6 +10552,7 @@ main:before
     text-align: center;
 
     color: #fff;
+    border: 2px solid #994ccf;
     border-radius: 5px;
     background-color: #994ccf;
 }
@@ -10571,16 +10576,16 @@ main:before
     background-size: 20px auto;
 }
 
+.event-info
+{
+    font-family: 'open_sanslight', sans-serif;
+}
+
 .event-rate h5
 {
     line-height: 28px;
 
     margin-bottom: 8px;
-}
-
-.rate
-{
-    color: #994ccf;
 }
 
 .rate strong
@@ -10604,13 +10609,13 @@ main:before
 
     vertical-align: bottom;
 
-    border: 1px solid #994ccf;
+    border: 1px solid #2c2034;
     border-radius: 6px;
 }
 
 .range span.fill
 {
-    background-color: #994ccf;
+    background-color: #2c2034;
 }
 
 .range span.at-40
@@ -10672,6 +10677,7 @@ main:before
 
     text-align: center;
 
+    color: #2c2034;
     border: solid rgba(0, 0, 0, .2);
     border-width: 2px 0;
     background-color: rgba(44, 32, 52, .3);
@@ -10716,7 +10722,7 @@ main:before
 
 .filled-heading
 {
-    margin-bottom: 10px;
+    margin: 0 0 5px;
     padding: 10px 15px 8px;
 
     text-transform: uppercase;
@@ -10732,9 +10738,9 @@ main:before
     margin-bottom: 20px;
 }
 
-.reviews h4
+.reviews article
 {
-    margin: 0 0 5px;
+    margin-bottom: 5px;
 }
 
 .reviews .likes
@@ -10793,6 +10799,11 @@ main:before
     padding: 0 5px;
 }
 
+.reviews .controls .buttons
+{
+    overflow: hidden;
+}
+
 .reviews footer
 {
     border-top: 2px solid #994ccf;
@@ -10804,7 +10815,7 @@ main:before
     background-color: #994ccf;
 }
 
-.reviews footer .add-comment
+.reviews footer button.add-comment
 {
     padding-left: 45px;
 
@@ -10853,11 +10864,33 @@ main:before
     background-color: rgba(127, 0, 0, .5);
 }
 
+.similar-events .filled-heading
+{
+    margin-bottom: 0;
+}
+
 .similar-events ul
 {
-    padding: 30px 0;
+    padding-top: 40px;
 
     background-color: rgba(44, 32, 52, .1);
+}
+
+.no-dev .wrapper
+{
+    padding-top: 150px;
+}
+
+.no-dev .back-link
+{
+    transition: .3s ease;
+    transition-property: color, background-color;
+}
+
+.no-dev .back-link:hover
+{
+    color: #994ccf;
+    background-color: #fff;
 }
 
 .no-dev .shop-logo a
@@ -11779,6 +11812,50 @@ main:before
     .shop-logo
     {
         float: right;
+    }
+
+    .reviews .controls .buttons
+    {
+        float: right;
+
+        width: 420px;
+    }
+
+    .reviews .controls button
+    {
+        padding: 10px;
+    }
+
+    .reviews .controls .add-comment
+    {
+        width: calc(50% - 3px);
+        margin-left: 2px;
+
+        border-left: 2px solid #994ccf;
+    }
+
+    .similar-events ul
+    {
+        display: -ms-flexbox;
+        display: flex;
+            flex-direction: row;
+
+        -ms-flex-direction: row;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+
+    .similar-events li
+    {
+        padding: 0 20px;
+    }
+
+    .similar-events .circle
+    {
+        width: 240px;
+        height: 240px;
     }
 }
 
