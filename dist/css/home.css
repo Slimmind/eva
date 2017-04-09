@@ -1,4 +1,4 @@
-@charset 'UTF-8';/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css *//**
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css *//**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Correct the line height in all browsers.
  * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
@@ -10690,206 +10690,6 @@ main:before
 .slick-dots button
 {
     text-indent: -9999px;
-}/* Slider */.slick-loading .slick-list
-{
-    background: #fff url('./ajax-loader.gif') center center no-repeat;
-}/* Icons *//* Arrows */.slick-prev,
-.slick-next
-{
-    font-size: 0;
-    line-height: 0;
-
-    position: absolute;
-    top: 50%;
-
-    display: block;
-
-    width: 20px;
-    height: 20px;
-    padding: 0;
-
-    cursor: pointer;
-    transform: translate(0, -50%);
-
-    color: transparent;
-    border: none;
-    outline: none;
-    background: transparent;
-}
-
-.slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus
-{
-    color: transparent;
-    outline: none;
-    background: transparent;
-}
-
-.slick-prev:hover:before,
-.slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before
-{
-    opacity: 1;
-}
-
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before
-{
-    opacity: .25;
-}
-
-.slick-prev:before,
-.slick-next:before
-{
-    font-family: 'slick';
-    font-size: 20px;
-    line-height: 1;
-
-    opacity: .75;
-    color: white;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev
-{
-    left: -25px;
-}
-
-[dir='rtl'] .slick-prev
-{
-    right: -25px;
-    left: auto;
-}
-
-.slick-prev:before
-{
-    content: '←';
-}
-
-[dir='rtl'] .slick-prev:before
-{
-    content: '→';
-}
-
-.slick-next
-{
-    right: -25px;
-}
-
-[dir='rtl'] .slick-next
-{
-    right: auto;
-    left: -25px;
-}
-
-.slick-next:before
-{
-    content: '→';
-}
-
-[dir='rtl'] .slick-next:before
-{
-    content: '←';
-}/* Dots */.slick-dotted.slick-slider
-{
-    margin-bottom: 30px;
-}
-
-.slick-dots
-{
-    position: absolute;
-    bottom: 20px;
-
-    display: block;
-
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-
-    text-align: center;
-
-    background-color: transparent;
-}
-
-.slick-dots li
-{
-    position: relative;
-
-    display: inline-block;
-
-    width: 20px;
-    height: 20px;
-    margin: 0 5px 5px;
-    padding: 0;
-
-    cursor: pointer;
-}
-
-.slick-dots li button
-{
-    font-size: 0;
-    line-height: 0;
-
-    display: block;
-
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-
-    cursor: pointer;
-
-    color: transparent;
-    border: 0;
-    outline: none;
-    background: transparent;
-}
-
-.slick-dots li button:hover,
-.slick-dots li button:focus
-{
-    outline: none;
-}
-
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before
-{
-    opacity: 1;
-}
-
-.slick-dots li button:before
-{
-    font-family: 'slick';
-    font-size: 6px;
-    line-height: 20px;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 20px;
-    height: 20px;
-
-    content: '•';
-    text-align: center;
-
-    opacity: .25;
-    color: black;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-dots li.slick-active button:before
-{
-    opacity: .75;
-    color: black;
 }
 
 .top-slider
@@ -10914,11 +10714,40 @@ main:before
     background: url('../images/top-slider-bg.jpg') no-repeat center center/cover;
 }
 
+.top-slider.loading:after
+{
+    position: absolute;
+    z-index: 9999;
+    top: calc(50% - 24px);
+    left: calc(50% - 24px);
+
+    width: 48px;
+    height: 48px;
+
+    content: '';
+
+    border: 4px solid rgba(153, 76, 207, .3);
+    border-top-color: #994ccf;
+    border-radius: 50%;
+}
+
+.top-slider.loading:after
+{
+    animation: rotation 2.5s ease infinite;
+}
+
 .top-slider .slide
 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+
+    will-change: transform;
+}
+
+.top-slider .slide:not(.slick-slide):not(:first-child)
+{
+    display: none;
 }
 
 .top-slider .slider-for
@@ -10931,6 +10760,11 @@ main:before
 .top-slider .slider-for .slide
 {
     height: 70vh;
+}
+
+.top-slider .slider-for .slick-current
+{
+    animation: swing-in-top-fwd .5s cubic-bezier(.175, .885, .32, 1.275) both;
 }
 
 .top-slider .slick-arrow
@@ -10947,6 +10781,11 @@ main:before
     height: 150px;
 
     text-align: center;
+}
+
+.top-slider .slider-nav .slide:not(.slick-slide)
+{
+    display: none;
 }
 
 .top-slider .slider-nav figure
@@ -11153,11 +10992,6 @@ main:before
 @font-face
 {
     font-family: 'open_sanssemibold';font-weight: normal;font-style: normal;src: url('../fonts/opensans-semibold-webfont.eot');src: url('../fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-semibold-webfont.woff2') format('woff2'), url('../fonts/opensans-semibold-webfont.woff') format('woff'), url('../fonts/opensans-semibold-webfont.ttf') format('truetype'), url('../fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
-}
-
-@font-face
-{
-    font-family: 'slick';font-weight: normal;font-style: normal;src: url('./fonts/slick.eot');src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0)
@@ -12957,8 +12791,8 @@ main:before
         z-index: 1;
         bottom: -50%;
 
-        width: 370px;
-        height: 370px;
+        width: 100%;
+        height: 100%;
 
         -webkit-clip-path: circle(200px at 195px 0%);
                 clip-path: circle(200px at 195px 0%);
@@ -13536,13 +13370,34 @@ main:before
     }
 }
 
-@keyframes some-animation
+@keyframes rotation
 {
     0%
     {
+        transform: rotate(0deg);
     }
 
     100%
     {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes swing-in-top-fwd
+{
+    0%
+    {
+        transform: rotateX(-100deg);
+        transform-origin: top;
+
+        opacity: 0;
+    }
+
+    100%
+    {
+        transform: rotateX(0deg);
+        transform-origin: top;
+
+        opacity: 1;
     }
 }

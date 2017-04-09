@@ -3,20 +3,44 @@
   margin-bottom: 40px;
   padding-bottom: 30px;
   &:before {
-   content: "";
+    content: "";
     @include pos(absolute, $bottom: 0, $left: 0);
     width: 100%;
     height: 30px;
     background: url('#{$path-images}/top-slider-bg.jpg') no-repeat center center / cover;
   }
+  &.loading {
+    &:after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 24px);
+      left: calc(50% - 24px);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 4px solid rgba($color-purple, .3);
+      border-top-color: $color-purple;
+      z-index: 9999;
+    }
+    &:after {
+      animation: rotation 2.5s ease infinite;
+    }
+  }
   .slide {
     @include bg(center, center, cover);
+    &:not(.slick-slide):not(:first-child) {
+      display: none;
+    }
+    will-change: transform;
   }
   .slider-for {
     position: relative;
     margin-bottom: 0 !important;
     .slide {
       height: 70vh;
+    }
+    .slick-current {
+      animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
     }
   }
   .slick-arrow {
@@ -27,6 +51,9 @@
     width: 1000px;
     height: 150px;
     text-align: center;
+    .slide:not(.slick-slide) {
+      display: none;
+    }
     figure {
       position: relative;
       display: block;
@@ -41,7 +68,7 @@
       cursor: pointer;
       &:before {
         content: "";
-        @include pos(absolute,0,0,0,0);
+        @include pos(absolute, 0, 0, 0, 0);
         border-radius: 50%;
         background-color: rgba($color-light-purple, .5);
         opacity: 1;
@@ -53,10 +80,10 @@
         opacity: 0;
       }
     }
-    .slide:nth-child(odd){
+    .slide:nth-child(odd) {
       padding-top: 50px;
     }
-    .slide:nth-child(even){
+    .slide:nth-child(even) {
       padding-bottom: 50px;
     }
   }
@@ -89,6 +116,7 @@
     text-indent: -9999px;
   }
 }
+
 @include mob-landscape {
   .top-slider {
     .slider-for {
@@ -98,6 +126,7 @@
     }
   }
 }
+
 @include lap {
   .top-slider {
     .slide-content {
@@ -114,6 +143,7 @@
     }
   }
 }
+
 @include desk {
   .top-slider {
     .slide-content {
@@ -123,6 +153,7 @@
     }
   }
 }
+
 .no-dev {
   .top-slider {
     padding-bottom: 49px;
