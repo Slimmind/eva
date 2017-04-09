@@ -1,6 +1,5 @@
 .circle {
   position: relative;
-  @include flex(column, flex-end, center, wrap);
   width: 280px;
   height: 280px;
   margin: 0 auto 40px;
@@ -8,20 +7,23 @@
   border: 4px solid $color-purple;
   @include bg(center, center, cover);
   overflow: hidden;
-  color: $color-white;
   text-align: center;
-  clip-path: 0 0 0 0 round 50%;
+  color: $color-white;
+  .circle-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
   .date {
     width: 100%;
     margin: 0;
     font: 20px/32px $font-medium;
     color: $color-purple;
-    flex-shrink: 0;
     text-shadow: -1px -1px 0 $color-white,
     1px -1px 0 $color-white,
     -1px 1px 0 $color-white,
     1px 1px 0 $color-white;
-    z-index: 1;
     time,
     strong {
       display: inline-block;
@@ -36,9 +38,8 @@
   }
 
   .description {
-    position: relative;
+    @include pos(absolute, $bottom: 0, $left: 0);
     width: 100%;
-    flex-shrink: 0;
     * {
       position: relative;
       z-index: 1;
@@ -78,10 +79,18 @@
 }
 @include lap {
   .circle {
+    position: relative;
     width: 370px;
     height: 370px;
     overflow: hidden;
-    -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
+    .circle-inner {
+      position: absolute;
+      width: 370px;
+      height: 370px;
+      bottom: -50%;
+      clip-path: circle(200px at 195px 0%);
+      z-index: 1;
+    }
     .date {
       margin-top: -35px;
       time {
@@ -93,10 +102,9 @@
       }
     }
     .description {
-      @include pos(absolute, $bottom: 0, $left: calc(50% - 185px));
-      //height: 185px;
-      //clip-path: circle(181px at 181px 0%);
-      transform: translateY(60px);
+      @include pos(absolute, 0, 0);
+      height: 155px;
+      transform: translateY(35px);
     }
     address,
     .category,
@@ -105,19 +113,20 @@
       display: block;
     }
     address {
-      font: 13px/16px $font-medium;
+      font: 14px/16px $font-medium;
     }
     .category {
-      font: 10px/14px $font-light;
+      font: 12px/14px $font-light;
     }
     .price {
       margin-bottom: 15px;
-      font: 12px/14px $font-bold;
+      font: 14px/14px $font-bold;
       strong {
         font-weight: normal;
       }
     }
     .details {
+      @include pos(absolute, $bottom: 0, $left: 0);
       height: 45px;
     }
   }
@@ -141,6 +150,7 @@
     &:after {
       content: "";
       @include pos(absolute, 0, 0, 0, 0);
+      border-radius: 50%;
       background-color: rgba($color-white, .5);
       opacity: 0;
       transition: opacity .3s ease;
@@ -152,12 +162,12 @@
       z-index: 1;
     }
     .description {
-      transform: translateY(40px);
+      transform: translateY(80px);
       transition: transform .3s ease-in;
       will-change: tranform;
     }
     .details {
-      transform: translateY(40px);
+      transform: translateY(75px);
       transition: transform .5s ease .2s;
     }
   }
@@ -166,7 +176,7 @@
       opacity: 1;
     }
     .description {
-      transform: translateY(0);
+      transform: translateY(35px);
     }
     .details {
       transform: translateY(0);

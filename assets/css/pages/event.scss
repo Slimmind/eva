@@ -17,6 +17,13 @@
     border-radius: 50%;
     border: 4px solid $color-purple;
   }
+  .event-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 4px solid $color-purple;
+    @include bg(center, center, cover);
+  }
 }
 .back-link {
   display: inline-block;

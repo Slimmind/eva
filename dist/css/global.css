@@ -9850,10 +9850,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 {
     position: relative;
 
-    display: -ms-flexbox;
-    display: flex;
     overflow: hidden;
-        flex-direction: column;
 
     width: 280px;
     height: 280px;
@@ -9867,32 +9864,27 @@ body > .jcf-select-drop.jcf-drop-flipped
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+}
 
-    -ms-flex-direction: column;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-clip-path: 0 0 0 0 round 50%;
-            clip-path: 0 0 0 0 round 50%;
+.circle .circle-inner
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
 }
 
 .circle .date
 {
     font: 20px/32px 'open_sanssemibold', sans-serif;
 
-    z-index: 1;
-
     width: 100%;
     margin: 0;
 
     color: #994ccf;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
 }
 
 .circle .date time,
@@ -9915,12 +9907,11 @@ body > .jcf-select-drop.jcf-drop-flipped
 
 .circle .description
 {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
     width: 100%;
-
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
 }
 
 .circle .description *
@@ -9992,6 +9983,7 @@ body > .jcf-select-drop.jcf-drop-flipped
     transition: opacity .3s ease;
 
     opacity: 0;
+    border-radius: 50%;
     background-color: rgba(255, 255, 255, .5);
 }
 
@@ -10005,7 +9997,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 .no-dev .circle .description
 {
     transition: transform .3s ease-in;
-    transform: translateY(40px);
+    transform: translateY(80px);
 
     will-change: tranform;
 }
@@ -10013,7 +10005,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 .no-dev .circle .details
 {
     transition: transform .5s ease .2s;
-    transform: translateY(40px);
+    transform: translateY(75px);
 }
 
 .no-dev .circle:hover:after
@@ -10023,7 +10015,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 
 .no-dev .circle:hover .description
 {
-    transform: translateY(0);
+    transform: translateY(35px);
 }
 
 .no-dev .circle:hover .details
@@ -10534,12 +10526,12 @@ main:before
 
 @font-face
 {
-    font-family: 'open_sanssemibold';font-weight: normal;font-style: normal;src: url('../fonts/opensans-semibold-webfont.eot');src: url('../fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-semibold-webfont.woff2') format('woff2'), url('../fonts/opensans-semibold-webfont.woff') format('woff'), url('../fonts/opensans-semibold-webfont.ttf') format('truetype'), url('../fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-family: 'open_sansregular';font-weight: normal;font-style: normal;src: url('../fonts/opensans-regular-webfont.eot');src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans-regular-webfont.woff') format('woff'), url('../fonts/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
 }
 
 @font-face
 {
-    font-family: 'open_sansregular';font-weight: normal;font-style: normal;src: url('../fonts/opensans-regular-webfont.eot');src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans-regular-webfont.woff') format('woff'), url('../fonts/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-family: 'open_sanssemibold';font-weight: normal;font-style: normal;src: url('../fonts/opensans-semibold-webfont.eot');src: url('../fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-semibold-webfont.woff2') format('woff2'), url('../fonts/opensans-semibold-webfont.woff') format('woff'), url('../fonts/opensans-semibold-webfont.ttf') format('truetype'), url('../fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0)
@@ -12317,12 +12309,25 @@ main:before
 
     .circle
     {
+        position: relative;
+
         overflow: hidden;
 
         width: 370px;
         height: 370px;
+    }
 
-        -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
+    .circle .circle-inner
+    {
+        position: absolute;
+        z-index: 1;
+        bottom: -50%;
+
+        width: 370px;
+        height: 370px;
+
+        -webkit-clip-path: circle(200px at 195px 0%);
+                clip-path: circle(200px at 195px 0%);
     }
 
     .circle .date
@@ -12345,10 +12350,12 @@ main:before
     .circle .description
     {
         position: absolute;
-        bottom: 0;
-        left: calc(50% - 185px);
+        top: 0;
+        left: 0;
 
-        transform: translateY(60px);
+        height: 155px;
+
+        transform: translateY(35px);
     }
 
     .circle address,
@@ -12362,17 +12369,17 @@ main:before
 
     .circle address
     {
-        font: 13px/16px 'open_sanssemibold', sans-serif;
+        font: 14px/16px 'open_sanssemibold', sans-serif;
     }
 
     .circle .category
     {
-        font: 10px/14px 'open_sanslight', sans-serif;
+        font: 12px/14px 'open_sanslight', sans-serif;
     }
 
     .circle .price
     {
-        font: 12px/14px 'open_sansbold', sans-serif;
+        font: 14px/14px 'open_sansbold', sans-serif;
 
         margin-bottom: 15px;
     }
@@ -12384,6 +12391,10 @@ main:before
 
     .circle .details
     {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
         height: 45px;
     }
 

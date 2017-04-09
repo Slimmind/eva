@@ -136,19 +136,20 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-dots {
     position: absolute;
-    bottom: -25px;
+    bottom: 20px;
     list-style: none;
     display: block;
     text-align: center;
     padding: 0;
     margin: 0;
     width: 100%;
+    background-color: $color-transparent;
     li {
         position: relative;
         display: inline-block;
         height: 20px;
         width: 20px;
-        margin: 0 5px;
+        margin: 0 5px 5px;
         padding: 0;
         cursor: pointer;
         button {

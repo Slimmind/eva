@@ -6,12 +6,24 @@
 @import "../sections/slick-theme";
 @import "../sections/top-slider";
 
+.events {
+  margin-bottom: 30px;
+  .buttons {
+    text-align: center;
+  }
+}
 .about {
-  margin-bottom: 20px;
-
+  padding: 20px 0;
+  background-color: rgba($color-deep-purple, .1);
 }
 
 @include lap {
+  .events {
+    margin-bottom: 90px;
+    .buttons {
+      padding-bottom: 40px;
+    }
+  }
   .about {
     p {
       font-size: 18px;
