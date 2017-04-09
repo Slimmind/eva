@@ -46,7 +46,27 @@
         $this.siblings('ul').slideToggle().closest('.nav-item').siblings('div').find('ul').slideUp();
       } );
     },
+    animate: function () {
+      if(!page.isDev()) {
+        $('.animated').each(function () {
+          $(this).attr('data-position', $(this).offset().top);
+        } );
+        $(window).on('scroll', function () {
+          var scrolled = $(window).scrollTop();
+          var addHeight = parseInt(window.innerHeight / 2);
+          $(".animated").each(function () {
+            var $this = $(this);
+            if($this.data('position')<(scrolled + addHeight)) {
+              $this.addClass('animation');
+            } else {
+              $this.removeClass('animation');
+            }
+          } );
+        } );
+      }
+    },
     load: function () {
+      page.animate();
     },
     resize: function () {
     },

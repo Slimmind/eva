@@ -9970,6 +9970,13 @@ body > .jcf-select-drop.jcf-drop-flipped
     text-align: center;
 }
 
+.no-dev .circle
+{
+    transition: opacity .7s ease;
+
+    opacity: 0;
+}
+
 .no-dev .circle:after
 {
     position: absolute;
@@ -10021,6 +10028,51 @@ body > .jcf-select-drop.jcf-drop-flipped
 .no-dev .circle:hover .details
 {
     transform: translateY(0);
+}
+
+.no-dev .circle.animation:nth-child(1)
+{
+    animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+}
+
+.no-dev .circle.animation:nth-child(2)
+{
+    animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+}
+
+.no-dev .circle.animation:nth-child(3)
+{
+    animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+}
+
+.no-dev .circle.animation:nth-child(4)
+{
+    animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+}
+
+.no-dev .circle.animation:nth-child(5)
+{
+    animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+}
+
+.no-dev .circle.animation:nth-child(6)
+{
+    animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+}
+
+.no-dev .circle.animation:nth-child(7)
+{
+    animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+}
+
+.no-dev .circle.animation:nth-child(8)
+{
+    animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+}
+
+.no-dev .circle.animation:nth-child(9)
+{
+    animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
 }
 
 .footer_
