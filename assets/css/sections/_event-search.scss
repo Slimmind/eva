@@ -38,9 +38,16 @@
 @include xtab {
   .event-search {
     form {
-      @include flex(row, space-between, center, wrap);
+      text-align: justify;
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+      }
     }
     .form-row {
+      display: inline-block;
+      vertical-align: top;
       max-width: 18%;
       margin: 0;
     }

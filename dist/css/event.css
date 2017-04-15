@@ -10030,49 +10030,58 @@ body > .jcf-select-drop.jcf-drop-flipped
     transform: translateY(0);
 }
 
-.no-dev .circle.animation:nth-child(1)
+.no-dev .animation:nth-child(1) .circle
 {
     animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+    animation-delay: .1s;
 }
 
-.no-dev .circle.animation:nth-child(2)
+.no-dev .animation:nth-child(2) .circle
 {
     animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+    animation-delay: .2s;
 }
 
-.no-dev .circle.animation:nth-child(3)
+.no-dev .animation:nth-child(3) .circle
 {
     animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+    animation-delay: .3s;
 }
 
-.no-dev .circle.animation:nth-child(4)
+.no-dev .animation:nth-child(4) .circle
 {
     animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+    animation-delay: .4s;
 }
 
-.no-dev .circle.animation:nth-child(5)
+.no-dev .animation:nth-child(5) .circle
 {
     animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+    animation-delay: .5s;
 }
 
-.no-dev .circle.animation:nth-child(6)
+.no-dev .animation:nth-child(6) .circle
 {
     animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+    animation-delay: .6s;
 }
 
-.no-dev .circle.animation:nth-child(7)
+.no-dev .animation:nth-child(7) .circle
 {
     animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+    animation-delay: .7s;
 }
 
-.no-dev .circle.animation:nth-child(8)
+.no-dev .animation:nth-child(8) .circle
 {
     animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+    animation-delay: .8s;
 }
 
-.no-dev .circle.animation:nth-child(9)
+.no-dev .animation:nth-child(9) .circle
 {
     animation: swing-in-top-fwd .9s cubic-bezier(.175, .885, .32, 1.275) both;
+    animation-delay: .9s;
 }
 
 .footer_
@@ -12291,23 +12300,26 @@ main:before
 {
     .event-search form
     {
-        display: -ms-flexbox;
-        display: flex;
-            flex-direction: row;
+        text-align: justify;
+    }
 
-        -ms-flex-direction: row;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -ms-flex-align: center;
-        align-items: center;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    .event-search form:after
+    {
+        display: inline-block;
+
+        width: 100%;
+
+        content: '';
     }
 
     .event-search .form-row
     {
+        display: inline-block;
+
         max-width: 18%;
         margin: 0;
+
+        vertical-align: top;
     }
 
     .event-search .search-wrap

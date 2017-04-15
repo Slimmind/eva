@@ -185,10 +185,13 @@
       transform: translateY(0);
     }
   }
-  .circle.animation {
+  .animation {
     @for $i from 1 through 9 {
       &:nth-child(#{$i}) {
-        animation: swing-in-top-fwd 0.9s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+        .circle {
+          animation: swing-in-top-fwd 0.9s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+          animation-delay: 0s + $i/10;
+        }
       }
     }
   }
