@@ -10590,7 +10590,7 @@ main:before
 {
     width: 280px;
     height: 280px;
-    margin-top: 30px;
+    margin: 0 auto 30px;
 
     border: 4px solid #994ccf;
     border-radius: 50%;
@@ -10624,15 +10624,16 @@ main:before
 
 .info-block
 {
-    margin-bottom: 20px;
+    width: 280px;
+    margin: 0 auto 20px;
 
     border-bottom: 2px dashed #cdcdcd;
 }
 
-.location,
-.place,
-.time,
-.date
+.event-location,
+.event-place,
+.event-time,
+.event-date
 {
     padding: 5px 5px 5px 30px;
 
@@ -10758,9 +10759,9 @@ main:before
     display: block;
 }
 
-.event-availability .location,
-.event-availability .time,
-.event-availability .date
+.event-availability .event-location,
+.event-availability .event-time,
+.event-availability .event-date
 {
     display: inline-block;
 }
@@ -10869,6 +10870,13 @@ main:before
     overflow: hidden;
 }
 
+.reviews footer.controls button
+{
+    float: right;
+
+    max-width: 160px;
+}
+
 .reviews footer
 {
     border-top: 2px solid #994ccf;
@@ -10927,6 +10935,35 @@ main:before
 .reviews .comment-form button[type='reset']
 {
     background-color: rgba(127, 0, 0, .5);
+}
+
+.similar-events .event-wrap
+{
+    display: block;
+
+    padding-bottom: 30px;
+}
+
+.similar-events .circle
+{
+    width: 260px;
+    height: 260px;
+    margin: 0 auto;
+}
+
+.similar-events .circle .description:before
+{
+    height: 80%;
+}
+
+.similar-events .circle .description h3
+{
+    margin-bottom: 15px;
+}
+
+.similar-events .circle .date
+{
+    transform: translateY(-15px);
 }
 
 .similar-events .filled-heading
@@ -11841,7 +11878,7 @@ main:before
     {
         float: left;
 
-        margin-right: 40px;
+        margin: 30px 40px 30px 0;
     }
 
     .info-block
@@ -11865,6 +11902,11 @@ main:before
         width: 50%;
 
         text-align: right;
+    }
+
+    .event-availability .shop
+    {
+        padding: 5px 15px;
     }
 
     .event-info
