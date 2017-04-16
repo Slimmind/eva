@@ -13,7 +13,29 @@
   }
 }
 .header-nav {
-  display: none;
+  float: right;
+  margin-right: 40px;
+  ul {
+    margin: 0;
+  }
+  li:not(.login) {
+    display: none;
+  }
+  .login {
+    margin-top: 5px;
+    a {
+      display: inline-block;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: $color-purple url('#{$path-svg}/user-icon.svg') no-repeat center center / 60%;
+      text-indent: -9999px;
+      &:after {
+        display: none;
+      }
+    }
+  }
 }
 @include lap {
   .no-dev {
@@ -22,17 +44,36 @@
       padding-top: 6px;
       .menu-btn {
         top: 36px;
+        right: 15px;
       }
     }
     .header-nav {
-      display: block;
-      float: right;
+      margin: 0;
       padding: 36px 50px 0 0;
       li {
         display: inline-block;
         margin-right: 30px;
         &:last-child {
           margin-right: 0;
+        }
+      }
+      .login {
+        margin: 0;
+        a {
+          width: auto;
+          padding: 0 10px 0 40px;
+          border-radius: 6px;
+          box-shadow: inset 0 0 10px 1px rgba($color-deep-purple, .8);
+          color: $color-white;
+          background-image: url('#{$path-svg}/login.svg');
+          transition-property: background-color, box-shadow;
+          transition: .3s ease;
+          @include bg(5px, center, auto, 30px);
+          text-indent: 0;
+          &:hover {
+            background-color: $color-deep-purple;
+            box-shadow: inset 0 0 10px 3px rgba($color-purple, .8);
+          }
         }
       }
       a {
@@ -50,27 +91,6 @@
         }
         &:hover:after {
           width: 100%;
-        }
-      }
-      .login {
-        a {
-          display: inline-block;
-          padding: 0 10px 0 40px;
-          border-radius: 6px;
-          box-shadow: inset 0 0 10px 1px rgba($color-deep-purple, .8);
-          color: $color-white;
-          background-color: $color-purple;
-          background-image: url('#{$path-svg}/login.svg');
-          transition-property: background-color, box-shadow;
-          transition: .3s ease;
-          @include bg(5px, center, auto, 30px);
-          &:after {
-            display: none;
-          }
-          &:hover {
-            background-color: $color-deep-purple;
-            box-shadow: inset 0 0 10px 3px rgba($color-purple, .8);
-          }
         }
       }
     }

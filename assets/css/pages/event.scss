@@ -153,6 +153,16 @@
   margin-bottom: 20px;
   article {
     margin-bottom: 5px;
+    border: 2px solid $color-purple;
+  }
+  .user-name {
+    margin: 0;
+    padding: 8px 10px;
+    background-color: $color-purple;
+    color: $color-deep-purple;
+  }
+  .heading {
+    padding: 0 10px 10px;
   }
   .likes {
     padding: 0 10px;
@@ -160,25 +170,33 @@
       font-family: $font-medium;
     }
   }
-  article {
-    border: 2px solid $color-purple;
-    h5 {
-      margin: 0;
-      padding: 8px 10px;
-      background-color: $color-purple;
-      color: $color-deep-purple;
-    }
-    h6 {
-      padding: 0 10px;
-    }
-  }
   header {
     border-bottom: 2px solid $color-purple;
   }
   .text {
+    position: relative;
+    max-height: 125px;
+    margin-bottom: 10px;
+    overflow: hidden;
     padding: 5px 10px;
     color: $color-deep-purple;
     font-family: $font-medium;
+    transition: max-height .3s ease;
+    &:after {
+      content: "";
+      @include pos(absolute,$bottom: 0, $left: 0);
+      width: 100%;
+      height: 40px;
+      background: linear-gradient(to top, rgba($color-white,1) 0%,rgba($color-white,0) 100%);
+    }
+    &.expanded {
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .comment {
+    padding-bottom: 20px;
   }
   .controls {
     overflow: hidden;
@@ -234,24 +252,83 @@
   }
 }
 .similar-events {
+  margin-bottom: 40px;
   .event-wrap {
     display: block;
     padding-bottom: 30px;
   }
-  .circle {
-    width: 260px;
-    height: 260px;
+
+  .event-circle {
+    width: 240px;
+    height: 240px;
     margin: 0 auto;
+    border-radius: 50%;
+    border: 4px solid $color-purple;
+    @include bg(center, center, cover);
+    overflow: hidden;
+    text-align: center;
+    color: $color-white;
+    .circle-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
     .description {
+      @include pos(absolute, $bottom: 0, $left: 0);
+      width: 100%;
+      height: 96px;
+      * {
+        position: relative;
+        z-index: 1;
+      }
       &:before {
-        height: 80%;
+        content: "";
+        @include pos(absolute, $bottom: 0, $left: 0);
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color-purple, .9);
+        z-index: 0;
       }
       h3 {
-        margin-bottom: 15px;
+        margin: -20px 0 15px;
+        padding: 0 20px;
+        font-size: 20px;
+        @include dots();
       }
     }
     .date {
-      transform: translateY(-15px);
+      width: 100%;
+      margin: 0;
+      transform: translateY(-35px);
+      font: 20px/32px $font-medium;
+      color: $color-purple;
+      text-shadow: -1px -1px 0 $color-white,
+      1px -1px 0 $color-white,
+      -1px 1px 0 $color-white,
+      1px 1px 0 $color-white;
+      time,
+      strong {
+        display: inline-block;
+      }
+      time {
+        margin-right: 20px;
+      }
+      strong {
+        margin-left: 20px;
+        font: 24px/32px $font-bold;
+      }
+    }
+    .details {
+      display: block;
+      width: 100%;
+      height: 40px;
+      background: $color-purple url('#{$path-svg}/join.svg') no-repeat center center;
+      text-indent: -9999px;
+    }
+
+    .buttons {
+      text-align: center;
     }
   }
   .filled-heading {
@@ -261,6 +338,10 @@
     padding-top: 40px;
     background-color: rgba($color-deep-purple, .1);
   }
+}
+.back-to-list {
+  text-align: center;
+  margin-bottom: 40px;
 }
 @include tab {
   .event-description {
@@ -295,6 +376,21 @@
     float: right;
   }
   .reviews {
+    header {
+      overflow: hidden;
+    }
+    .user-name {
+      float: left;
+    }
+    .heading {
+      float: right;
+      margin: 0;
+      padding: 10px;
+    }
+    .likes {
+      clear: both;
+      text-align: right;
+    }
     .controls {
       .buttons {
         width: 420px;
@@ -309,19 +405,47 @@
         border-left: 2px solid $color-purple;
       }
     }
+    footer.controls button {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
   }
   .similar-events {
+    margin-bottom: 50px;
     ul {
       @include flex(row, space-between, $fw: wrap);
     }
     li{
       padding: 0 20px;
     }
-    .circle {
-      width: 240px;
-      height: 240px;
+  }
+}
+@include lap {
+  .event-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .reviews {
+    .user-name {
+      max-width: 240px;
+    }
+    .heading {
+      max-width: 600px;
+      padding-top: 9px;
+      float: left;
+    }
+    .likes {
+      padding-top: 6px;
+      clear: none;
+      float: right;
+    }
+    .text {
+      font-size: 14px;
     }
   }
+}
+.back-to-list {
+  margin-bottom: 100px;
 }
 .no-dev {
   .wrapper {

@@ -9668,6 +9668,43 @@ body > .jcf-select-drop.jcf-drop-flipped
 
 .header-nav
 {
+    float: right;
+
+    margin-right: 40px;
+}
+
+.header-nav ul
+{
+    margin: 0;
+}
+
+.header-nav li:not(.login)
+{
+    display: none;
+}
+
+.header-nav .login
+{
+    margin-top: 5px;
+}
+
+.header-nav .login a
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 40px;
+    height: 40px;
+
+    text-indent: -9999px;
+
+    border-radius: 50%;
+    background: #994ccf url('../../svg/user-icon.svg') no-repeat center center/60%;
+}
+
+.header-nav .login a:after
+{
     display: none;
 }
 
@@ -10469,7 +10506,7 @@ main:before
 {
     display: inline-block;
 
-    width: 200px;
+    width: 150px;
     height: 40px;
 
     background-repeat: no-repeat;
@@ -10807,6 +10844,22 @@ main:before
 .reviews article
 {
     margin-bottom: 5px;
+
+    border: 2px solid #994ccf;
+}
+
+.reviews .user-name
+{
+    margin: 0;
+    padding: 8px 10px;
+
+    color: #2c2034;
+    background-color: #994ccf;
+}
+
+.reviews .heading
+{
+    padding: 0 10px 10px;
 }
 
 .reviews .likes
@@ -10819,25 +10872,6 @@ main:before
     font-family: 'open_sanssemibold', sans-serif;
 }
 
-.reviews article
-{
-    border: 2px solid #994ccf;
-}
-
-.reviews article h5
-{
-    margin: 0;
-    padding: 8px 10px;
-
-    color: #2c2034;
-    background-color: #994ccf;
-}
-
-.reviews article h6
-{
-    padding: 0 10px;
-}
-
 .reviews header
 {
     border-bottom: 2px solid #994ccf;
@@ -10847,9 +10881,41 @@ main:before
 {
     font-family: 'open_sanssemibold', sans-serif;
 
+    position: relative;
+
+    overflow: hidden;
+
+    max-height: 125px;
+    margin-bottom: 10px;
     padding: 5px 10px;
 
+    transition: max-height .3s ease;
+
     color: #2c2034;
+}
+
+.reviews .text:after
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+
+    content: '';
+
+    background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.reviews .text.expanded:after
+{
+    display: none;
+}
+
+.reviews .comment
+{
+    padding-bottom: 20px;
 }
 
 .reviews .controls
@@ -10937,6 +11003,11 @@ main:before
     background-color: rgba(127, 0, 0, .5);
 }
 
+.similar-events
+{
+    margin-bottom: 40px;
+}
+
 .similar-events .event-wrap
 {
     display: block;
@@ -10944,26 +11015,124 @@ main:before
     padding-bottom: 30px;
 }
 
-.similar-events .circle
+.similar-events .event-circle
 {
-    width: 260px;
-    height: 260px;
+    overflow: hidden;
+
+    width: 240px;
+    height: 240px;
     margin: 0 auto;
+
+    text-align: center;
+
+    color: #fff;
+    border: 4px solid #994ccf;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
-.similar-events .circle .description:before
+.similar-events .event-circle .circle-inner
 {
-    height: 80%;
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
 }
 
-.similar-events .circle .description h3
+.similar-events .event-circle .description
 {
-    margin-bottom: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 96px;
 }
 
-.similar-events .circle .date
+.similar-events .event-circle .description *
 {
-    transform: translateY(-15px);
+    position: relative;
+    z-index: 1;
+}
+
+.similar-events .event-circle .description:before
+{
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background-color: rgba(153, 76, 207, .9);
+}
+
+.similar-events .event-circle .description h3
+{
+    font-size: 20px;
+
+    overflow: hidden;
+
+    margin: -20px 0 15px;
+    padding: 0 20px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.similar-events .event-circle .date
+{
+    font: 20px/32px 'open_sanssemibold', sans-serif;
+
+    width: 100%;
+    margin: 0;
+
+    transform: translateY(-35px);
+
+    color: #994ccf;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+.similar-events .event-circle .date time,
+.similar-events .event-circle .date strong
+{
+    display: inline-block;
+}
+
+.similar-events .event-circle .date time
+{
+    margin-right: 20px;
+}
+
+.similar-events .event-circle .date strong
+{
+    font: 24px/32px 'open_sansbold', sans-serif;
+
+    margin-left: 20px;
+}
+
+.similar-events .event-circle .details
+{
+    display: block;
+
+    width: 100%;
+    height: 40px;
+
+    text-indent: -9999px;
+
+    background: #994ccf url('../../svg/join.svg') no-repeat center center;
+}
+
+.similar-events .event-circle .buttons
+{
+    text-align: center;
 }
 
 .similar-events .filled-heading
@@ -10976,6 +11145,18 @@ main:before
     padding-top: 40px;
 
     background-color: rgba(44, 32, 52, .1);
+}
+
+.back-to-list
+{
+    margin-bottom: 40px;
+
+    text-align: center;
+}
+
+.back-to-list
+{
+    margin-bottom: 100px;
 }
 
 .no-dev .wrapper
@@ -11921,6 +12102,31 @@ main:before
         float: right;
     }
 
+    .reviews header
+    {
+        overflow: hidden;
+    }
+
+    .reviews .user-name
+    {
+        float: left;
+    }
+
+    .reviews .heading
+    {
+        float: right;
+
+        margin: 0;
+        padding: 10px;
+    }
+
+    .reviews .likes
+    {
+        clear: both;
+
+        text-align: right;
+    }
+
     .reviews .controls .buttons
     {
         float: right;
@@ -11941,6 +12147,17 @@ main:before
         border-left: 2px solid #994ccf;
     }
 
+    .reviews footer.controls button
+    {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .similar-events
+    {
+        margin-bottom: 50px;
+    }
+
     .similar-events ul
     {
         display: -ms-flexbox;
@@ -11957,12 +12174,6 @@ main:before
     .similar-events li
     {
         padding: 0 20px;
-    }
-
-    .similar-events .circle
-    {
-        width: 240px;
-        height: 240px;
     }
 }
 
@@ -12745,6 +12956,11 @@ main:before
         font-size: 24px;
     }
 
+    h6
+    {
+        font-size: 16px;
+    }
+
     .jcf-select .jcf-select-text
     {
         margin: 0 50px 0 20px;
@@ -12764,13 +12980,12 @@ main:before
     .no-dev .header_ .menu-btn
     {
         top: 36px;
+        right: 15px;
     }
 
     .no-dev .header-nav
     {
-        display: block;
-        float: right;
-
+        margin: 0;
         padding: 36px 50px 0 0;
     }
 
@@ -12784,6 +12999,35 @@ main:before
     .no-dev .header-nav li:last-child
     {
         margin-right: 0;
+    }
+
+    .no-dev .header-nav .login
+    {
+        margin: 0;
+    }
+
+    .no-dev .header-nav .login a
+    {
+        width: auto;
+        padding: 0 10px 0 40px;
+
+        transition: .3s ease;
+        transition-property: background-color, box-shadow;
+        text-indent: 0;
+
+        color: #fff;
+        border-radius: 6px;
+        background-image: url('../../svg/login.svg');
+        background-repeat: no-repeat;
+        background-position: 5px center;
+        background-size: auto 30px;
+        box-shadow: inset 0 0 10px 1px rgba(44, 32, 52, .8);
+    }
+
+    .no-dev .header-nav .login a:hover
+    {
+        background-color: #2c2034;
+        box-shadow: inset 0 0 10px 3px rgba(153, 76, 207, .8);
     }
 
     .no-dev .header-nav a
@@ -12815,36 +13059,6 @@ main:before
     .no-dev .header-nav a:hover:after
     {
         width: 100%;
-    }
-
-    .no-dev .header-nav .login a
-    {
-        display: inline-block;
-
-        padding: 0 10px 0 40px;
-
-        transition: .3s ease;
-        transition-property: background-color, box-shadow;
-
-        color: #fff;
-        border-radius: 6px;
-        background-color: #994ccf;
-        background-image: url('../../svg/login.svg');
-        background-repeat: no-repeat;
-        background-position: 5px center;
-        background-size: auto 30px;
-        box-shadow: inset 0 0 10px 1px rgba(44, 32, 52, .8);
-    }
-
-    .no-dev .header-nav .login a:after
-    {
-        display: none;
-    }
-
-    .no-dev .header-nav .login a:hover
-    {
-        background-color: #2c2034;
-        box-shadow: inset 0 0 10px 3px rgba(153, 76, 207, .8);
     }
 
     .no-dev .main-nav
@@ -13046,6 +13260,38 @@ main:before
     .no-dev .menu-btn:hover
     {
         background-color: #b363eb;
+    }
+
+    .event-description
+    {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .reviews .user-name
+    {
+        max-width: 240px;
+    }
+
+    .reviews .heading
+    {
+        float: left;
+
+        max-width: 600px;
+        padding-top: 9px;
+    }
+
+    .reviews .likes
+    {
+        float: right;
+        clear: none;
+
+        padding-top: 6px;
+    }
+
+    .reviews .text
+    {
+        font-size: 14px;
     }
 }
 
