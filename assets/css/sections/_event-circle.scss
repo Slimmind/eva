@@ -106,7 +106,7 @@
     .description {
       @include pos(absolute, 0, 0);
       height: 150px;
-      transform: translateY(30px);
+      transform: translateY(33px);
     }
     address,
     .category,
@@ -149,8 +149,6 @@
 }
 .no-dev {
   .circle {
-    opacity: 0;
-    transition: opacity .7s ease;
     &:after {
       content: "";
       @include pos(absolute, 0, 0, 0, 0);
@@ -186,13 +184,15 @@
       transform: translateY(0);
     }
   }
+  .animated {
+    opacity: 0;
+    transition: opacity .7s ease;
+  }
   .animation {
     @for $i from 1 through 9 {
       &:nth-child(#{$i}) {
-        .circle {
-          animation: swing-in-top-fwd 0.9s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-          animation-delay: 0s + $i/10;
-        }
+        animation: swing-in-top-fwd 0.9s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+        animation-delay: 0s + $i/10;
       }
     }
   }

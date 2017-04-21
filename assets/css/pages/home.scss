@@ -28,62 +28,40 @@
       line-height: 26px;
     }
   }
-}
-
-.no-dev {
-  @include lap {
-    .animated {
-      position: relative;
-      &:nth-child(2),
-      &:nth-child(5),
-      &:nth-child(8) {
-        &:before,
-        &:after {
-          content: "";
-          @include pos(absolute, calc(50% - 22px));
-          width: 40px;
-          height: 4px;
-          background-color: rgba($color-deep-purple, .5);
-          opacity: 0;
-          transition: opacity 1s ease;
-          z-index: 0;
-        }
-        &:before {
-          left: -20px;
-        }
-        &:after {
-          right: -20px;
-        }
+  .animated {
+    position: relative;
+    &:nth-child(2),
+    &:nth-child(5),
+    &:nth-child(8) {
+      &:before{
+        content: "";
+        @include pos(absolute, calc(50% - 22px), center);
+        width: calc(100% + 30px);
+        height: 4px;
+        background-color: rgba($color-deep-purple, .5);
+        z-index: 0;
       }
-
-      &.animation {
-        &:before,
-        &:after {
-          opacity: 1;
-          transition-duration: 0s;
-        }
+    }
+    &:nth-child(6),
+    &:nth-child(7) {
+      &:before {
+        content: "";
+        position: absolute;
+        left: 155px;
+        top: -119px;
+        width: 200px;
+        height: 200px;
+        border: 4px solid $color-transparent;
+        border-right-color: rgba($color-deep-purple, .5);
+        background-color: $color-transparent;
+        border-radius: 50%;
       }
-      &:nth-child(6),
-      &:nth-child(7) {
-        &:before {
-          content: "";
-          position: absolute;
-          left: 35%;
-          top: -30%;
-          width: 200px;
-          height: 200px;
-          border: 4px solid $color-transparent;
-          border-right-color: rgba($color-deep-purple, .5);
-          background-color: $color-transparent;
-          border-radius: 50%;
-        }
-      }
-      &:nth-child(7) {
-        &:before {
-          left: 15%;
-          border-right-color: $color-transparent;
-          border-left-color: rgba($color-deep-purple, .5);
-        }
+    }
+    &:nth-child(7) {
+      &:before {
+        left: 45px;
+        border-right-color: $color-transparent;
+        border-left-color: rgba($color-deep-purple, .5);
       }
     }
   }

@@ -107,5 +107,14 @@
         }
       }
     }
+    .footer-bottom-nav,
+    .shop-nav {
+      a {
+        transition: color .3s ease;
+        &:hover {
+          color: $color-deep-purple;
+        }
+      }
+    }
   }
 }

@@ -55,7 +55,7 @@
         } );
         $(window).on('scroll', function () {
           var scrolled = $(window).scrollTop();
-          var addHeight = parseInt(window.innerHeight / 2);
+          var addHeight = parseInt(window.innerHeight * 0.9);
           $(".animated").each(function () {
             var $this = $(this);
             if($this.data('position')<(scrolled + addHeight)) {

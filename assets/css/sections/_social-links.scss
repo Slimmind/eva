@@ -40,3 +40,13 @@ div.social-links {
     }
   }
 }
+.no-dev {
+  div.social-links {
+    .social-link {
+      transition: background-color .3s ease;
+      &:hover {
+        background-color: $color-deep-purple;
+      }
+    }
+  }
+}

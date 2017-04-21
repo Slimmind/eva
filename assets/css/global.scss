@@ -90,6 +90,9 @@ main {
   }
 }
 @include lap {
+  .container {
+    width: 1200px !important;
+  }
   .show-more {
     font-size: 50px;
     line-height: 72px;

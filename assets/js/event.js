@@ -10,7 +10,7 @@
     },
     addComments: function () {
       $('.add-comment').on('click', function () {
-        $('.comment-form').slideToggle();
+        $(this).parents('.controls').siblings('.comment-form').slideToggle();
       } );
     },
     commentsHeight: function () {
@@ -22,10 +22,9 @@
         var text = $this.parents('.controls').siblings('.text');
         var textHeight = text.innerHeight();
         var fullHeight = text.find('.comment').innerHeight();
-        console.log('text = ' + textHeight + ', comment = ' + fullHeight);
         if(!text.attr('style')) {
           if(fullHeight > textHeight) {
-            text.css('maxHeight', fullHeight).addClass('expanded')
+            text.css('maxHeight', fullHeight).addClass('expanded');
           }
         } else {
           text.removeAttr('style').removeClass('expanded');
