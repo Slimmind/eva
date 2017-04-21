@@ -9886,6 +9886,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 .circle
 {
     position: relative;
+    z-index: 1;
 
     overflow: hidden;
 
@@ -9969,7 +9970,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 
     content: '';
 
-    background-color: rgba(153, 76, 207, .9);
+    background-color: rgba(153, 76, 207, .7);
 }
 
 .circle .description h3
@@ -10041,7 +10042,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 .no-dev .circle .description
 {
     transition: transform .3s ease-in;
-    transform: translateY(80px);
+    transform: translateY(60px);
 
     will-change: tranform;
 }
@@ -10059,7 +10060,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 
 .no-dev .circle:hover .description
 {
-    transform: translateY(35px);
+    transform: translateY(33px);
 }
 
 .no-dev .circle:hover .details
@@ -12925,9 +12926,9 @@ main:before
         top: 0;
         left: 0;
 
-        height: 155px;
+        height: 150px;
 
-        transform: translateY(35px);
+        transform: translateY(30px);
     }
 
     .circle address,
@@ -13062,6 +13063,80 @@ main:before
     {
         font-size: 18px;
         line-height: 26px;
+    }
+
+    .no-dev .animated
+    {
+        position: relative;
+    }
+
+    .no-dev .animated:nth-child(2):before,
+    .no-dev .animated:nth-child(2):after,
+    .no-dev .animated:nth-child(5):before,
+    .no-dev .animated:nth-child(5):after,
+    .no-dev .animated:nth-child(8):before,
+    .no-dev .animated:nth-child(8):after
+    {
+        position: absolute;
+        z-index: 0;
+        top: calc(50% - 22px);
+
+        width: 40px;
+        height: 4px;
+
+        content: '';
+        transition: opacity 1s ease;
+
+        opacity: 0;
+        background-color: rgba(44, 32, 52, .5);
+    }
+
+    .no-dev .animated:nth-child(2):before,
+    .no-dev .animated:nth-child(5):before,
+    .no-dev .animated:nth-child(8):before
+    {
+        left: -20px;
+    }
+
+    .no-dev .animated:nth-child(2):after,
+    .no-dev .animated:nth-child(5):after,
+    .no-dev .animated:nth-child(8):after
+    {
+        right: -20px;
+    }
+
+    .no-dev .animated.animation:before,
+    .no-dev .animated.animation:after
+    {
+        transition-duration: 0s;
+
+        opacity: 1;
+    }
+
+    .no-dev .animated:nth-child(6):before,
+    .no-dev .animated:nth-child(7):before
+    {
+        position: absolute;
+        top: -30%;
+        left: 35%;
+
+        width: 200px;
+        height: 200px;
+
+        content: '';
+
+        border: 4px solid transparent;
+        border-right-color: rgba(44, 32, 52, .5);
+        border-radius: 50%;
+        background-color: transparent;
+    }
+
+    .no-dev .animated:nth-child(7):before
+    {
+        left: 15%;
+
+        border-right-color: transparent;
+        border-left-color: rgba(44, 32, 52, .5);
     }
 }
 

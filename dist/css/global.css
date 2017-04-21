@@ -9886,6 +9886,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 .circle
 {
     position: relative;
+    z-index: 1;
 
     overflow: hidden;
 
@@ -9969,7 +9970,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 
     content: '';
 
-    background-color: rgba(153, 76, 207, .9);
+    background-color: rgba(153, 76, 207, .7);
 }
 
 .circle .description h3
@@ -10041,7 +10042,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 .no-dev .circle .description
 {
     transition: transform .3s ease-in;
-    transform: translateY(80px);
+    transform: translateY(60px);
 
     will-change: tranform;
 }
@@ -10059,7 +10060,7 @@ body > .jcf-select-drop.jcf-drop-flipped
 
 .no-dev .circle:hover .description
 {
-    transform: translateY(35px);
+    transform: translateY(33px);
 }
 
 .no-dev .circle:hover .details
@@ -12457,9 +12458,9 @@ main:before
         top: 0;
         left: 0;
 
-        height: 155px;
+        height: 150px;
 
-        transform: translateY(35px);
+        transform: translateY(30px);
     }
 
     .circle address,
