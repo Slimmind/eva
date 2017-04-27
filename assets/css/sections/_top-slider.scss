@@ -141,6 +141,9 @@
         line-height: 24px;
       }
     }
+    .go-to-event {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -149,7 +152,21 @@
     .slide-content {
       h2 {
         margin-top: 0;
+        font-size: 56px;
       }
+      time,
+      address {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+    .go-to-event,
+    .ad-title {
+      font-size: 22px;
+      line-height: 28px;
+    }
+    .ad-link {
+      width: 280px;
     }
   }
 }
@@ -167,7 +184,7 @@
       }
     }
     .slide-content {
-      width: 70%;
+      width: 100%;
       background: linear-gradient(90deg, $color-transparent, $color-white);
     }
     .slick-arrow {
@@ -184,6 +201,14 @@
       @include pos(absolute, $bottom: 60px, $left: calc(50% - 500px));
       .slick-track {
         margin: 0 auto;
+      }
+    }
+    .go-to-event {
+      transition: border-color .3s ease, background-color .3s ease, color .3s ease;
+      &:hover {
+        color: $color-purple;
+        background-color: #f0f0f0;
+        border-color: $color-purple;
       }
     }
   }

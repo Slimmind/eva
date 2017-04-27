@@ -110,9 +110,10 @@
   text-indent: -9999px;
   z-index: 10;
   @include bg(center, center, contain);
-}
-.slick-prev,
-.slick-next {
+  @include lap {
+    width: 70px;
+    height: 70px;
+  }
 }
 .slick-prev {
   left: 0;
@@ -144,5 +145,27 @@
   }
   button {
     text-indent: -9999px;
+  }
+}
+.no-dev {
+  .slick-arrow {  
+    opacity: .5;
+    transform: translateX(0);
+    transition: transform .3s ease, opacity .3s ease;
+    will-change: transform;
+    &:not(.slick-disabled):active {
+      box-shadow: 0 0 5px 2px $color-white;
+    }
+  }
+  .slick-prev:not(.slick-disabled):hover {
+    transform: translateX(-10px);
+    opacity: 1;
+  }
+  .slick-next:not(.slick-disabled):hover {
+    transform: translateX(10px);
+    opacity: 1;
+  }
+  .slick-disabled {
+    cursor: not-allowed;
   }
 }

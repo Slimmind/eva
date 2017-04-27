@@ -40,16 +40,16 @@
 @include lap {
   .no-dev {
     .header_ {
-      height: 130px;
+      height: 100px;
       padding-top: 6px;
       .menu-btn {
-        top: 36px;
+        top: 23px;
         right: 15px;
       }
     }
     .header-nav {
       margin: 0;
-      padding: 36px 50px 0 0;
+      padding: 23px 50px 0 0;
       li {
         display: inline-block;
         margin-right: 30px;
@@ -79,7 +79,7 @@
       a {
         position: relative;
         display: inline-block;
-        font: 26px/40px $font-light;
+        font: 18px/40px $font-light;
         color: $color-purple;
         &:after {
           content: "";
