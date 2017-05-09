@@ -2,6 +2,7 @@
 @import "../libs/variables";
 @import "../libs/mixins";
 //sections
+@import "../sections/reviews";
 .wrapper {
   padding-top: 50px;
 }
@@ -149,108 +150,7 @@
   border-bottom: 3px solid $color-deep-purple;
   text-transform: uppercase;
 }
-.reviews {
-  margin-bottom: 20px;
-  article {
-    margin-bottom: 5px;
-    border: 2px solid $color-purple;
-  }
-  .user-name {
-    margin: 0;
-    padding: 8px 10px;
-    background-color: $color-purple;
-    color: $color-deep-purple;
-  }
-  .heading {
-    padding: 0 10px 10px;
-  }
-  .likes {
-    padding: 0 10px;
-    span {
-      font-family: $font-medium;
-    }
-  }
-  header {
-    border-bottom: 2px solid $color-purple;
-  }
-  .text {
-    position: relative;
-    max-height: 125px;
-    margin-bottom: 10px;
-    overflow: hidden;
-    padding: 5px 10px;
-    color: $color-deep-purple;
-    font-family: $font-medium;
-    transition: max-height .3s ease;
-    &:after {
-      content: "";
-      @include pos(absolute,$bottom: 0, $left: 0);
-      width: 100%;
-      height: 40px;
-      background: linear-gradient(to top, rgba($color-white,1) 0%,rgba($color-white,0) 100%);
-    }
-    &.expanded {
-      &:after {
-        display: none;
-      }
-    }
-  }
-  .comment {
-    padding-bottom: 20px;
-  }
-  .controls {
-    overflow: hidden;
-    button {
-      width: 50%;
-      padding: 0 5px;
-      float: left;
-    }
-    .buttons {
-      overflow: hidden;
-    }
-  }
-  footer.controls button {
-    float: right;
-    max-width: 160px;
-  }
-  footer {
-    border-top: 2px solid $color-purple;
-    .expand-comment {
-      background-color: $color-purple;
-      color: $color-white;
-    }
-    button.add-comment {
-      padding-left: 45px;
-      background: url('#{$path-svg}/plus.svg') no-repeat 5px center / 30px 30px;
-      color: $color-purple;
-      text-align: left;
-    }
-  }
-  .comment-form {
-    display: none;
-    margin-bottom: 20px;
-    .form-row {
-      height: 90px;
-      margin: 0;
-      overflow-y: auto;
-      overflow-x: hidden;
-    }
-    textarea {
-      padding: 5px 10px;
-      font: 12px/18px $font-bold;
-      background-color: rgba($color-deep-purple, .5);
-      color: $color-white;
-    }
-    button {
-      padding: 10px 5px;
-      background-color: rgba($color-green, .5);
-      color: $color-white;
-      &[type="reset"] {
-        background-color: rgba($color-red, .5);
-      }
-    }
-  }
-}
+
 .similar-events {
   margin-bottom: 40px;
   .event-wrap {
@@ -375,41 +275,6 @@
   .shop-logo {
     float: right;
   }
-  .reviews {
-    header {
-      overflow: hidden;
-    }
-    .user-name {
-      float: left;
-    }
-    .heading {
-      float: right;
-      margin: 0;
-      padding: 10px;
-    }
-    .likes {
-      clear: both;
-      text-align: right;
-    }
-    .controls {
-      .buttons {
-        width: 420px;
-        float: right;
-      }
-      button {
-        padding: 10px;
-      }
-      .add-comment {
-        width: calc(50% - 3px);
-        margin-left: 2px;
-        border-left: 2px solid $color-purple;
-      }
-    }
-    footer.controls button {
-      padding-top: 5px;
-      padding-bottom: 5px;
-    }
-  }
   .similar-events {
     margin-bottom: 50px;
     ul {
@@ -424,24 +289,6 @@
   .event-description {
     font-size: 16px;
     line-height: 24px;
-  }
-  .reviews {
-    .user-name {
-      max-width: 240px;
-    }
-    .heading {
-      max-width: 600px;
-      padding-top: 9px;
-      float: left;
-    }
-    .likes {
-      padding-top: 6px;
-      clear: none;
-      float: right;
-    }
-    .text {
-      font-size: 14px;
-    }
   }
 }
 .back-to-list {
