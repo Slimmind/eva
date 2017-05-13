@@ -16,9 +16,10 @@
     commentsHeight: function () {
       var commentWrap = $('.reviews .text');
       var comment = commentWrap.find('.comment');
-      var expandBtn = $('.expand-comment');
+      var expandBtn = $('.expand-btn');
       expandBtn.on('click', function () {
         var $this = $(this);
+        $this.toggleClass('active');
         var text = $this.parents('.controls').siblings('.text');
         var textHeight = text.innerHeight();
         var fullHeight = text.find('.comment').innerHeight();
