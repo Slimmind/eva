@@ -6,12 +6,95 @@
     text-transform: uppercase;
   }
   article {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
   }
-  .user-name {
-    margin: 0;
-    padding: 8px 10px;
-    color: $color-deep-purple;
+  .user-box {
+    .user,
+    h5 {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .user {
+      position: relative;
+    }
+    .user-info {
+      @include pos(absolute, calc(100% + 10px), $right: 14px);
+      width: 140px;
+      padding: 5px 10px;
+      background-color: $color-white;
+      border: 2px solid $color-purple;
+      border-radius: 25px 0 25px 25px;
+      &:before {
+        content: "";
+        @include pos(absolute, $bottom: 100%, $right: -2px);
+        width: 0;
+        height: 0;
+        border: 5px solid $color-transparent;
+        border-right-color: $color-purple;
+        border-bottom-color: $color-purple;
+        z-index: 0;
+      }
+      strong,
+      time {
+        font: 12px/16px $font-bold;
+        color: $color-deep-purple;
+      }
+      span {
+        position: relative;
+        display: block;
+        margin-bottom: 2px;
+        color: rgba($color-deep-purple, .5);
+        &:after {
+          content: "";
+          @include pos(absolute, 100%, 0);
+          width: 70px;
+          height: 1px;
+          background-color: rgba($color-deep-purple, .3);
+        }
+      }
+      .nickname {
+        span {
+          display: inline-block;
+          max-width: 100%;
+          vertical-align: middle;
+          font: 12px/16px $font-bold;
+          color: $color-purple;
+          @include dots();
+          &:after {
+            display: none;
+          }
+        }
+        &.liked {
+          position: relative;
+          &:before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 28px;
+            height: 28px;
+            margin-right: 5px;
+            border-radius: 50%;
+            background: $color-pink url('#{$path-svg}/heart.svg') no-repeat center center / 20px auto;
+          }
+          span {
+            max-width: calc(100% - 35px);
+          }
+        }
+      }
+    }
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      @include bg(center, center, cover);
+    }
+    h5 {
+      margin: 0;
+      width: calc(100% - 40px);
+      padding: 8px 10px;
+      color: $color-deep-purple;
+      @include dots();
+    }
   }
   .heading {
     padding: 0 10px 10px;
@@ -45,7 +128,7 @@
       }
     }
   }
-  .expand-comment {
+  .expand-review {
     text-align: right;
   }
 
@@ -83,23 +166,80 @@
 
 //
 
-  .controls {
+  .comments {
+    border-top: 2px solid rgba($color-deep-purple, .3);
+    padding-top: 20px;
+  }
+  .comment {
+    position: relative;
     overflow: hidden;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    &:nth-child(odd) {
+      .comment-avatar {
+        left: 0;
+      }
+      .comment-text {
+        padding: 10px 15px 0 60px;
+        border-radius: 0 30px 30px 30px;
+      }
+    }
+    &:nth-child(even) {
+      .comment-avatar {
+        right: 0;
+      }
+      .comment-text {
+        padding: 10px 60px 0 15px;
+        border-radius: 30px 0 30px 30px;
+      }
+    }
+  }
+  .comment-avatar {
+    @include pos(absolute,0);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid $color-purple;
+    @include bg(center, top, cover);
+    z-index: 1;
+  }
+  .comment-text {
+    border: 2px solid $color-purple;
+    padding: 10px 20px 0;
+  }
+  .controls {
+    text-align: right;
     .btn {
       display: inline-block;
-      vertical-align: top;
+      vertical-align: middle;
       width: 48%;
-      padding: 0 5px;
-
+      max-width: 160px;
+      white-space: normal;
+      font-size: 12px;
+      text-align: left;
+      border-radius: 20px;      
     }
     .add-comment {
-      padding-left: 45px;
-      background: url('#{$path-svg}/plus.svg') no-repeat 5px center / 30px 30px;
-      color: $color-purple;
-      text-align: left;
+      background: $color-purple url('#{$path-svg}/plus-white.svg') no-repeat 5px center / 30px 30px;
+      color: $color-white;
+      padding: 1px 5px 1px 45px;
     }
     .comments-qty {
-
+      color: $color-purple;
+      background-color: $color-white;
+      border: 2px solid $color-purple;
+      padding: 3px 5px;
+      .qty {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: $color-purple;
+        color: $color-white;
+        font: 20px/28px $font-medium;
+        text-align: center;
+      }
     }
   }
   .comment-form {
@@ -153,6 +293,9 @@
     footer.controls button {
       padding-top: 5px;
       padding-bottom: 5px;
+    }
+    .comment {
+
     }
   }
 }
