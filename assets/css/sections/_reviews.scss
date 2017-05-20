@@ -175,9 +175,13 @@
     overflow: hidden;
     margin-bottom: 20px;
     padding-top: 30px;
+    font: 12px/16px $font-medium;
     &:nth-child(odd) {
       .comment-avatar {
         left: 0;
+        &:after {
+          right: -15px;
+        }
       }
       .comment-text {
         padding: 10px 15px 0 60px;
@@ -187,6 +191,9 @@
     &:nth-child(even) {
       .comment-avatar {
         right: 0;
+        &:after {
+          left: -15px;
+        }
       }
       .comment-text {
         padding: 10px 60px 0 15px;
@@ -202,10 +209,19 @@
     border: 2px solid $color-purple;
     @include bg(center, top, cover);
     z-index: 1;
+    &:after {
+      content: "";
+      @include pos(absolute, 14px);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: $color-white url('#{$path-svg}/review-author-icon.svg') no-repeat center top 5px / 100%;
+    }
   }
   .comment-text {
     border: 2px solid $color-purple;
     padding: 10px 20px 0;
+    color: rgba($color-deep-purple, .5);
   }
   .controls {
     text-align: right;
@@ -295,7 +311,60 @@
       padding-bottom: 5px;
     }
     .comment {
-
+      @include flex(row, space-between, center);
+      font-size: 14px;
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+        .comment-text:before {
+          right: -30px;
+          border-left-color: $color-purple;
+        }
+        .comment-avatar:after {
+          left: -10px;
+        }
+      }
+      &:nth-child(odd) {
+        .comment-text:before {
+          left: -30px;
+          border-right-color: $color-purple;
+        }
+        .comment-avatar:after {
+          right: -10px;
+        }
+      }
+    }
+    .comment-avatar {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      &:after {
+        width: 40px;
+        height: 40px;
+        top: 0;
+      }
+    }
+    .comment-text {
+      position: relative;
+      border-radius: 50px !important;
+      font-size: 14px;
+      width: calc(100% - 160px);
+      &:before {
+        content: "";
+        @include pos(absolute, center);
+        width: 0;
+        height: 0;
+        border: solid $color-transparent;
+        border-width: 9px 15px;
+      }
+    }
+  }
+}
+@include xtab {
+  .reviews {
+    overflow: hidden;
+    .comments {
+      width: 60%;
+      float: right;
     }
   }
 }
