@@ -275,7 +275,7 @@
     .nickname {
       a {
         display: inline-block;
-        max-width: calc(100% - 35px);
+        max-width: 100%;
         vertical-align: middle;
         font: 12px/16px $font-bold;
         color: $color-purple;
@@ -286,13 +286,12 @@
       }
       &.liked {
         position: relative;
-        padding-left: 40px;
+        padding-left: 35px;
         &:after {
           content: "";
-          @include pos(absolute, center, 10px);
+          @include pos(absolute, center, 0);
           width: 28px;
           height: 28px;
-          margin-right: 5px;
           border-radius: 50%;
           background: $color-pink url('#{$path-svg}/heart.svg') no-repeat center center / 20px auto;
         }
@@ -322,9 +321,7 @@
       float: left;
     }
     .heading {
-      float: right;
       margin: 0;
-      max-width: 60%;
       padding: 10px;
       font-size: 18px;
     }
@@ -334,16 +331,18 @@
     }
     .controls {
       .btn {
-        max-width: 160px;
+        max-width: 210px;
+        height: 38px;
+        font-size: 14px;
+        font-family: $font-medium;
       }
       .add-comment {
         padding-left: 50px;
       }
     }
-    .review-text,
-    .comment {
-      font-size: 14px;
-      line-height: 18px;
+    .review-text {
+      font-size: 16px;
+      line-height: 20px;
     }
     .comments {
       padding-top: 20px;
@@ -352,6 +351,7 @@
       @include flex(row, space-between, center);
       padding-top: 0;
       font-size: 14px;
+      line-height: 16px;
       &:nth-child(even) {
         flex-direction: row-reverse;
         .comment-text:before {
@@ -387,6 +387,7 @@
       border-radius: 50px !important;
       font-size: 14px;
       width: calc(100% - 160px);
+      padding: 15px 25px 10px !important;
       &:before {
         content: "";
         @include pos(absolute, center);
@@ -398,23 +399,39 @@
     }
   }
   .user-box {
-    float: left;
-    width: 100%;
-    max-width: 40%;
     .user-info {
       top: -5px;
       right: auto;
+      padding-top: 0;
+      border-radius: 17px;
       &:before {
         display: none;
       }
       .nickname {
-        &.liked:after {
-          position: relative;
-          width: 18px;
-          height: 18px;
-          margin: 0 5px 0 5px;
-          z-index: 20;
-          background-size: 12px auto;
+        padding-left: 0;
+        margin: -2px 0 2px -12px;
+        &:before {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          width: 36px;
+          height: 36px;
+          margin: 0 10px 0 0;
+          border-radius: 50%;
+          border: 2px solid $color-purple;
+          background: url('#{$path-svg}/review-author-icon.svg') no-repeat center top / 36px auto;
+          overflow: hidden;
+        }
+        &.liked {
+          padding-left: 0;
+          &:after {
+            position: absolute;
+            left: 20px;
+            width: 24px;
+            height: 24px;
+            z-index: 20;
+            background-size: 18px auto;
+          }
         }
       }
     }

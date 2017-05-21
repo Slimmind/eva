@@ -10954,7 +10954,7 @@ main:before
     display: inline-block;
     overflow: hidden;
 
-    max-width: calc(100% - 35px);
+    max-width: 100%;
 
     vertical-align: middle;
     white-space: nowrap;
@@ -10972,18 +10972,17 @@ main:before
 {
     position: relative;
 
-    padding-left: 40px;
+    padding-left: 35px;
 }
 
 .user-box .user-info .nickname.liked:after
 {
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 0;
 
     width: 28px;
     height: 28px;
-    margin-right: 5px;
 
     content: '';
     transform: translateY(-50%);
@@ -12306,9 +12305,6 @@ main:before
     {
         font-size: 18px;
 
-        float: right;
-
-        max-width: 60%;
         margin: 0;
         padding: 10px;
     }
@@ -12322,7 +12318,11 @@ main:before
 
     .reviews .controls .btn
     {
-        max-width: 160px;
+        font-family: 'open_sanssemibold', sans-serif;
+        font-size: 14px;
+
+        max-width: 210px;
+        height: 38px;
     }
 
     .reviews .controls .add-comment
@@ -12330,11 +12330,10 @@ main:before
         padding-left: 50px;
     }
 
-    .reviews .review-text,
-    .reviews .comment
+    .reviews .review-text
     {
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     .reviews .comments
@@ -12345,6 +12344,7 @@ main:before
     .reviews .comment
     {
         font-size: 14px;
+        line-height: 16px;
 
         display: -ms-flexbox;
         display: flex;
@@ -12413,6 +12413,7 @@ main:before
         position: relative;
 
         width: calc(100% - 160px);
+        padding: 15px 25px 10px !important;
 
         border-radius: 50px !important;
     }
@@ -12432,18 +12433,14 @@ main:before
         border-width: 9px 15px;
     }
 
-    .user-box
-    {
-        float: left;
-
-        width: 100%;
-        max-width: 40%;
-    }
-
     .user-box .user-info
     {
         top: -5px;
         right: auto;
+
+        padding-top: 0;
+
+        border-radius: 17px;
     }
 
     .user-box .user-info:before
@@ -12451,22 +12448,50 @@ main:before
         display: none;
     }
 
+    .user-box .user-info .nickname
+    {
+        margin: -2px 0 2px -12px;
+        padding-left: 0;
+    }
+
+    .user-box .user-info .nickname:before
+    {
+        display: inline-block;
+        overflow: hidden;
+
+        width: 36px;
+        height: 36px;
+        margin: 0 10px 0 0;
+
+        content: '';
+        vertical-align: middle;
+
+        border: 2px solid #994ccf;
+        border-radius: 50%;
+        background: url('../../svg/review-author-icon.svg') no-repeat center top/36px auto;
+    }
+
+    .user-box .user-info .nickname.liked
+    {
+        padding-left: 0;
+    }
+
     .user-box .user-info .nickname.liked:after
     {
-        position: relative;
+        position: absolute;
         z-index: 20;
+        left: 20px;
 
-        width: 18px;
-        height: 18px;
-        margin: 0 5px 0 5px;
+        width: 24px;
+        height: 24px;
 
-        background-size: 12px auto;
+        background-size: 18px auto;
     }
 
     .event-description
     {
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     .event-description figure
