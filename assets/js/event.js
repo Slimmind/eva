@@ -10,26 +10,26 @@
     },
     addComments: function () {
       $('.add-comment').on('click', function () {
-        $(this).parents('.controls').siblings('.comment-form').slideToggle();
+        $(this).toggleClass('active').parents('.controls').siblings('.comment-form').slideToggle();
       } );
     },
     commentsHeight: function () {
-      var commentWrap = $('.reviews .text');
-      var comment = commentWrap.find('.comment');
+      var commentWrap = $('.review-text-wrap');
       var expandBtn = $('.expand-btn');
       expandBtn.on('click', function () {
         var $this = $(this);
         $this.toggleClass('active');
-        var text = $this.parents('.controls').siblings('.text');
-        var textHeight = text.innerHeight();
-        var fullHeight = text.find('.comment').innerHeight();
-        if(!text.attr('style')) {
+        var text = $this.parents('article').find('.review-text');
+        var textHeight = commentWrap.innerHeight();
+        var fullHeight = text.innerHeight();
+        if(!commentWrap.attr('style')) {
           if(fullHeight > textHeight) {
-            text.css('maxHeight', fullHeight).addClass('expanded');
+            commentWrap.css('maxHeight', fullHeight).addClass('expanded');
           }
         } else {
-          text.removeAttr('style').removeClass('expanded');
+          commentWrap.removeAttr('style').removeClass('expanded');
         }
+        console.log('textHeight = ' + textHeight + ' fullTextHeight = ' + fullHeight);
       } );
     },
     load: function () {

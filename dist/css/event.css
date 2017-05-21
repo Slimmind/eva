@@ -10497,154 +10497,6 @@ main:before
     margin-bottom: 20px;
 }
 
-.reviews .user-box .user,
-.reviews .user-box h5
-{
-    display: inline-block;
-
-    vertical-align: middle;
-}
-
-.reviews .user-box .user
-{
-    position: relative;
-}
-
-.reviews .user-box .user-info
-{
-    position: absolute;
-    top: calc(100% + 10px);
-    right: 14px;
-
-    width: 140px;
-    padding: 5px 10px;
-
-    border: 2px solid #994ccf;
-    border-radius: 25px 0 25px 25px;
-    background-color: #fff;
-}
-
-.reviews .user-box .user-info:before
-{
-    position: absolute;
-    z-index: 0;
-    right: -2px;
-    bottom: 100%;
-
-    width: 0;
-    height: 0;
-
-    content: '';
-
-    border: 5px solid transparent;
-    border-right-color: #994ccf;
-    border-bottom-color: #994ccf;
-}
-
-.reviews .user-box .user-info strong,
-.reviews .user-box .user-info time
-{
-    font: 12px/16px 'open_sansbold', sans-serif;
-
-    color: #2c2034;
-}
-
-.reviews .user-box .user-info span
-{
-    position: relative;
-
-    display: block;
-
-    margin-bottom: 2px;
-
-    color: rgba(44, 32, 52, .5);
-}
-
-.reviews .user-box .user-info span:after
-{
-    position: absolute;
-    top: 100%;
-    left: 0;
-
-    width: 70px;
-    height: 1px;
-
-    content: '';
-
-    background-color: rgba(44, 32, 52, .3);
-}
-
-.reviews .user-box .user-info .nickname span
-{
-    font: 12px/16px 'open_sansbold', sans-serif;
-
-    display: inline-block;
-    overflow: hidden;
-
-    max-width: 100%;
-
-    vertical-align: middle;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-
-    color: #994ccf;
-}
-
-.reviews .user-box .user-info .nickname span:after
-{
-    display: none;
-}
-
-.reviews .user-box .user-info .nickname.liked
-{
-    position: relative;
-}
-
-.reviews .user-box .user-info .nickname.liked:before
-{
-    display: inline-block;
-
-    width: 28px;
-    height: 28px;
-    margin-right: 5px;
-
-    content: '';
-    vertical-align: middle;
-
-    border-radius: 50%;
-    background: #bd017c url('../../svg/heart.svg') no-repeat center center/20px auto;
-}
-
-.reviews .user-box .user-info .nickname.liked span
-{
-    max-width: calc(100% - 35px);
-}
-
-.reviews .user-box .avatar
-{
-    width: 32px;
-    height: 32px;
-
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-.reviews .user-box h5
-{
-    overflow: hidden;
-
-    width: calc(100% - 40px);
-    margin: 0;
-    padding: 8px 10px;
-
-    white-space: nowrap;
-    text-overflow: ellipsis;
-
-    color: #2c2034;
-}
-
 .reviews .heading
 {
     padding: 0 10px 10px;
@@ -10662,7 +10514,7 @@ main:before
     font-family: 'open_sanssemibold', sans-serif;
 }
 
-.reviews .text
+.reviews .review-text-wrap
 {
     font-family: 'open_sanssemibold', sans-serif;
 
@@ -10679,7 +10531,7 @@ main:before
     color: #2c2034;
 }
 
-.reviews .text:after
+.reviews .review-text-wrap:after
 {
     position: absolute;
     bottom: 0;
@@ -10693,13 +10545,15 @@ main:before
     background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-.reviews .text.expanded:after
+.reviews .review-text-wrap.expanded:after
 {
     display: none;
 }
 
 .reviews .expand-review
 {
+    margin-bottom: 20px;
+
     text-align: right;
 }
 
@@ -10850,11 +10704,12 @@ main:before
 .reviews .controls .btn
 {
     font-size: 12px;
+    line-height: 16px;
 
     display: inline-block;
 
-    width: 48%;
-    max-width: 160px;
+    width: auto;
+    max-width: 125px;
 
     text-align: left;
     vertical-align: middle;
@@ -10865,14 +10720,53 @@ main:before
 
 .reviews .controls .add-comment
 {
-    padding: 1px 5px 1px 45px;
+    position: relative;
+
+    padding: 1px 5px 1px 40px;
+
+    transition: border-radius .3s ease;
 
     color: #fff;
     background: #994ccf url('../../svg/plus-white.svg') no-repeat 5px center/30px 30px;
 }
 
+.reviews .controls .add-comment:before
+{
+    position: absolute;
+    top: -11px;
+    left: -1px;
+
+    width: 0;
+    height: 0;
+
+    content: '';
+    transition: .5s ease;
+    transition-property: transfrom, opacity;
+    transform: translateY(11px);
+
+    opacity: 0;
+    border: 5px solid transparent;
+    border-bottom-color: #994ccf;
+    border-left-color: #994ccf;
+
+    will-change: transform;
+}
+
+.reviews .controls .add-comment.active
+{
+    border-top-left-radius: 0;
+}
+
+.reviews .controls .add-comment.active:before
+{
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
 .reviews .controls .comments-qty
 {
+    max-width: 160px;
     padding: 3px 5px;
 
     color: #994ccf;
@@ -10880,11 +10774,17 @@ main:before
     background-color: #fff;
 }
 
+.reviews .controls .comments-qty span,
+.reviews .controls .comments-qty strong
+{
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
 .reviews .controls .comments-qty .qty
 {
     font: 20px/28px 'open_sanssemibold', sans-serif;
-
-    display: inline-block;
 
     width: 28px;
     height: 28px;
@@ -10899,6 +10799,8 @@ main:before
 
 .reviews .comment-form
 {
+    display: none;
+
     margin-bottom: 20px;
 }
 
@@ -10917,8 +10819,207 @@ main:before
 
     padding: 5px 10px;
 
-    color: #fff;
-    background-color: rgba(44, 32, 52, .5);
+    color: rgba(44, 32, 52, .5);
+    border: solid #994ccf;
+    border-width: 0 2px 2px 0;
+    background-color: #f7f7f7;
+}
+
+.reviews .comment-form textarea::-webkit-input-placeholder
+{
+    font-family: 'open_sanslight', sans-serif;
+    font-style: italic;
+
+    color: #d9d8d8;
+}
+
+.reviews .comment-form textarea:-moz-placeholder
+{
+    font-family: 'open_sanslight', sans-serif;
+    font-style: italic;
+
+    color: #d9d8d8;
+}
+
+.reviews .comment-form textarea::-moz-placeholder
+{
+    font-family: 'open_sanslight', sans-serif;
+    font-style: italic;
+
+    color: #d9d8d8;
+}
+
+.reviews .comment-form textarea:-ms-input-placeholder
+{
+    font-family: 'open_sanslight', sans-serif;
+    font-style: italic;
+
+    color: #d9d8d8;
+}
+
+.user-box .user,
+.user-box h5
+{
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+.user-box .user
+{
+    position: relative;
+}
+
+.user-box .user:hover .user-info
+{
+    visibility: visible;
+
+    opacity: 1;
+}
+
+.user-box .user-info
+{
+    position: absolute;
+    z-index: 1;
+    top: calc(100% + 10px);
+    right: 14px;
+
+    visibility: hidden;
+
+    width: 140px;
+    padding: 5px 10px;
+
+    transition: opacity .5s ease;
+
+    opacity: 0;
+    border: 2px solid #994ccf;
+    border-radius: 25px 0 25px 25px;
+    background-color: #fff;
+}
+
+.user-box .user-info:before
+{
+    position: absolute;
+    z-index: 0;
+    right: -2px;
+    bottom: 100%;
+
+    width: 0;
+    height: 0;
+
+    content: '';
+
+    border: 5px solid transparent;
+    border-right-color: #994ccf;
+    border-bottom-color: #994ccf;
+}
+
+.user-box .user-info strong,
+.user-box .user-info time
+{
+    font: 12px/16px 'open_sansbold', sans-serif;
+
+    color: #2c2034;
+}
+
+.user-box .user-info span
+{
+    position: relative;
+
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: rgba(44, 32, 52, .5);
+}
+
+.user-box .user-info span:after
+{
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 70px;
+    height: 1px;
+
+    content: '';
+
+    background-color: rgba(44, 32, 52, .3);
+}
+
+.user-box .user-info .nickname a
+{
+    font: 12px/16px 'open_sansbold', sans-serif;
+
+    display: inline-block;
+    overflow: hidden;
+
+    max-width: calc(100% - 35px);
+
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    color: #994ccf;
+}
+
+.user-box .user-info .nickname a:after
+{
+    display: none;
+}
+
+.user-box .user-info .nickname.liked
+{
+    position: relative;
+
+    padding-left: 40px;
+}
+
+.user-box .user-info .nickname.liked:after
+{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
+
+    content: '';
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+    background: #bd017c url('../../svg/heart.svg') no-repeat center center/20px auto;
+}
+
+.user-box .user-info .nickname.liked span
+{
+    max-width: calc(100% - 35px);
+}
+
+.user-box .avatar
+{
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.user-box h5
+{
+    overflow: hidden;
+
+    max-width: calc(100% - 40px);
+    margin: 0;
+    padding: 8px 10px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    color: #2c2034;
 }
 
 .wrapper
@@ -12196,11 +12297,6 @@ main:before
         margin-top: 64px;
     }
 
-    .reviews header
-    {
-        overflow: hidden;
-    }
-
     .reviews .user-name
     {
         float: left;
@@ -12208,8 +12304,11 @@ main:before
 
     .reviews .heading
     {
+        font-size: 18px;
+
         float: right;
 
+        max-width: 60%;
         margin: 0;
         padding: 10px;
     }
@@ -12221,30 +12320,26 @@ main:before
         text-align: right;
     }
 
-    .reviews .controls .buttons
+    .reviews .controls .btn
     {
-        float: right;
-
-        width: 420px;
-    }
-
-    .reviews .controls button
-    {
-        padding: 10px;
+        max-width: 160px;
     }
 
     .reviews .controls .add-comment
     {
-        width: calc(50% - 3px);
-        margin-left: 2px;
-
-        border-left: 2px solid #994ccf;
+        padding-left: 50px;
     }
 
-    .reviews footer.controls button
+    .reviews .review-text,
+    .reviews .comment
     {
-        padding-top: 5px;
-        padding-bottom: 5px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .reviews .comments
+    {
+        padding-top: 20px;
     }
 
     .reviews .comment
@@ -12254,6 +12349,8 @@ main:before
         display: -ms-flexbox;
         display: flex;
             flex-direction: row;
+
+        padding-top: 0;
 
         -ms-flex-direction: row;
         -ms-flex-pack: justify;
@@ -12333,6 +12430,43 @@ main:before
 
         border: solid transparent;
         border-width: 9px 15px;
+    }
+
+    .user-box
+    {
+        float: left;
+
+        width: 100%;
+        max-width: 40%;
+    }
+
+    .user-box .user-info
+    {
+        top: -5px;
+        right: auto;
+    }
+
+    .user-box .user-info:before
+    {
+        display: none;
+    }
+
+    .user-box .user-info .nickname.liked:after
+    {
+        position: relative;
+        z-index: 20;
+
+        width: 18px;
+        height: 18px;
+        margin: 0 5px 0 5px;
+
+        background-size: 12px auto;
+    }
+
+    .event-description
+    {
+        font-size: 14px;
+        line-height: 18px;
     }
 
     .event-description figure
@@ -13509,7 +13643,7 @@ main:before
         padding-top: 6px;
     }
 
-    .reviews .text
+    .reviews .review-text-wrap
     {
         font-size: 14px;
     }
