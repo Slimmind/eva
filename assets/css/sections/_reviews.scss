@@ -9,7 +9,9 @@
     margin-bottom: 20px;
   }
   .heading {
-    padding: 0 10px 10px;
+  	display: inline-block;
+  	vertical-align: middle;
+  	width: calc(100% - 150px);
   }
   .likes {
     padding: 0 10px;
@@ -61,8 +63,8 @@
       content: "";
       width: 32px;
       height: 32px;
-      background: url('#{$path-svg}/leftarrow.svg') no-repeat center center / contain;
-      transform: rotate(-90deg);
+      background: $color-purple url('#{$path-svg}/arrow-bottom.svg') no-repeat center center / contain;
+      border-radius: 50%;
       transition: transform .3s ease;
       will-change: transform;
     }
@@ -70,7 +72,7 @@
       content: "Свернуть";
     }
     &.active:after {
-      transform: rotate(90deg);
+      transform: rotateX(180deg);
     }
   }
   .comments {
@@ -148,7 +150,6 @@
       background: $color-purple url('#{$path-svg}/plus-white.svg') no-repeat 5px center / 30px 30px;
       color: $color-white;
       padding: 1px 5px 1px 40px;
-      transition: border-radius .3s ease;
       &:before {
         content: "";
         @include pos(absolute, -11px, -1px);
@@ -159,9 +160,6 @@
         border-left-color: $color-purple;
         transform: translateY(11px);
         opacity: 0;
-        transition-property: transfrom, opacity;
-        transition: .5s ease;
-        will-change: transform;
       }
       &.active {
         border-top-left-radius: 0;
@@ -195,6 +193,7 @@
     }
   }
   .comment-form {
+  	position: relative;
     display: none;
     margin-bottom: 20px;
     .form-row {
@@ -203,8 +202,23 @@
       overflow-y: auto;
       overflow-x: hidden;
     }
+    .submit-wrap {
+    	@include pos(absolute, $bottom: 5px, $right: 5px);
+    	button {
+    		display: inline-block;
+    		width: 40px;
+    		height: 40px;
+    		padding: 5px 10px;
+    		font-family: $font-medium;
+    		color: $color-white;
+    		border-radius: 20px;
+    		border: 2px solid $color-purple;
+    		text-indent: -9999px;	
+    		background: $color-purple url('#{$path-svg}/send.svg') no-repeat center center / 30px auto;
+    	}    	
+   	}
     textarea {
-      padding: 5px 10px;
+      padding: 5px 50px 5px 10px;
       font: 12px/18px $font-bold;
       background-color: $color-light-gray;
       color: rgba($color-deep-purple, .5);
@@ -219,6 +233,9 @@
   }
 }
 .user-box {
+	display: inline-block;
+	vertical-align: middle;
+	width: 140px;
   .user,
   h5 {
     display: inline-block;
@@ -237,23 +254,13 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity .5s ease;
-    @include pos(absolute, calc(100% + 10px), $right: 14px);
+    @include pos(absolute, calc(100% - 35px), 0);
     width: 140px;
-    padding: 5px 10px;
+    padding: 0 10px 5px;
     background-color: $color-white;
-    border: 2px solid $color-purple;
-    border-radius: 25px 0 25px 25px;
+    border: 1px solid $color-purple;
+    border-radius: 20px;
     z-index: 1;
-    &:before {
-      content: "";
-      @include pos(absolute, $bottom: 100%, $right: -2px);
-      width: 0;
-      height: 0;
-      border: 5px solid $color-transparent;
-      border-right-color: $color-purple;
-      border-bottom-color: $color-purple;
-      z-index: 0;
-    }
     strong,
     time {
       font: 12px/16px $font-bold;
@@ -273,27 +280,37 @@
       }
     }
     .nickname {
+    	margin: -1px 0 2px -11px;
       a {
         display: inline-block;
         max-width: 100%;
+        margin: -1px 0 2px -11px;
         vertical-align: middle;
         font: 12px/16px $font-bold;
         color: $color-purple;
         @include dots();
-        &:after {
-          display: none;
-        }
+      }
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 36px;
+        height: 36px;
+        margin: 0 24px 0 0;
+        border-radius: 50%;
+        border: 1px solid $color-purple;
+        background: url('#{$path-svg}/review-author-icon.svg') no-repeat center top 5px/ 36px auto;
+        overflow: hidden;
       }
       &.liked {
         position: relative;
-        padding-left: 35px;
         &:after {
           content: "";
-          @include pos(absolute, center, 0);
-          width: 28px;
-          height: 28px;
+          @include pos(absolute, center, 20px);
+          width: 24px;
+          height: 24px;
           border-radius: 50%;
-          background: $color-pink url('#{$path-svg}/heart.svg') no-repeat center center / 20px auto;
+          background: $color-pink url('#{$path-svg}/heart.svg') no-repeat center center / 18px auto;
         }
         span {
           max-width: calc(100% - 35px);
@@ -302,17 +319,21 @@
     }
   }
   .avatar {
-    width: 32px;
-    height: 32px;
+  	position: relative;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
+    border: 2px solid $color-purple;
     @include bg(center, center, cover);
-  }
-  h5 {
-    margin: 0;
-    max-width: calc(100% - 40px);
-    padding: 8px 10px;
-    color: $color-deep-purple;
-    @include dots();
+    &:after {
+      content: "";
+      @include pos(absolute, $bottom: -4px, $left: 0);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: $color-white url('#{$path-svg}/review-author-icon.svg') no-repeat center top 5px / 36px auto;
+      overflow: hidden;
+    }
   }
 }
 @include tab {
@@ -321,9 +342,19 @@
       float: left;
     }
     .heading {
-      margin: 0;
-      padding: 10px;
+    	position: relative;
+      margin: 0 0 0 -30px;
+      padding: 5px 0 5px 50px;
       font-size: 18px;
+      width: calc(100% - 120px);
+      vertical-align: top;
+      &:after {
+      	content: "";
+      	@include pos(absolute, $bottom: 0, $left: 0);
+      	width: 100%;
+      	height: 3px;
+      	background-color: $color-purple;
+      };
     }
     .likes {
       clear: both;
@@ -331,13 +362,14 @@
     }
     .controls {
       .btn {
-        max-width: 210px;
+        max-width: 230px;
         height: 38px;
+        padding: 3px 10px;
         font-size: 14px;
         font-family: $font-medium;
       }
       .add-comment {
-        padding-left: 50px;
+        padding-left: 45px;
       }
     }
     .review-text {
@@ -374,8 +406,8 @@
     }
     .comment-avatar {
       position: relative;
-      width: 120px;
-      height: 120px;
+      width: 90px;
+      height: 90px;
       &:after {
         width: 40px;
         height: 40px;
@@ -399,68 +431,77 @@
     }
   }
   .user-box {
-    .user-info {
-      top: -5px;
-      right: auto;
-      padding-top: 0;
-      border-radius: 17px;
-      &:before {
-        display: none;
-      }
-      .nickname {
-        padding-left: 0;
-        margin: -2px 0 2px -12px;
-        &:before {
-          content: "";
-          display: inline-block;
-          vertical-align: middle;
-          width: 36px;
-          height: 36px;
-          margin: 0 10px 0 0;
-          border-radius: 50%;
-          border: 2px solid $color-purple;
-          background: url('#{$path-svg}/review-author-icon.svg') no-repeat center top / 36px auto;
-          overflow: hidden;
-        }
-        &.liked {
-          padding-left: 0;
-          &:after {
-            position: absolute;
-            left: 20px;
-            width: 24px;
-            height: 24px;
-            z-index: 20;
-            background-size: 18px auto;
-          }
-        }
-      }
-    }
+  	position: relative;
+  	z-index: 1;
+  	.avatar {
+  		width: 120px;
+  		height: 120px;
+  	}
   }
 }
 @include xtab {
   .reviews {
     overflow: hidden;
-    .comments {
+    .heading {
+    	width: calc(100% - 394px);
+    	span {
+    		display: block;
+    		@include dots();
+    	}
+    	&:after {
+    		width: calc(100% + 280px);
+    	};
+    }
+    .likes {
+    	padding-top: 6px;
+    	clear: none;
+    	float: right;
+    	width: 280px;
+    	border: none;
+    }
+    .review-text-wrap {
+   		clear: both;
+   		margin-top: -80px; 	
+   		.review-text {
+   			position: relative;
+   			&:before {
+   				content: "";
+   				display: block;
+   				width: 130px;
+   				height: 100px;
+   				float: left;
+   				z-index: -1;
+   			};
+   		}
+    }
+    .comments,
+    .comment-form {
       width: 60%;
       float: right;
+    }
+    .controls {
+    	clear: both;
+    }
+    .comment-form {
+    	textarea {
+    		padding-right: 120px;
+    	}
+    	.submit-wrap  {
+    		right: 20px;
+    		bottom: 10px;
+    		button {
+	    		width: auto;
+	    		height: 38px;
+	    		background-color: $color-purple;
+	    		text-indent: 0;
+	    		background: none;
+	    	}
+    	}
     }
   }
 }
 @include lap {
   .reviews {
-    .user-name {
-      max-width: 240px;
-    }
-    .heading {
-      max-width: 600px;
-      padding-top: 9px;
-      float: left;
-    }
-    .likes {
-      padding-top: 6px;
-      clear: none;
-      float: right;
-    }
     .review-text-wrap {
       font-size: 14px;
     }

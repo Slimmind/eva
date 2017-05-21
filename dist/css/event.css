@@ -10499,7 +10499,11 @@ main:before
 
 .reviews .heading
 {
-    padding: 0 10px 10px;
+    display: inline-block;
+
+    width: calc(100% - 150px);
+
+    vertical-align: middle;
 }
 
 .reviews .likes
@@ -10588,9 +10592,9 @@ main:before
 
     content: '';
     transition: transform .3s ease;
-    transform: rotate(-90deg);
 
-    background: url('../../svg/leftarrow.svg') no-repeat center center/contain;
+    border-radius: 50%;
+    background: #994ccf url('../../svg/arrow-bottom.svg') no-repeat center center/contain;
 
     will-change: transform;
 }
@@ -10602,7 +10606,7 @@ main:before
 
 .reviews .expand-btn.active:after
 {
-    transform: rotate(90deg);
+    transform: rotateX(180deg);
 }
 
 .reviews .comments
@@ -10724,8 +10728,6 @@ main:before
 
     padding: 1px 5px 1px 40px;
 
-    transition: border-radius .3s ease;
-
     color: #fff;
     background: #994ccf url('../../svg/plus-white.svg') no-repeat 5px center/30px 30px;
 }
@@ -10740,16 +10742,12 @@ main:before
     height: 0;
 
     content: '';
-    transition: .5s ease;
-    transition-property: transfrom, opacity;
     transform: translateY(11px);
 
     opacity: 0;
     border: 5px solid transparent;
     border-bottom-color: #994ccf;
     border-left-color: #994ccf;
-
-    will-change: transform;
 }
 
 .reviews .controls .add-comment.active
@@ -10799,6 +10797,8 @@ main:before
 
 .reviews .comment-form
 {
+    position: relative;
+
     display: none;
 
     margin-bottom: 20px;
@@ -10813,11 +10813,36 @@ main:before
     margin: 0;
 }
 
+.reviews .comment-form .submit-wrap
+{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+.reviews .comment-form .submit-wrap button
+{
+    font-family: 'open_sanssemibold', sans-serif;
+
+    display: inline-block;
+
+    width: 40px;
+    height: 40px;
+    padding: 5px 10px;
+
+    text-indent: -9999px;
+
+    color: #fff;
+    border: 2px solid #994ccf;
+    border-radius: 20px;
+    background: #994ccf url('../../svg/send.svg') no-repeat center center/30px auto;
+}
+
 .reviews .comment-form textarea
 {
     font: 12px/18px 'open_sansbold', sans-serif;
 
-    padding: 5px 10px;
+    padding: 5px 50px 5px 10px;
 
     color: rgba(44, 32, 52, .5);
     border: solid #994ccf;
@@ -10857,6 +10882,15 @@ main:before
     color: #d9d8d8;
 }
 
+.user-box
+{
+    display: inline-block;
+
+    width: 140px;
+
+    vertical-align: middle;
+}
+
 .user-box .user,
 .user-box h5
 {
@@ -10881,37 +10915,20 @@ main:before
 {
     position: absolute;
     z-index: 1;
-    top: calc(100% + 10px);
-    right: 14px;
+    top: calc(100% - 35px);
+    left: 0;
 
     visibility: hidden;
 
     width: 140px;
-    padding: 5px 10px;
+    padding: 0 10px 5px;
 
     transition: opacity .5s ease;
 
     opacity: 0;
-    border: 2px solid #994ccf;
-    border-radius: 25px 0 25px 25px;
+    border: 1px solid #994ccf;
+    border-radius: 20px;
     background-color: #fff;
-}
-
-.user-box .user-info:before
-{
-    position: absolute;
-    z-index: 0;
-    right: -2px;
-    bottom: 100%;
-
-    width: 0;
-    height: 0;
-
-    content: '';
-
-    border: 5px solid transparent;
-    border-right-color: #994ccf;
-    border-bottom-color: #994ccf;
 }
 
 .user-box .user-info strong,
@@ -10947,6 +10964,11 @@ main:before
     background-color: rgba(44, 32, 52, .3);
 }
 
+.user-box .user-info .nickname
+{
+    margin: -1px 0 2px -11px;
+}
+
 .user-box .user-info .nickname a
 {
     font: 12px/16px 'open_sansbold', sans-serif;
@@ -10955,6 +10977,7 @@ main:before
     overflow: hidden;
 
     max-width: 100%;
+    margin: -1px 0 2px -11px;
 
     vertical-align: middle;
     white-space: nowrap;
@@ -10963,32 +10986,42 @@ main:before
     color: #994ccf;
 }
 
-.user-box .user-info .nickname a:after
+.user-box .user-info .nickname:before
 {
-    display: none;
+    display: inline-block;
+    overflow: hidden;
+
+    width: 36px;
+    height: 36px;
+    margin: 0 24px 0 0;
+
+    content: '';
+    vertical-align: middle;
+
+    border: 1px solid #994ccf;
+    border-radius: 50%;
+    background: url('../../svg/review-author-icon.svg') no-repeat center top 5px/36px auto;
 }
 
 .user-box .user-info .nickname.liked
 {
     position: relative;
-
-    padding-left: 35px;
 }
 
 .user-box .user-info .nickname.liked:after
 {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 20px;
 
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
 
     content: '';
     transform: translateY(-50%);
 
     border-radius: 50%;
-    background: #bd017c url('../../svg/heart.svg') no-repeat center center/20px auto;
+    background: #bd017c url('../../svg/heart.svg') no-repeat center center/18px auto;
 }
 
 .user-box .user-info .nickname.liked span
@@ -10998,27 +11031,33 @@ main:before
 
 .user-box .avatar
 {
-    width: 32px;
-    height: 32px;
+    position: relative;
 
+    width: 90px;
+    height: 90px;
+
+    border: 2px solid #994ccf;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 }
 
-.user-box h5
+.user-box .avatar:after
 {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+
     overflow: hidden;
 
-    max-width: calc(100% - 40px);
-    margin: 0;
-    padding: 8px 10px;
+    width: 36px;
+    height: 36px;
 
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    content: '';
 
-    color: #2c2034;
+    border-radius: 50%;
+    background: #fff url('../../svg/review-author-icon.svg') no-repeat center top 5px/36px auto;
 }
 
 .wrapper
@@ -12305,8 +12344,27 @@ main:before
     {
         font-size: 18px;
 
-        margin: 0;
-        padding: 10px;
+        position: relative;
+
+        width: calc(100% - 120px);
+        margin: 0 0 0 -30px;
+        padding: 5px 0 5px 50px;
+
+        vertical-align: top;
+    }
+
+    .reviews .heading:after
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 3px;
+
+        content: '';
+
+        background-color: #994ccf;
     }
 
     .reviews .likes
@@ -12321,13 +12379,14 @@ main:before
         font-family: 'open_sanssemibold', sans-serif;
         font-size: 14px;
 
-        max-width: 210px;
+        max-width: 230px;
         height: 38px;
+        padding: 3px 10px;
     }
 
     .reviews .controls .add-comment
     {
-        padding-left: 50px;
+        padding-left: 45px;
     }
 
     .reviews .review-text
@@ -12394,8 +12453,8 @@ main:before
     {
         position: relative;
 
-        width: 120px;
-        height: 120px;
+        width: 90px;
+        height: 90px;
     }
 
     .reviews .comment-avatar:after
@@ -12433,59 +12492,16 @@ main:before
         border-width: 9px 15px;
     }
 
-    .user-box .user-info
+    .user-box
     {
-        top: -5px;
-        right: auto;
-
-        padding-top: 0;
-
-        border-radius: 17px;
+        position: relative;
+        z-index: 1;
     }
 
-    .user-box .user-info:before
+    .user-box .avatar
     {
-        display: none;
-    }
-
-    .user-box .user-info .nickname
-    {
-        margin: -2px 0 2px -12px;
-        padding-left: 0;
-    }
-
-    .user-box .user-info .nickname:before
-    {
-        display: inline-block;
-        overflow: hidden;
-
-        width: 36px;
-        height: 36px;
-        margin: 0 10px 0 0;
-
-        content: '';
-        vertical-align: middle;
-
-        border: 2px solid #994ccf;
-        border-radius: 50%;
-        background: url('../../svg/review-author-icon.svg') no-repeat center top/36px auto;
-    }
-
-    .user-box .user-info .nickname.liked
-    {
-        padding-left: 0;
-    }
-
-    .user-box .user-info .nickname.liked:after
-    {
-        position: absolute;
-        z-index: 20;
-        left: 20px;
-
-        width: 24px;
-        height: 24px;
-
-        background-size: 18px auto;
+        width: 120px;
+        height: 120px;
     }
 
     .event-description
@@ -13015,11 +13031,94 @@ main:before
         overflow: hidden;
     }
 
-    .reviews .comments
+    .reviews .heading
+    {
+        width: calc(100% - 394px);
+    }
+
+    .reviews .heading span
+    {
+        display: block;
+        overflow: hidden;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .reviews .heading:after
+    {
+        width: calc(100% + 280px);
+    }
+
+    .reviews .likes
+    {
+        float: right;
+        clear: none;
+
+        width: 280px;
+        padding-top: 6px;
+
+        border: none;
+    }
+
+    .reviews .review-text-wrap
+    {
+        clear: both;
+
+        margin-top: -80px;
+    }
+
+    .reviews .review-text-wrap .review-text
+    {
+        position: relative;
+    }
+
+    .reviews .review-text-wrap .review-text:before
+    {
+        z-index: -1;
+
+        display: block;
+        float: left;
+
+        width: 130px;
+        height: 100px;
+
+        content: '';
+    }
+
+    .reviews .comments,
+    .reviews .comment-form
     {
         float: right;
 
         width: 60%;
+    }
+
+    .reviews .controls
+    {
+        clear: both;
+    }
+
+    .reviews .comment-form textarea
+    {
+        padding-right: 120px;
+    }
+
+    .reviews .comment-form .submit-wrap
+    {
+        right: 20px;
+        bottom: 10px;
+    }
+
+    .reviews .comment-form .submit-wrap button
+    {
+        width: auto;
+        height: 38px;
+
+        text-indent: 0;
+
+        background: none;
+        background-color: #994ccf;
     }
 }
 
@@ -13645,27 +13744,6 @@ main:before
     .no-dev .menu-btn:hover
     {
         background-color: #b363eb;
-    }
-
-    .reviews .user-name
-    {
-        max-width: 240px;
-    }
-
-    .reviews .heading
-    {
-        float: left;
-
-        max-width: 600px;
-        padding-top: 9px;
-    }
-
-    .reviews .likes
-    {
-        float: right;
-        clear: none;
-
-        padding-top: 6px;
     }
 
     .reviews .review-text-wrap

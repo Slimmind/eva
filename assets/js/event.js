@@ -21,7 +21,7 @@
         $this.toggleClass('active');
         var text = $this.parents('article').find('.review-text');
         var textHeight = commentWrap.innerHeight();
-        var fullHeight = text.innerHeight();
+        var fullHeight = text.innerHeight() + 10;
         if(!commentWrap.attr('style')) {
           if(fullHeight > textHeight) {
             commentWrap.css('maxHeight', fullHeight).addClass('expanded');
