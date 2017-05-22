@@ -150,7 +150,24 @@
   border-bottom: 3px solid $color-deep-purple;
   text-transform: uppercase;
 }
-
+.reviews,
+.similar-events {
+  > h4 {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+    font: 18px/24px $font-medium;
+    color: $color-deep-purple;
+    text-transform: uppercase;
+    &:after {
+      content: "";
+      @include pos(absolute, $bottom: 0, $left: 0);
+      width: calc(100% - 30px);
+      height: 1px;
+      background-color: $color-deep-purple;
+    }
+  }
+}
 .similar-events {
   margin-bottom: 40px;
   .event-wrap {
@@ -291,6 +308,12 @@
   .event-description {
     font-size: 16px;
     line-height: 24px;
+  }
+  .reviews,
+  .similar-events {
+    > h4 {
+      font: 24px/28px $font-medium;
+    }
   }
 }
 .back-to-list {
