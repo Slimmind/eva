@@ -79,57 +79,6 @@
     border-top: 2px solid rgba($color-deep-purple, .3);
     padding-top: 20px;
   }
-  .comment {
-    position: relative;
-    margin-bottom: 20px;
-    padding-top: 30px;
-    font: 12px/16px $font-medium;
-    .user-box {
-      position: absolute;
-      top: 0;
-      figure {
-        width: 60px;
-        height: 60px;
-        &:after {
-          bottom: 10px;
-          left: -40px;
-        }
-      }
-      .user-info {
-        left: 30px;
-      }
-    }
-    &:nth-child(odd) {
-      .user-box {
-        left: 0;
-        &:after {
-          right: -15px;
-        }
-        figure:after {
-          left: 40px;
-        }
-      }
-      .comment-text {
-        padding: 10px 15px 0 60px;
-        border-radius: 0 30px 30px 30px;
-      }
-      .user-box .user-info {
-        left: -30px;
-      }
-    }
-    &:nth-child(even) {
-      .user-box {
-        right: 0;
-        &:after {
-          left: -15px;
-        }
-      }
-      .comment-text {
-        padding: 10px 60px 0 15px;
-        border-radius: 30px 0 30px 30px;
-      }
-    }
-  }
   .comment-avatar {
     @include pos(absolute,0);
     width: 60px;
@@ -245,9 +194,9 @@
   }
 }
 .user-box {
-	display: inline-block;
-	vertical-align: middle;
-	width: 140px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 140px;
   .user,
   h5 {
     display: inline-block;
@@ -293,12 +242,12 @@
       }
     }
     .nickname {
-    	margin: -1px 0 2px -11px;
+      margin: -1px 0 2px -11px;
       a {
         display: inline-block;
         max-width: 100%;
         margin: -1px 0 2px -11px;
-        vertical-align: middle;
+        padding-top: 10px;
         font: 12px/16px $font-bold;
         color: $color-purple;
         @include dots();
@@ -306,7 +255,6 @@
       &:before {
         content: "";
         display: inline-block;
-        vertical-align: middle;
         width: 36px;
         height: 36px;
         margin: 0 24px 0 0;
@@ -332,7 +280,7 @@
     }
   }
   .avatar {
-  	position: relative;
+    position: relative;
     width: 90px;
     height: 90px;
     border-radius: 50%;
@@ -346,6 +294,72 @@
       border-radius: 50%;
       background: $color-white url('#{$path-svg}/review-author-icon.svg') no-repeat center top 5px / 36px auto;
       overflow: hidden;
+    }
+  }
+}
+.comment {
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  font: 12px/16px $font-medium;
+  .user-box {
+    position: absolute;
+    top: 0;
+    figure {
+      width: 60px;
+      height: 60px;
+      &:after {
+        bottom: 10px;
+        left: -25px;
+      }
+    }
+  }
+  .user-info {
+    top: 11px;
+  }
+  &:nth-child(odd) {
+    background-color: indigo;
+    .user-box {
+      left: 0;
+      &:after {
+        right: -15px;
+      }
+      figure:after {
+        left: 40px;
+      }
+    }
+    .comment-text {
+      padding: 10px 15px 0 60px;
+      border-radius: 0 30px 30px 30px;
+    }
+    .user-info {
+      top: 11px;
+      left: 41px;
+    }
+  }
+  &:nth-child(even) {
+    .user-box {
+      right: 0;
+      text-align: right;
+    }
+    .user-info {
+      left: -125px;
+      text-align: left;
+    }
+    .comment-text {
+      padding: 10px 60px 0 15px;
+      border-radius: 30px 0 30px 30px;
+    }
+    .nickname {
+      overflow: hidden;
+      margin: -1px -11px 2px 0;
+      &:before {
+        float: right;
+        margin-right: 0;
+      }
+      &.liked:after {
+        left: 85px;
+      }
     }
   }
 }
