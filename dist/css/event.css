@@ -10622,15 +10622,31 @@ main:before
 
     position: relative;
 
-    overflow: hidden;
-
     margin-bottom: 20px;
     padding-top: 30px;
 }
 
 .reviews .comment .user-box
 {
+    position: absolute;
     top: 0;
+}
+
+.reviews .comment .user-box figure
+{
+    width: 60px;
+    height: 60px;
+}
+
+.reviews .comment .user-box figure:after
+{
+    bottom: 10px;
+    left: -40px;
+}
+
+.reviews .comment .user-box .user-info
+{
+    left: 30px;
 }
 
 .reviews .comment:nth-child(odd) .user-box
@@ -10643,11 +10659,21 @@ main:before
     right: -15px;
 }
 
+.reviews .comment:nth-child(odd) .user-box figure:after
+{
+    left: 40px;
+}
+
 .reviews .comment:nth-child(odd) .comment-text
 {
     padding: 10px 15px 0 60px;
 
     border-radius: 0 30px 30px 30px;
+}
+
+.reviews .comment:nth-child(odd) .user-box .user-info
+{
+    left: -30px;
 }
 
 .reviews .comment:nth-child(even) .user-box
@@ -10931,6 +10957,8 @@ main:before
 
 .user-box .user-info span
 {
+    font: 10px/14px 'open_sansregular', sans-serif;
+
     position: relative;
 
     display: block;
