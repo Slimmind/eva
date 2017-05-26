@@ -79,23 +79,6 @@
     border-top: 2px solid rgba($color-deep-purple, .3);
     padding-top: 20px;
   }
-  .comment-avatar {
-    @include pos(absolute,0);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid $color-purple;
-    @include bg(center, top, cover);
-    z-index: 1;
-    &:after {
-      content: "";
-      @include pos(absolute, 14px);
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: $color-white url('#{$path-svg}/review-author-icon.svg') no-repeat center top 5px / 100%;
-    }
-  }
   .comment-text {
     border: 2px solid $color-purple;
     padding: 10px 20px 0;
@@ -308,7 +291,7 @@
   .user-box {
     position: absolute;
     top: 0;
-    figure {
+    .avatar {
       width: 60px;
       height: 60px;
       &:after {
@@ -407,7 +390,7 @@
     }
     .comments {
       padding-top: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
     .comment {
       @include flex(row, space-between, center);
@@ -423,7 +406,7 @@
           right: -30px;
           border-left-color: $color-purple;
         }
-        .comment-avatar:after {
+        .comment .avatar:after {
           left: -10px;
         }
       }
@@ -432,19 +415,6 @@
           left: -30px;
           border-right-color: $color-purple;
         }
-        .comment-avatar:after {
-          right: -10px;
-        }
-      }
-    }
-    .comment-avatar {
-      position: relative;
-      width: 90px;
-      height: 90px;
-      &:after {
-        width: 40px;
-        height: 40px;
-        top: 0;
       }
     }
     .comment-text {
@@ -511,6 +481,32 @@
     .comment-form {
       width: 60%;
       float: right;
+    }
+    .comment {
+      .user-box {
+        .avatar {
+          width: 90px;
+          height: 90px;
+          &:after {
+            bottom: 0;
+            left: 60px;
+          }
+        }
+        .user-info {
+          top: 52px;
+          left: 61px;
+        }
+      }
+      &:nth-child(even) {
+        .user-box {
+          .avatar:after {
+            left: -15px;
+          }
+          .user-info {
+            left: -117px;
+          }
+        }
+      }
     }
     .controls {
     	clear: both;

@@ -10616,36 +10616,6 @@ main:before
     border-top: 2px solid rgba(44, 32, 52, .3);
 }
 
-.reviews .comment-avatar
-{
-    position: absolute;
-    z-index: 1;
-    top: 0;
-
-    width: 60px;
-    height: 60px;
-
-    border: 2px solid #994ccf;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-}
-
-.reviews .comment-avatar:after
-{
-    position: absolute;
-    top: 14px;
-
-    width: 28px;
-    height: 28px;
-
-    content: '';
-
-    border-radius: 50%;
-    background: #fff url('../../svg/review-author-icon.svg') no-repeat center top 5px/100%;
-}
-
 .reviews .comment-text
 {
     padding: 10px 20px 0;
@@ -11024,13 +10994,13 @@ main:before
     top: 0;
 }
 
-.comment .user-box figure
+.comment .user-box .avatar
 {
     width: 60px;
     height: 60px;
 }
 
-.comment .user-box figure:after
+.comment .user-box .avatar:after
 {
     bottom: 10px;
     left: -25px;
@@ -12476,7 +12446,7 @@ main:before
 
     .reviews .comments
     {
-        margin-bottom: 40px;
+        margin-bottom: 50px;
         padding-top: 20px;
     }
 
@@ -12517,7 +12487,7 @@ main:before
         border-left-color: #994ccf;
     }
 
-    .reviews .comment:nth-child(even) .comment-avatar:after
+    .reviews .comment:nth-child(even) .comment .avatar:after
     {
         left: -10px;
     }
@@ -12527,27 +12497,6 @@ main:before
         left: -30px;
 
         border-right-color: #994ccf;
-    }
-
-    .reviews .comment:nth-child(odd) .comment-avatar:after
-    {
-        right: -10px;
-    }
-
-    .reviews .comment-avatar
-    {
-        position: relative;
-
-        width: 90px;
-        height: 90px;
-    }
-
-    .reviews .comment-avatar:after
-    {
-        top: 0;
-
-        width: 40px;
-        height: 40px;
     }
 
     .reviews .comment-text
@@ -13177,6 +13126,34 @@ main:before
         float: right;
 
         width: 60%;
+    }
+
+    .reviews .comment .user-box .avatar
+    {
+        width: 90px;
+        height: 90px;
+    }
+
+    .reviews .comment .user-box .avatar:after
+    {
+        bottom: 0;
+        left: 60px;
+    }
+
+    .reviews .comment .user-box .user-info
+    {
+        top: 52px;
+        left: 61px;
+    }
+
+    .reviews .comment:nth-child(even) .user-box .avatar:after
+    {
+        left: -15px;
+    }
+
+    .reviews .comment:nth-child(even) .user-box .user-info
+    {
+        left: -117px;
     }
 
     .reviews .controls
