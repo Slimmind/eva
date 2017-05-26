@@ -242,23 +242,25 @@
       }
     }
     .nickname {
+      position: relative;
+      height: 36px;
     	line-height: 14px;
       margin: -1px 0 2px -11px;
+      padding-left: 50px;
       a {
         display: inline-block;
         max-width: 100%;
-        margin: -1px 0 2px -11px;
-        padding-top: 10px;
-        font: 12px/16px $font-bold;
+        margin: -1px 0 0 0;
+        padding: 10px 0;
+        font: 12px/14px $font-bold;
         color: $color-purple;
         @include dots();
       }
       &:before {
         content: "";
-        display: inline-block;
+        @include pos(absolute,0,0);
         width: 36px;
         height: 36px;
-        margin: 0 24px 0 0;
         border-radius: 50%;
         border: 1px solid $color-purple;
         background: url('#{$path-svg}/review-author-icon.svg') no-repeat center top 5px/ 36px auto;
@@ -319,7 +321,6 @@
     top: 11px;
   }
   &:nth-child(odd) {
-    background-color: indigo;
     .user-box {
       left: 0;
       &:after {
@@ -354,9 +355,9 @@
     .nickname {
       overflow: hidden;
       margin: -1px -11px 2px 0;
+      padding: 0 50px 0 0;
       &:before {
-        float: right;
-        margin-right: 0;
+        left: calc(100% - 36px);
       }
       &.liked:after {
         left: 85px;
@@ -406,12 +407,16 @@
     }
     .comments {
       padding-top: 20px;
+      margin-bottom: 40px;
     }
     .comment {
       @include flex(row, space-between, center);
       padding-top: 0;
       font-size: 14px;
       line-height: 16px;
+      .user-box {
+        position: static;
+      }
       &:nth-child(even) {
         flex-direction: row-reverse;
         .comment-text:before {

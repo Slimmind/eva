@@ -10909,19 +10909,23 @@ main:before
 {
     line-height: 14px;
 
+    position: relative;
+
+    height: 36px;
     margin: -1px 0 2px -11px;
+    padding-left: 50px;
 }
 
 .user-box .user-info .nickname a
 {
-    font: 12px/16px 'open_sansbold', sans-serif;
+    font: 12px/14px 'open_sansbold', sans-serif;
 
     display: inline-block;
     overflow: hidden;
 
     max-width: 100%;
-    margin: -1px 0 2px -11px;
-    padding-top: 10px;
+    margin: -1px 0 0 0;
+    padding: 10px 0;
 
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -10931,12 +10935,14 @@ main:before
 
 .user-box .user-info .nickname:before
 {
-    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
     overflow: hidden;
 
     width: 36px;
     height: 36px;
-    margin: 0 24px 0 0;
 
     content: '';
 
@@ -11035,11 +11041,6 @@ main:before
     top: 11px;
 }
 
-.comment:nth-child(odd)
-{
-    background-color: indigo;
-}
-
 .comment:nth-child(odd) .user-box
 {
     left: 0;
@@ -11094,13 +11095,12 @@ main:before
     overflow: hidden;
 
     margin: -1px -11px 2px 0;
+    padding: 0 50px 0 0;
 }
 
 .comment:nth-child(even) .nickname:before
 {
-    float: right;
-
-    margin-right: 0;
+    left: calc(100% - 36px);
 }
 
 .comment:nth-child(even) .nickname.liked:after
@@ -12476,6 +12476,7 @@ main:before
 
     .reviews .comments
     {
+        margin-bottom: 40px;
         padding-top: 20px;
     }
 
@@ -12495,6 +12496,11 @@ main:before
         justify-content: space-between;
         -ms-flex-align: center;
         align-items: center;
+    }
+
+    .reviews .comment .user-box
+    {
+        position: static;
     }
 
     .reviews .comment:nth-child(even)
