@@ -10907,6 +10907,8 @@ main:before
 
 .user-box .user-info .nickname
 {
+    line-height: 14px;
+
     margin: -1px 0 2px -11px;
 }
 
