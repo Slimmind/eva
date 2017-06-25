@@ -7715,155 +7715,7 @@ main:before {
   padding-top: 50px;
 }
 
-.event-description {
-  margin-bottom: 30px;
-  color: #2c2034;
-  font-family: "open_sanssemibold", sans-serif;
-  overflow: hidden;
-}
-
-.event-description figure {
-  width: 280px;
-  height: 280px;
-  margin: 0 auto 30px;
-  border-radius: 50%;
-  border: 4px solid #994ccf;
-}
-
-.event-description .event-img {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  border: 4px solid #994ccf;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.back-link {
-  display: inline-block;
-  padding: 5px 10px;
-  border: 2px solid #994ccf;
-  border-radius: 5px;
-  color: #fff;
-  background-color: #994ccf;
-  text-align: center;
-}
-
-.info-block {
-  width: 280px;
-  margin: 0 auto 20px;
-  border-bottom: 2px dashed #cdcdcd;
-}
-
-.event-location,.event-place,.event-time,.event-date {
-  padding: 5px 5px 5px 30px;
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 20px auto;
-}
-
-.event-info {
-  font-family: "open_sanslight", sans-serif;
-}
-
-.event-rate h5 {
-  margin-bottom: 8px;
-  line-height: 28px;
-}
-
-.rate strong {
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: normal;
-}
-
-.range {
-  display: inline-block;
-}
-
-.range span {
-  display: inline-block;
-  vertical-align: bottom;
-  width: 6px;
-  height: 6px;
-  border-radius: 6px;
-  border: 1px solid #2c2034;
-}
-
-.range span.fill {
-  background-color: #2c2034;
-}
-
-.range span.at-40 {
-  height: 12px;
-}
-
-.range span.at-60 {
-  height: 18px;
-}
-
-.range span.at-80 {
-  height: 24px;
-}
-
-.range span.at-100 {
-  height: 30px;
-}
-
-.event-availability {
-  margin-bottom: 25px;
-}
-
-.event-availability .shop {
-  margin-bottom: 5px;
-  padding: 5px;
-  background-color: rgba(44, 32, 52, 0.3);
-  color: #2c2034;
-  border: solid rgba(0, 0, 0, 0.2);
-  border-width: 2px 0;
-  text-align: center;
-  overflow: hidden;
-}
-
-.event-availability .shop h3 {
-  margin: 0 0 10px;
-}
-
-.event-availability .event-title {
-  display: block;
-}
-
-.event-availability .event-location,.event-availability .event-time,.event-availability .event-date {
-  display: inline-block;
-}
-
-.event-info {
-  display: inline-block;
-}
-
-.shop-logo {
-  display: inline-block;
-  max-width: 280px;
-  margin: 0 auto;
-}
-
-.shop-logo a {
-  display: block;
-  height: 100%;
-}
-
-.filled-heading {
-  margin: 0 0 5px;
-  padding: 10px 15px 8px;
-  border-radius: 10px 10px 0 0;
-  color: #ffffff;
-  background-color: #994ccf;
-  border-bottom: 3px solid #2c2034;
-  text-transform: uppercase;
-}
-
-.reviews > h4,.similar-events > h4 {
+.reviews > h4 {
   display: inline-block;
   position: relative;
   padding-bottom: 3px;
@@ -7872,7 +7724,7 @@ main:before {
   text-transform: uppercase;
 }
 
-.reviews > h4:after,.similar-events > h4:after {
+.reviews > h4:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -7882,138 +7734,12 @@ main:before {
   background-color: #2c2034;
 }
 
-.similar-events {
-  margin-bottom: 40px;
-}
-
-.similar-events .event-wrap {
-  display: block;
-  padding-bottom: 30px;
-}
-
-.similar-events .event-circle {
-  width: 240px;
-  height: 240px;
-  margin: 0 auto;
-  border-radius: 50%;
-  border: 4px solid #994ccf;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  overflow: hidden;
-  text-align: center;
-  color: #ffffff;
-}
-
-.similar-events .event-circle .circle-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.similar-events .event-circle .description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 96px;
-}
-
-.similar-events .event-circle .description * {
-  position: relative;
-  z-index: 1;
-}
-
-.similar-events .event-circle .description:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(153, 76, 207, 0.9);
-  z-index: 0;
-}
-
-.similar-events .event-circle .description h3 {
-  margin: -20px 0 15px;
-  padding: 0 20px;
-  font-size: 20px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.similar-events .event-circle .date {
-  width: 100%;
-  margin: 0;
-  transform: translateY(-35px);
-  font: 20px/32px "open_sanssemibold", sans-serif;
-  color: #994ccf;
-  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
-}
-
-.similar-events .event-circle .date time,.similar-events .event-circle .date strong {
-  display: inline-block;
-}
-
-.similar-events .event-circle .date time {
-  margin-right: 20px;
-}
-
-.similar-events .event-circle .date strong {
-  margin-left: 20px;
-  font: 24px/32px "open_sansbold", sans-serif;
-}
-
-.similar-events .event-circle .details {
-  display: block;
-  width: 100%;
-  height: 40px;
-  background: #994ccf url("../../svg/join.svg") no-repeat center center;
-  text-indent: -9999px;
-}
-
-.similar-events .event-circle .buttons {
-  text-align: center;
-}
-
-.similar-events .filled-heading {
-  margin-bottom: 0;
-}
-
-.similar-events ul {
-  padding-top: 40px;
-  background-color: rgba(44, 32, 52, 0.1);
-}
-
-.back-to-list {
-  text-align: center;
+.reviews .review {
   margin-bottom: 40px;
 }
 
 .no-dev .wrapper {
   padding-top: 150px;
-}
-
-.no-dev .back-link {
-  transition-property: color, background-color;
-  transition: .3s ease;
-}
-
-.no-dev .back-link:hover {
-  color: #994ccf;
-  background-color: #ffffff;
-}
-
-.no-dev .shop-logo a {
-  opacity: .7;
-  transition: opacity .3s ease;
-}
-
-.no-dev .shop-logo a:hover {
-  opacity: 1;
 }
 
 @font-face {
@@ -8754,62 +8480,24 @@ main:before {
     height: 120px;
   }
 
-  .event-description {
-    font-size: 16px;
-    line-height: 20px;
+  .reviews .controls {
+    position: relative;
+    padding-top: 24px;
   }
 
-  .event-description figure {
-    float: left;
-    margin: 30px 40px 30px 0;
+  .reviews .controls:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 75%;
+    height: 3px;
+    background-color: rgba(44, 32, 52, 0.3);
   }
 
-  .info-block {
-    width: calc(100% - 320px);
-    float: right;
-  }
-
-  .info-block .event-info {
-    width: 50%;
-    float: left;
-  }
-
-  .info-block .event-rate {
-    width: 50%;
-    float: right;
-    text-align: right;
-  }
-
-  .event-availability .shop {
-    padding: 5px 15px;
-  }
-
-  .event-info {
-    float: left;
-    text-align: left;
-  }
-
-  .shop-logo {
-    float: right;
-  }
-
-  .similar-events {
-    margin-bottom: 50px;
-  }
-
-  .similar-events ul {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-
-  .similar-events li {
-    padding: 0 20px;
+  .reviews .controls .btn {
+    padding-top: 9px;
+    padding-bottom: 9px;
   }
 }
 
@@ -9735,17 +9423,12 @@ main:before {
     font-size: 14px;
   }
 
-  .event-description {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .reviews > h4,.similar-events > h4 {
+  .reviews > h4 {
     font: 24px/28px "open_sanssemibold", sans-serif;
   }
 
-  .back-to-list {
-    margin-bottom: 100px;
+  .reviews .review {
+    margin-bottom: 90px;
   }
 }
 

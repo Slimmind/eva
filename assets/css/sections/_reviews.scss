@@ -90,7 +90,7 @@
       display: inline-block;
       vertical-align: middle;
       width: auto;
-      max-width: 125px;
+      max-width: 100%;
       white-space: normal;
       font-size: 12px;
       line-height: 16px;
@@ -446,20 +446,20 @@
   .reviews {
     overflow: hidden;
     .heading {
-    	width: calc(100% - 394px);
+    	width: calc(100% - 480px);
     	span {
     		display: block;
     		@include dots();
     	}
     	&:after {
-    		width: calc(100% + 280px);
+    		width: 100vw;
     	};
     }
     .likes {
     	padding-top: 6px;
     	clear: none;
     	float: right;
-    	width: 280px;
+    	width: 300px;
     	border: none;
     }
     .review-text-wrap {

@@ -22,7 +22,7 @@
     }
   }
   .search-wrap {
-    padding: 5px 40px 5px 5px;
+    padding: 5px 40px 5px 10px;
     input[type="submit"] {
       display: block;
       @include pos(absolute, 0, $right: 0);
@@ -37,6 +37,7 @@
 }
 @include xtab {
   .event-search {
+    font-size: 14px;
     form {
       text-align: justify;
       &:after {

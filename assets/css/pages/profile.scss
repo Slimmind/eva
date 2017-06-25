@@ -1,0 +1,70 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+@import "../sections/reviews";
+.wrapper {
+  padding-top: 50px;
+}
+.reviews {
+  > h4 {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+    font: 18px/24px $font-medium;
+    color: $color-deep-purple;
+    text-transform: uppercase;
+    &:after {
+      content: "";
+      @include pos(absolute, $bottom: 0, $left: 0);
+      width: calc(100% - 30px);
+      height: 1px;
+      background-color: $color-deep-purple;
+    }
+  }
+  .review {
+    margin-bottom: 40px;
+  }
+}
+@include tab {
+  .reviews {
+    .controls {
+      position: relative;
+      padding-top: 24px;
+      &:before {
+        content: "";
+        @include pos(absolute, 0, $right: 0);
+        width: 75%;
+        height: 3px;
+        background-color: rgba($color-deep-purple, .3);
+      }
+      .btn {
+        padding-top: 9px;
+        padding-bottom: 9px;
+      }
+    }
+  }
+}
+@include lap {
+  .reviews {
+    > h4 {
+      font: 24px/28px $font-medium;
+    }
+    .review {
+      margin-bottom: 90px;
+    }
+  }
+}
+.no-dev {
+  .wrapper {
+    padding-top: 150px;
+  }
+}
+
+
+
+
+
+
+
+

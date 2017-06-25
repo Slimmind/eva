@@ -4,338 +4,351 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport"
+		  content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
 	<link rel="shortcut icon" href="dist/images/apple-icon.png" type="image/x-icon">
 	<link rel="icon" href="dist/images/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="dist/images/apple-icon.png" />
+	<link rel="apple-touch-icon" href="dist/images/apple-icon.png"/>
 	<meta content="telephone=no" name="format-detection">
 	<title>EventArea</title>
-	<link rel="stylesheet" href="dist/css/event.css" />
+	<link rel="stylesheet" href="dist/css/event.css"/>
 </head>
 
 <body>
-	<main class="wrapper" style="background-image: url(dist/images/main-bg.jpg);">
+<main class="wrapper" style="background-image: url(dist/images/main-bg.jpg);">
 
-		//= templates/header
+	//= templates/header
 
-		//= templates/navigation
+	//= templates/navigation
 
-		<div class="container">
+	<div class="container">
 
-			//= templates/event-search
+		//= templates/event-search
 
-			<div class="event-description">
+		<div class="event-description">
+			<article>
+				<figure class="event-image" style="background-image: url('dist/images/event-1.jpg')"></figure>
+				<div class="info-block">
+					<ul class="event-info">
+						<li class="event-title">
+							<h3>Evanescence</h3>
+						</li>
+						<li class="event-location" style="background-image: url('svg/dark-position.svg');">Sentrum</li>
+						<li class="event-time" style="background-image: url('svg/dark-time.svg');">23:00</li>
+						<li class="event-date" style="background-image: url('svg/dark-calendar.svg');">
+							<time datetime="2017-12-27">27 декабря 2017</time>
+						</li>
+					</ul>
+					<ul class="event-rate">
+						<li>
+							<h5>Место в рейтинге</h5>
+						</li>
+						<li class="rate">
+							<div class="range">
+								<span class="at-20 fill"></span>
+								<span class="at-40 fill"></span>
+								<span class="at-60 fill"></span>
+								<span class="at-80 fill"></span>
+								<span class="at-100 fill"></span>
+							</div>
+							<strong>25</strong>
+						</li>
+						<li>Ваш голос</li>
+						<li class="likes">
+							<a href="javascript:void(0)" class="like"
+							   style="background-image: url('svg/like.svg');">14587</a>
+							<a href="javascript:void(0)" class="dislike"
+							   style="background-image: url('svg/dislike.svg');">14023</a>
+						</li>
+					</ul>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus
+					perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et
+					laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur
+					adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus
+					perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et
+					laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur
+					adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit!</p>
+				<a href="javascript:void(0)" class="back-link">Вернуться к списку мероприятий</a>
+			</article>
+		</div>
+		<div class="event-availability">
+			<h4>Мероприятие досупно к продаже в:</h4>
+			<div class="shop">
+				<ul class="event-info">
+					<li class="event-title">
+						<h3>Evanescence</h3>
+					</li>
+					<li class="event-location" style="background-image: url('svg/dark-position.svg');">Sentrum</li>
+					<li class="event-time" style="background-image: url('svg/dark-time.svg');">23:00</li>
+					<li class="event-date" style="background-image: url('svg/dark-calendar.svg');">
+						<time datetime="">27 декабря 2017</time>
+					</li>
+				</ul>
+				<figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png"
+																			alt=""/></a>
+				</figure>
+			</div>
+			<div class="shop">
+				<ul class="event-info">
+					<li class="event-title">
+						<h3>Evanescence</h3>
+					</li>
+					<li class="event-location" style="background-image: url('svg/dark-position.svg');">Sentrum</li>
+					<li class="event-time" style="background-image: url('svg/dark-time.svg');">23:00</li>
+					<li class="event-date" style="background-image: url('svg/dark-calendar.svg');">
+						<time datetime="">27 декабря 2017</time>
+					</li>
+				</ul>
+				<figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png"
+																			alt=""/></a>
+				</figure>
+			</div>
+			<div class="shop">
+				<ul class="event-info">
+					<li class="event-title">
+						<h3>Evanescence</h3>
+					</li>
+					<li class="event-location" style="background-image: url('svg/dark-position.svg');">Sentrum</li>
+					<li class="event-time" style="background-image: url('svg/dark-time.svg');">23:00</li>
+					<li class="event-date" style="background-image: url('svg/dark-calendar.svg');">
+						<time datetime="">27 декабря 2017</time>
+					</li>
+				</ul>
+				<figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png"
+																			alt=""/></a>
+				</figure>
+			</div>
+			<div class="shop">
+				<ul class="event-info">
+					<li class="event-title">
+						<h3>Evanescence</h3>
+					</li>
+					<li class="event-location" style="background-image: url('svg/dark-position.svg');">Sentrum</li>
+					<li class="event-time" style="background-image: url('svg/dark-time.svg');">23:00</li>
+					<li class="event-date" style="background-image: url('svg/dark-calendar.svg');">
+						<time datetime="">27 декабря 2017</time>
+					</li>
+				</ul>
+				<figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png"
+																			alt=""/></a>
+				</figure>
+			</div>
+		</div>
+		<div class="reviews">
+			<h4>Рецензии</h4>
+			<div class="review">
 				<article>
-					<figure class="event-image" style="background-image: url('dist/images/event-1.jpg')"></figure>
-					<div class="info-block">
-						<ul class="event-info">
-							<li class="event-title">
-								<h3>Evanescence</h3>
-							</li>
-							<li class="event-location" style="background-image: url('svg/dark-position.svg');">Sentrum</li>
-							<li class="event-time" style="background-image: url('svg/dark-time.svg');">23:00</li>
-							<li class="event-date" style="background-image: url('svg/dark-calendar.svg');">
-								<time datetime="2017-12-27">27 декабря 2017</time>
-							</li>
-						</ul>
-						<ul class="event-rate">
-							<li>
-								<h5>Место в рейтинге</h5>
-							</li>
-							<li class="rate">
-								<div class="range">
-									<span class="at-20 fill"></span>
-									<span class="at-40 fill"></span>
-									<span class="at-60 fill"></span>
-									<span class="at-80 fill"></span>
-									<span class="at-100 fill"></span>
-								</div>
-								<strong>25</strong>
-							</li>
-							<li>Ваш голос</li>
-							<li class="likes">
-								<a href="javascript:void(0)" class="like" style="background-image: url('svg/like.svg');">14587</a>
-								<a href="javascript:void(0)" class="dislike" style="background-image: url('svg/dislike.svg');">14023</a>
-							</li>
-						</ul>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus
-						perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et
-						laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur
-						adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit!</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus
-						perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eaque et
-						laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit! Lorem ipsum dolor sit amet, consectetur
-						adipisicing elit. Distinctio eaque et laboriosam molestiae mollitia necessitatibus perspiciatis quae quam qui suscipit!</p>
-					<a href="javascript:void(0)" class="back-link">Вернуться к списку мероприятий</a>
-				</article>
-			</div>
-			<div class="event-availability">
-				<h4>Мероприятие досупно к продаже в:</h4>
-				<div class="shop">
-					<ul class="event-info">
-						<li class="event-title">
-							<h3>Evanescence</h3>
-						</li>
-						<li class="event-location" style="background-image: url('svg/dark-position.svg');">Sentrum</li>
-						<li class="event-time" style="background-image: url('svg/dark-time.svg');">23:00</li>
-						<li class="event-date" style="background-image: url('svg/dark-calendar.svg');">
-							<time datetime="">27 декабря 2017</time>
-						</li>
-					</ul>
-					<figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png" alt=""/></a>
-					</figure>
-				</div>
-				<div class="shop">
-					<ul class="event-info">
-						<li class="event-title">
-							<h3>Evanescence</h3>
-						</li>
-						<li class="event-location" style="background-image: url('svg/dark-position.svg');">Sentrum</li>
-						<li class="event-time" style="background-image: url('svg/dark-time.svg');">23:00</li>
-						<li class="event-date" style="background-image: url('svg/dark-calendar.svg');">
-							<time datetime="">27 декабря 2017</time>
-						</li>
-					</ul>
-					<figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png" alt=""/></a>
-					</figure>
-				</div>
-				<div class="shop">
-					<ul class="event-info">
-						<li class="event-title">
-							<h3>Evanescence</h3>
-						</li>
-						<li class="event-location" style="background-image: url('svg/dark-position.svg');">Sentrum</li>
-						<li class="event-time" style="background-image: url('svg/dark-time.svg');">23:00</li>
-						<li class="event-date" style="background-image: url('svg/dark-calendar.svg');">
-							<time datetime="">27 декабря 2017</time>
-						</li>
-					</ul>
-					<figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png" alt=""/></a>
-					</figure>
-				</div>
-				<div class="shop">
-					<ul class="event-info">
-						<li class="event-title">
-							<h3>Evanescence</h3>
-						</li>
-						<li class="event-location" style="background-image: url('svg/dark-position.svg');">Sentrum</li>
-						<li class="event-time" style="background-image: url('svg/dark-time.svg');">23:00</li>
-						<li class="event-date" style="background-image: url('svg/dark-calendar.svg');">
-							<time datetime="">27 декабря 2017</time>
-						</li>
-					</ul>
-					<figure class="shop-logo"><a href="javascript:void(0)"><img src="dist/images/internet-bilet.png" alt=""/></a>
-					</figure>
-				</div>
-			</div>
-			<div class="reviews">
-				<h4>Рецензии</h4>
-				<div class="review">
-					<article>
-						<header>
-							<div class="user-box">
-								<div class="user">
-									<figure class="avatar" style="background-image: url('dist/images/slide-3.jpg');"></figure>
-									<div class="user-info">
-										<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
-                    <div class="user-name">
-                      <span>Имя\Фамилия</span>
-                      <strong>Никита Никулин</strong>
-                    </div>
-										<div class="rate">
-											<span>Рейтинг</span>
-											<strong>345</strong>
-										</div>
-										<div class="registration-date">
-											<span>Дата регистрации</span>
-											<time datetime="2017-07-14">14.07.2017</time>
-										</div>
+					<header>
+						<div class="user-box">
+							<div class="user">
+								<figure class="avatar"
+										style="background-image: url('dist/images/slide-3.jpg');"></figure>
+								<div class="user-info">
+									<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
+									<div class="user-name">
+										<span>Имя\Фамилия</span>
+										<strong>Никита Никулин</strong>
+									</div>
+									<div class="rate">
+										<span>Рейтинг</span>
+										<strong>345</strong>
+									</div>
+									<div class="registration-date">
+										<span>Дата регистрации</span>
+										<time datetime="2017-07-14">14.07.2017</time>
 									</div>
 								</div>
-              </div>
-              <h6 class="heading"><span>Lorem ipsum dolor sit amet, consectetur adipisicingelit.</span></h6>
-							<div class="likes">
-								<span>Полезный отзыв?</span>
-								<a href="javascript:void(0)" class="like" style="background-image: url('svg/like.svg');">14587</a>
-								<a href="javascript:void(0)" class="dislike"
-									 style="background-image: url('svg/dislike.svg');">14023</a>
 							</div>
-						</header>
-						<div class="review-text-wrap">
-							<div class="review-text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum
+						</div>
+						<h6 class="heading"><span>Lorem ipsum dolor sit amet, consectetur adipisicingelit.</span></h6>
+						<div class="likes">
+							<span>Полезный отзыв?</span>
+							<a href="javascript:void(0)" class="like"
+							   style="background-image: url('svg/like.svg');">14587</a>
+							<a href="javascript:void(0)" class="dislike"
+							   style="background-image: url('svg/dislike.svg');">14023</a>
+						</div>
+					</header>
+					<div class="review-text-wrap">
+						<div class="review-text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum
 								deleniti distinctio ipsam
 								optio vel veniam.
 								Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+						</div>
+					</div>
+					<div class="expand-review">
+						<span class="expand-btn"></span>
+					</div>
+					<div class="comment-form">
+						<form action="/">
+							<p class="form-row">
+								<textarea rows="5" cols="30" placeholder="Ваш комментарий..."></textarea>
+							</p>
+							<div class="submit-wrap">
+								<button type="submit">Отправить</button>
 							</div>
-						</div>
-						<div class="expand-review">
-							<span class="expand-btn"></span>
-						</div>
-						<div class="comment-form">
-							<form action="/">
-								<p class="form-row">
-									<textarea rows="5" cols="30" placeholder="Ваш комментарий..."></textarea>
-								</p>
-                <div class="submit-wrap">
-                  <button type="submit">Отправить</button>
-                </div>
-							</form>
-						</div>
-						<div class="controls">
-							<button class="btn add-comment">Добавить комментарий</button>
-						</div>
-					</article>
-					<div class="comments">
-						<div class="comment clearfix">
-							<div class="user-box">
-								<div class="user">
-									<figure class="avatar" style="background-image: url('dist/images/slide-3.jpg');"></figure>
-									<div class="user-info">
-										<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
-										<div class="user-name">
-											<span>Имя\Фамилия</span>
-											<strong>Никита Никулин</strong>
-										</div>
-										<div class="rate">
-											<span>Рейтинг</span>
-											<strong>345</strong>
-										</div>
-										<div class="registration-date">
-											<span>Дата регистрации</span>
-											<time datetime="2017-07-14">14.07.2017</time>
-										</div>
+						</form>
+					</div>
+					<div class="controls">
+						<button class="btn add-comment">Добавить комментарий</button>
+					</div>
+				</article>
+				<div class="comments">
+					<div class="comment clearfix">
+						<div class="user-box">
+							<div class="user">
+								<figure class="avatar"
+										style="background-image: url('dist/images/slide-3.jpg');"></figure>
+								<div class="user-info">
+									<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
+									<div class="user-name">
+										<span>Имя\Фамилия</span>
+										<strong>Никита Никулин</strong>
+									</div>
+									<div class="rate">
+										<span>Рейтинг</span>
+										<strong>345</strong>
+									</div>
+									<div class="registration-date">
+										<span>Дата регистрации</span>
+										<time datetime="2017-07-14">14.07.2017</time>
 									</div>
 								</div>
 							</div>
-							<div class="comment-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem consequatur dolore ipsum nihil
-									rem reprehenderit temporibus voluptatibus? Ipsa, vitae!</p>
-							</div>
 						</div>
-						<div class="comment">
-							<div class="user-box">
-								<div class="user">
-									<figure class="avatar" style="background-image: url('dist/images/slide-3.jpg');"></figure>
-									<div class="user-info">
-										<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
-										<div class="user-name">
-											<span>Имя\Фамилия</span>
-											<strong>Никита Никулин</strong>
-										</div>
-										<div class="rate">
-											<span>Рейтинг</span>
-											<strong>345</strong>
-										</div>
-										<div class="registration-date">
-											<span>Дата регистрации</span>
-											<time datetime="2017-07-14">14.07.2017</time>
-										</div>
+						<div class="comment-text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem consequatur dolore ipsum nihil
+								rem reprehenderit temporibus voluptatibus? Ipsa, vitae!</p>
+						</div>
+					</div>
+					<div class="comment">
+						<div class="user-box">
+							<div class="user">
+								<figure class="avatar"
+										style="background-image: url('dist/images/slide-3.jpg');"></figure>
+								<div class="user-info">
+									<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
+									<div class="user-name">
+										<span>Имя\Фамилия</span>
+										<strong>Никита Никулин</strong>
+									</div>
+									<div class="rate">
+										<span>Рейтинг</span>
+										<strong>345</strong>
+									</div>
+									<div class="registration-date">
+										<span>Дата регистрации</span>
+										<time datetime="2017-07-14">14.07.2017</time>
 									</div>
 								</div>
 							</div>
-							<div class="comment-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem consequatur dolore ipsum nihil
-									rem reprehenderit temporibus voluptatibus? Ipsa, vitae!</p>
-							</div>
 						</div>
-						<div class="controls">
-							<div class="btn comments-qty"><span>Еще</span> <strong class="qty">25</strong><span>комментариев</span></div>
+						<div class="comment-text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem consequatur dolore ipsum nihil
+								rem reprehenderit temporibus voluptatibus? Ipsa, vitae!</p>
 						</div>
+					</div>
+					<div class="controls">
+						<div class="btn comments-qty"><span>Еще</span> <strong
+								class="qty">25</strong><span>комментариев</span></div>
 					</div>
 				</div>
 			</div>
-			<div class="similar-events">
-				<h4>Похожие мероприятия</h4>
-				<ul>
-					<li class="event-wrap">
-						<div class="event-circle" style="background-image: url('dist/images/event-1.jpg')">
-							<div class="circle-inner">
-								<div class="description">
-									<p class="date">
-										<time datetime="2017-07-17T19:00">17/07/2017</time>
-										<strong class="beginning">19:00</strong>
-									</p>
-									<h3>Evanescence</h3>
-									<a href="event.html" class="details">Details</a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="event-wrap">
-						<div class="event-circle" style="background-image: url('dist/images/event-1.jpg')">
-							<div class="circle-inner">
-								<div class="description">
-									<p class="date">
-										<time datetime="2017-07-17T19:00">17/07/2017</time>
-										<strong class="beginning">19:00</strong>
-									</p>
-									<h3>Evanescence</h3>
-									<a href="event.html" class="details">Details</a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="event-wrap">
-						<div class="event-circle" style="background-image: url('dist/images/event-1.jpg')">
-							<div class="circle-inner">
-								<div class="description">
-									<p class="date">
-										<time datetime="2017-07-17T19:00">17/07/2017</time>
-										<strong class="beginning">19:00</strong>
-									</p>
-									<h3>Evanescence</h3>
-									<a href="event.html" class="details">Details</a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="event-wrap">
-						<div class="event-circle" style="background-image: url('dist/images/event-1.jpg')">
-							<div class="circle-inner">
-								<div class="description">
-									<p class="date">
-										<time datetime="2017-07-17T19:00">17/07/2017</time>
-										<strong class="beginning">19:00</strong>
-									</p>
-									<h3>Evanescence</h3>
-									<a href="event.html" class="details">Details</a>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="back-to-list">
-				<a href="javascript:void(0)" class="btn show-more">Вернуться к списку</a>
-			</div>
 		</div>
+		<div class="similar-events">
+			<h4>Похожие мероприятия</h4>
+			<ul>
+				<li class="event-wrap">
+					<div class="event-circle" style="background-image: url('dist/images/event-1.jpg')">
+						<div class="circle-inner">
+							<div class="description">
+								<p class="date">
+									<time datetime="2017-07-17T19:00">17/07/2017</time>
+									<strong class="beginning">19:00</strong>
+								</p>
+								<h3>Evanescence</h3>
+								<a href="event.html" class="details">Details</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="event-wrap">
+					<div class="event-circle" style="background-image: url('dist/images/event-1.jpg')">
+						<div class="circle-inner">
+							<div class="description">
+								<p class="date">
+									<time datetime="2017-07-17T19:00">17/07/2017</time>
+									<strong class="beginning">19:00</strong>
+								</p>
+								<h3>Evanescence</h3>
+								<a href="event.html" class="details">Details</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="event-wrap">
+					<div class="event-circle" style="background-image: url('dist/images/event-1.jpg')">
+						<div class="circle-inner">
+							<div class="description">
+								<p class="date">
+									<time datetime="2017-07-17T19:00">17/07/2017</time>
+									<strong class="beginning">19:00</strong>
+								</p>
+								<h3>Evanescence</h3>
+								<a href="event.html" class="details">Details</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="event-wrap">
+					<div class="event-circle" style="background-image: url('dist/images/event-1.jpg')">
+						<div class="circle-inner">
+							<div class="description">
+								<p class="date">
+									<time datetime="2017-07-17T19:00">17/07/2017</time>
+									<strong class="beginning">19:00</strong>
+								</p>
+								<h3>Evanescence</h3>
+								<a href="event.html" class="details">Details</a>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="back-to-list">
+			<a href="javascript:void(0)" class="btn show-more">Вернуться к списку</a>
+		</div>
+	</div>
 
-		//= templates/footer
+	//= templates/footer
 
 
-	</main>
-	<!-- WRAPPER END -->
-	<div class="popups"></div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="dist/js/global.js"></script>
-	<script src="dist/js/event.js"></script>
+</main>
+<!-- WRAPPER END -->
+<div class="popups"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="dist/js/global.js"></script>
+<script src="dist/js/event.js"></script>
 </body>
 
 </html>

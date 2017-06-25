@@ -2,16 +2,10 @@
   'use strict';
   var page = {
     init: function () {
-      page.addComments();
       page.commentsHeight();
     },
     isDev: function () {
       return !$('html').hasClass('no-dev') || window.innerWidth < 1280;
-    },
-    addComments: function () {
-      $('.add-comment').on('click', function () {
-        $(this).toggleClass('active').parents('.controls').siblings('.comment-form').slideToggle();
-      } );
     },
     commentsHeight: function () {
       var commentWrap = $('.review-text-wrap');
@@ -32,7 +26,6 @@
       } );
     },
     load: function () {
-
     },
     resize: function () {
     },

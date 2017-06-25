@@ -89,22 +89,6 @@
     }
   }
 }
-.like,
-.dislike {
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-size: 20px auto;
-}
-.like {
-  padding: 5px 30px 5px 5px;
-  background-position: right center;
-  color: #127F00;
-}
-.dislike {
-  padding: 5px 5px 5px 30px;
-  background-position: left center;
-  color: #7F0000;
-}
 .event-availability {
   margin-bottom: 25px;
   .shop {
@@ -315,9 +299,9 @@
       font: 24px/28px $font-medium;
     }
   }
-}
-.back-to-list {
-  margin-bottom: 100px;
+  .back-to-list {
+    margin-bottom: 100px;
+  }
 }
 .no-dev {
   .wrapper {
