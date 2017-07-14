@@ -1,0 +1,32 @@
+.recommends-slider {
+  .circle {
+    width: 240px;
+    height: 240px;
+    .description {
+      padding-bottom: 20px;
+    }
+    .date {
+      font-size: 18px;
+      margin-top: -36px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    address,
+    .category,
+    .price {
+      display: block;
+      font-size: 10px;
+      margin-bottom: 0;
+    }
+    .category {
+      font-size: 8px;
+    }
+  }
+  .slick-prev {
+    @include pos(absolute, 100px, -15px);
+  }
+  .slick-next {
+    @include pos(absolute, 100px, $right: -15px);
+  }
+}

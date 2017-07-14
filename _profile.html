@@ -1,304 +1,377 @@
 <!DOCTYPE html>
-<html lang="en" class="no-dev">
+<html lang="en" class="no-dev1">
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport"
+		  content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
 	<link rel="shortcut icon" href="dist/images/apple-icon.png" type="image/x-icon">
 	<link rel="icon" href="dist/images/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="dist/images/apple-icon.png" />
+	<link rel="apple-touch-icon" href="dist/images/apple-icon.png"/>
 	<meta content="telephone=no" name="format-detection">
 	<title>EventArea</title>
-	<link rel="stylesheet" href="dist/css/profile.css" />
+	<link rel="stylesheet" href="dist/css/profile.css"/>
 </head>
 
 <body>
-	<main class="wrapper" style="background-image: url(dist/images/main-bg.jpg);">
+<main class="wrapper" style="background-image: url(dist/images/main-bg.jpg);">
 
-		//= templates/header
+	//= templates/header
 
-		//= templates/navigation
+	//= templates/navigation
 
-		<div class="container">
+	<div class="container">
 
-			//= templates/event-search
+		//= templates/event-search
 
-			<div class="reviews">
-				<h4>Рецензии</h4>
-				<div class="review">
-					<article>
-						<header>
-							<div class="user-box">
-								<div class="user">
-									<figure class="avatar"
-													style="background-image: url('dist/images/slide-3.jpg');"></figure>
-									<div class="user-info">
-										<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
-										<div class="user-name">
-											<span>Имя\Фамилия</span>
-											<strong>Никита Никулин</strong>
-										</div>
-										<div class="rate">
-											<span>Рейтинг</span>
-											<strong>345</strong>
-										</div>
-										<div class="registration-date">
-											<span>Дата регистрации</span>
-											<time datetime="2017-07-14">14.07.2017</time>
-										</div>
-									</div>
-								</div>
-							</div>
-							<h6 class="heading"><span>Lorem ipsum dolor sit amet, consectetur adipisicingelit.</span></h6>
-							<div class="likes">
-								<span>Полезный отзыв?</span>
-								<a href="javascript:void(0)" class="like"
-									 style="background-image: url('svg/like.svg');">14587</a>
-								<a href="javascript:void(0)" class="dislike"
-									 style="background-image: url('svg/dislike.svg');">14023</a>
-							</div>
-						</header>
-						<div class="review-text-wrap">
-							<div class="review-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum
-									deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
+		<div class="recommends">
+			<h4>Рекомендуемое пользователем</h4>
+			<div class="recommends-slider">
+				<div class="slide">
+					<div class="circle" style="background-image: url('dist/images/event-1.jpg')">
+						<div class="circle-inner">
+							<div class="description">
+								<p class="date">
+									<time datetime="2017-07-17T19:00">17/07/2017</time>
+									<strong class="beginning">19:00</strong>
+								</p>
+								<h3>Evanescence</h3>
+								<address>Киев, Plaza</address>
+								<p class="category">Готик-метал, Альтернативный рок</p>
+								<p class="price">Цена: <strong class="min-price">500</strong> - <strong class="max-price">5300</strong>грн.</p>
 							</div>
 						</div>
-						<div class="expand-review">
-							<span class="expand-btn"></span>
-						</div>
-
-						<div class="controls">
-							<a href="javascript:void(0)" class="btn">Перейти к рецензии</a>
-						</div>
-					</article>
+					</div>
 				</div>
-				<div class="review">
-					<article>
-						<header>
-							<div class="user-box">
-								<div class="user">
-									<figure class="avatar"
-													style="background-image: url('dist/images/slide-3.jpg');"></figure>
-									<div class="user-info">
-										<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
-										<div class="user-name">
-											<span>Имя\Фамилия</span>
-											<strong>Никита Никулин</strong>
-										</div>
-										<div class="rate">
-											<span>Рейтинг</span>
-											<strong>345</strong>
-										</div>
-										<div class="registration-date">
-											<span>Дата регистрации</span>
-											<time datetime="2017-07-14">14.07.2017</time>
-										</div>
-									</div>
-								</div>
-							</div>
-							<h6 class="heading"><span>Lorem ipsum dolor sit amet, consectetur adipisicingelit.</span></h6>
-							<div class="likes">
-								<span>Полезный отзыв?</span>
-								<a href="javascript:void(0)" class="like"
-									 style="background-image: url('svg/like.svg');">14587</a>
-								<a href="javascript:void(0)" class="dislike"
-									 style="background-image: url('svg/dislike.svg');">14023</a>
-							</div>
-						</header>
-						<div class="review-text-wrap">
-							<div class="review-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum
-									deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
+				<div class="slide">
+					<div class="circle" style="background-image: url('dist/images/event-1.jpg')">
+						<div class="circle-inner">
+							<div class="description">
+								<p class="date">
+									<time datetime="2017-07-17T19:00">17/07/2017</time>
+									<strong class="beginning">19:00</strong>
+								</p>
+								<h3>Evanescence</h3>
+								<address>Киев, Plaza</address>
+								<p class="category">Готик-метал, Альтернативный рок</p>
+								<p class="price">Цена: <strong class="min-price">500</strong> - <strong
+										class="max-price">5300</strong>грн.</p>
 							</div>
 						</div>
-						<div class="expand-review">
-							<span class="expand-btn"></span>
-						</div>
-
-						<div class="controls">
-							<a href="javascript:void(0)" class="btn">Перейти к рецензии</a>
-						</div>
-					</article>
+					</div>
 				</div>
-				<div class="review">
-					<article>
-						<header>
-							<div class="user-box">
-								<div class="user">
-									<figure class="avatar"
-													style="background-image: url('dist/images/slide-3.jpg');"></figure>
-									<div class="user-info">
-										<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
-										<div class="user-name">
-											<span>Имя\Фамилия</span>
-											<strong>Никита Никулин</strong>
-										</div>
-										<div class="rate">
-											<span>Рейтинг</span>
-											<strong>345</strong>
-										</div>
-										<div class="registration-date">
-											<span>Дата регистрации</span>
-											<time datetime="2017-07-14">14.07.2017</time>
-										</div>
-									</div>
-								</div>
-							</div>
-							<h6 class="heading"><span>Lorem ipsum dolor sit amet, consectetur adipisicingelit.</span></h6>
-							<div class="likes">
-								<span>Полезный отзыв?</span>
-								<a href="javascript:void(0)" class="like"
-									 style="background-image: url('svg/like.svg');">14587</a>
-								<a href="javascript:void(0)" class="dislike"
-									 style="background-image: url('svg/dislike.svg');">14023</a>
-							</div>
-						</header>
-						<div class="review-text-wrap">
-							<div class="review-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum
-									deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
+				<div class="slide">
+					<div class="circle" style="background-image: url('dist/images/event-1.jpg')">
+						<div class="circle-inner">
+							<div class="description">
+								<p class="date">
+									<time datetime="2017-07-17T19:00">17/07/2017</time>
+									<strong class="beginning">19:00</strong>
+								</p>
+								<h3>Evanescence</h3>
+								<address>Киев, Plaza</address>
+								<p class="category">Готик-метал, Альтернативный рок</p>
+								<p class="price">Цена: <strong class="min-price">500</strong> - <strong
+										class="max-price">5300</strong>грн.</p>
 							</div>
 						</div>
-						<div class="expand-review">
-							<span class="expand-btn"></span>
-						</div>
-
-						<div class="controls">
-							<a href="javascript:void(0)" class="btn">Перейти к рецензии</a>
-						</div>
-					</article>
+					</div>
 				</div>
-				<div class="review">
-					<article>
-						<header>
-							<div class="user-box">
-								<div class="user">
-									<figure class="avatar"
-													style="background-image: url('dist/images/slide-3.jpg');"></figure>
-									<div class="user-info">
-										<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
-										<div class="user-name">
-											<span>Имя\Фамилия</span>
-											<strong>Никита Никулин</strong>
-										</div>
-										<div class="rate">
-											<span>Рейтинг</span>
-											<strong>345</strong>
-										</div>
-										<div class="registration-date">
-											<span>Дата регистрации</span>
-											<time datetime="2017-07-14">14.07.2017</time>
-										</div>
-									</div>
-								</div>
-							</div>
-							<h6 class="heading"><span>Lorem ipsum dolor sit amet, consectetur adipisicingelit.</span></h6>
-							<div class="likes">
-								<span>Полезный отзыв?</span>
-								<a href="javascript:void(0)" class="like"
-									 style="background-image: url('svg/like.svg');">14587</a>
-								<a href="javascript:void(0)" class="dislike"
-									 style="background-image: url('svg/dislike.svg');">14023</a>
-							</div>
-						</header>
-						<div class="review-text-wrap">
-							<div class="review-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum
-									deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
-									optio vel veniam.
-									Laudantium, nemo nobis.</p>
+				<div class="slide">
+					<div class="circle" style="background-image: url('dist/images/event-1.jpg')">
+						<div class="circle-inner">
+							<div class="description">
+								<p class="date">
+									<time datetime="2017-07-17T19:00">17/07/2017</time>
+									<strong class="beginning">19:00</strong>
+								</p>
+								<h3>Evanescence</h3>
+								<address>Киев, Plaza</address>
+								<p class="category">Готик-метал, Альтернативный рок</p>
+								<p class="price">Цена: <strong class="min-price">500</strong> - <strong
+										class="max-price">5300</strong>грн.</p>
 							</div>
 						</div>
-						<div class="expand-review">
-							<span class="expand-btn"></span>
-						</div>
-
-						<div class="controls">
-							<a href="javascript:void(0)" class="btn">Перейти к рецензии</a>
-						</div>
-					</article>
+					</div>
 				</div>
 			</div>
-			
+		</div>
+		<div class="reviews">
+			<h4>Рецензии</h4>
+			<div class="review">
+				<article>
+					<header>
+						<div class="user-box">
+							<div class="user">
+								<figure class="avatar"
+										style="background-image: url('dist/images/slide-3.jpg');"></figure>
+								<div class="user-info">
+									<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
+									<div class="user-name">
+										<span>Имя\Фамилия</span>
+										<strong>Никита Никулин</strong>
+									</div>
+									<div class="rate">
+										<span>Рейтинг</span>
+										<strong>345</strong>
+									</div>
+									<div class="registration-date">
+										<span>Дата регистрации</span>
+										<time datetime="2017-07-14">14.07.2017</time>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h6 class="heading"><span>Lorem ipsum dolor sit amet, consectetur adipisicingelit.</span></h6>
+						<div class="likes">
+							<span>Полезный отзыв?</span>
+							<a href="javascript:void(0)" class="like"
+							   style="background-image: url('svg/like.svg');">14587</a>
+							<a href="javascript:void(0)" class="dislike"
+							   style="background-image: url('svg/dislike.svg');">14023</a>
+						</div>
+					</header>
+					<div class="review-text-wrap">
+						<div class="review-text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum
+								deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+						</div>
+					</div>
+					<div class="expand-review">
+						<span class="expand-btn"></span>
+					</div>
+
+					<div class="controls">
+						<a href="javascript:void(0)" class="btn">Перейти к рецензии</a>
+					</div>
+				</article>
+			</div>
+			<div class="review">
+				<article>
+					<header>
+						<div class="user-box">
+							<div class="user">
+								<figure class="avatar"
+										style="background-image: url('dist/images/slide-3.jpg');"></figure>
+								<div class="user-info">
+									<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
+									<div class="user-name">
+										<span>Имя\Фамилия</span>
+										<strong>Никита Никулин</strong>
+									</div>
+									<div class="rate">
+										<span>Рейтинг</span>
+										<strong>345</strong>
+									</div>
+									<div class="registration-date">
+										<span>Дата регистрации</span>
+										<time datetime="2017-07-14">14.07.2017</time>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h6 class="heading"><span>Lorem ipsum dolor sit amet, consectetur adipisicingelit.</span></h6>
+						<div class="likes">
+							<span>Полезный отзыв?</span>
+							<a href="javascript:void(0)" class="like"
+							   style="background-image: url('svg/like.svg');">14587</a>
+							<a href="javascript:void(0)" class="dislike"
+							   style="background-image: url('svg/dislike.svg');">14023</a>
+						</div>
+					</header>
+					<div class="review-text-wrap">
+						<div class="review-text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum
+								deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+						</div>
+					</div>
+					<div class="expand-review">
+						<span class="expand-btn"></span>
+					</div>
+
+					<div class="controls">
+						<a href="javascript:void(0)" class="btn">Перейти к рецензии</a>
+					</div>
+				</article>
+			</div>
+			<div class="review">
+				<article>
+					<header>
+						<div class="user-box">
+							<div class="user">
+								<figure class="avatar"
+										style="background-image: url('dist/images/slide-3.jpg');"></figure>
+								<div class="user-info">
+									<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
+									<div class="user-name">
+										<span>Имя\Фамилия</span>
+										<strong>Никита Никулин</strong>
+									</div>
+									<div class="rate">
+										<span>Рейтинг</span>
+										<strong>345</strong>
+									</div>
+									<div class="registration-date">
+										<span>Дата регистрации</span>
+										<time datetime="2017-07-14">14.07.2017</time>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h6 class="heading"><span>Lorem ipsum dolor sit amet, consectetur adipisicingelit.</span></h6>
+						<div class="likes">
+							<span>Полезный отзыв?</span>
+							<a href="javascript:void(0)" class="like"
+							   style="background-image: url('svg/like.svg');">14587</a>
+							<a href="javascript:void(0)" class="dislike"
+							   style="background-image: url('svg/dislike.svg');">14023</a>
+						</div>
+					</header>
+					<div class="review-text-wrap">
+						<div class="review-text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum
+								deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+						</div>
+					</div>
+					<div class="expand-review">
+						<span class="expand-btn"></span>
+					</div>
+
+					<div class="controls">
+						<a href="javascript:void(0)" class="btn">Перейти к рецензии</a>
+					</div>
+				</article>
+			</div>
+			<div class="review">
+				<article>
+					<header>
+						<div class="user-box">
+							<div class="user">
+								<figure class="avatar"
+										style="background-image: url('dist/images/slide-3.jpg');"></figure>
+								<div class="user-info">
+									<h6 class="nickname liked"><a href="javascript:void(0)">Alexey2103</a></h6>
+									<div class="user-name">
+										<span>Имя\Фамилия</span>
+										<strong>Никита Никулин</strong>
+									</div>
+									<div class="rate">
+										<span>Рейтинг</span>
+										<strong>345</strong>
+									</div>
+									<div class="registration-date">
+										<span>Дата регистрации</span>
+										<time datetime="2017-07-14">14.07.2017</time>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h6 class="heading"><span>Lorem ipsum dolor sit amet, consectetur adipisicingelit.</span></h6>
+						<div class="likes">
+							<span>Полезный отзыв?</span>
+							<a href="javascript:void(0)" class="like"
+							   style="background-image: url('svg/like.svg');">14587</a>
+							<a href="javascript:void(0)" class="dislike"
+							   style="background-image: url('svg/dislike.svg');">14023</a>
+						</div>
+					</header>
+					<div class="review-text-wrap">
+						<div class="review-text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum
+								deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam cum deleniti distinctio ipsam
+								optio vel veniam.
+								Laudantium, nemo nobis.</p>
+						</div>
+					</div>
+					<div class="expand-review">
+						<span class="expand-btn"></span>
+					</div>
+
+					<div class="controls">
+						<a href="javascript:void(0)" class="btn">Перейти к рецензии</a>
+					</div>
+				</article>
+			</div>
 		</div>
 
-		//= templates/footer
+	</div>
 
-	</main>
-	<!-- WRAPPER END -->
-	<div class="popups"></div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="dist/js/global.js"></script>
-	<script src="dist/js/profile.js"></script>
+	//= templates/footer
+
+</main>
+<!-- WRAPPER END -->
+<div class="popups"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="dist/js/global.js"></script>
+<script src="dist/js/profile.js"></script>
 </body>
 
 </html>

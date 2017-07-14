@@ -1,8 +1,11 @@
+//= includes/slick.js
+
 (function ($, window, document) {
   'use strict';
   var page = {
     init: function () {
       page.commentsHeight();
+      page.recommendsSlider();
     },
     isDev: function () {
       return !$('html').hasClass('no-dev') || window.innerWidth < 1280;
@@ -24,6 +27,23 @@
           commentWrap.removeAttr('style').removeClass('expanded');
         }
       } );
+    },
+    recommendsSlider: function () {
+      $('.recommends-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: true,
+        infinite: false,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
     },
     load: function () {
     },
