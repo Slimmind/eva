@@ -23,10 +23,7 @@
       menuBtn.on('click', function () {
         wrap.toggleClass('no-scroll');
         nav.toggleClass('open');
-      } );
-      var closeBtn = $('.main-nav .main-menu');
-      closeBtn.on('click', function () {
-
+        menuBtn.toggleClass('active');
       } );
       $(document).on('click', function (event) {
         if ($(event.target).closest('input').length ||
