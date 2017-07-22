@@ -1,10 +1,5 @@
 .reviews {
   margin-bottom: 20px;
-  h4 {
-    color: $color-purple;
-    font-family: $font-light;
-    text-transform: uppercase;
-  }
   article {
     margin-bottom: 20px;
   }
@@ -101,7 +96,7 @@
       position: relative;
       background: $color-purple url('#{$path-svg}/plus-white.svg') no-repeat 4px center / 30px 30px;
       color: $color-white;
-      padding: 1px 5px 1px 40px;
+      padding: 10px 5px 10px 40px;
       transform: rotate(0deg);
       transition: transform .3s ease, width .2s ease;
       &.active {

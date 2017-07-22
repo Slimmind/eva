@@ -1,7 +1,9 @@
 .recommends-slider {
+  margin-bottom: 40px;
   .circle {
     width: 240px;
     height: 240px;
+    margin: 0 auto;
     .description {
       padding-bottom: 20px;
     }
@@ -28,5 +30,11 @@
   }
   .slick-next {
     @include pos(absolute, 100px, $right: -15px);
+  }
+}
+@include xtab {
+  .recommends-slider {
+    margin-bottom: 90px;
+    padding: 0 80px;
   }
 }

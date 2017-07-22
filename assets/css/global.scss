@@ -129,6 +129,21 @@ main {
   background-position: left center;
   color: #7F0000;
 }
+.underlined-title {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+  font: 18px/24px $font-medium;
+  color: $color-deep-purple;
+  text-transform: uppercase;
+  &:after {
+    content: "";
+    @include pos(absolute, $bottom: 0, $left: 0);
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color: $color-deep-purple;
+  }
+}
 @include lap {
   .container {
     width: 1200px !important;
@@ -136,6 +151,9 @@ main {
   .show-more {
     font-size: 50px;
     line-height: 72px;
+  }
+  .underlined-title {
+    font: 24px/28px $font-medium;
   }
   .no-dev {
     .logo {

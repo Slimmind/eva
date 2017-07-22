@@ -136,6 +136,7 @@ label {
   color: $color-white;
   text-align: center;
   padding: 10px 20px;
+  cursor: pointer;
 }
 @include lap {
   h2 {
@@ -155,5 +156,12 @@ label {
   }
 }
 .no-dev {
-
+  .btn {
+    transition: color .3s ease, background-color .3s ease;
+    &:hover {
+      background-color: $color-white;
+      color: $color-purple;
+      box-shadow: inset 0 0 0 2px $color-purple;
+    }
+  }
 }

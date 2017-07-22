@@ -4,26 +4,11 @@
 //sections
 @import "../sections/reviews";
 @import "../sections/slick";
-@import "../sections/recomends-slider";
+@import "../sections/recommends-slider";
 .wrapper {
   padding-top: 50px;
 }
 .reviews {
-  > h4 {
-    display: inline-block;
-    position: relative;
-    padding-bottom: 3px;
-    font: 18px/24px $font-medium;
-    color: $color-deep-purple;
-    text-transform: uppercase;
-    &:after {
-      content: "";
-      @include pos(absolute, $bottom: 0, $left: 0);
-      width: calc(100% - 30px);
-      height: 1px;
-      background-color: $color-deep-purple;
-    }
-  }
   .review {
     margin-bottom: 40px;
   }
@@ -49,9 +34,6 @@
 }
 @include lap {
   .reviews {
-    > h4 {
-      font: 24px/28px $font-medium;
-    }
     .review {
       margin-bottom: 90px;
     }
