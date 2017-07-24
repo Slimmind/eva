@@ -1,15 +1,29 @@
 .recommends-slider {
   margin-bottom: 40px;
+  .slide {
+    position: relative;
+    a {
+      @include pos(absolute,0,0,0,0);
+      display: block;
+    }
+  }
   .circle {
     width: 240px;
     height: 240px;
     margin: 0 auto;
+    pointer-events: none;
     .description {
       padding-bottom: 20px;
+      transform: translateY(0);
     }
     .date {
-      font-size: 18px;
       margin-top: -36px;
+      time {
+        font-size: 18px !important;
+      }
+      strong {
+        font-size: 20px !important;
+      }
     }
     h3 {
       font-size: 18px;
@@ -22,7 +36,7 @@
       margin-bottom: 0;
     }
     .category {
-      font-size: 8px;
+      font-size: 9px;
     }
   }
   .slick-prev {
@@ -36,5 +50,28 @@
   .recommends-slider {
     margin-bottom: 90px;
     padding: 0 80px;
+  }
+}
+@include lap {
+  .recommends-slider {
+    .circle .description {
+      &:before {
+        height: 80%;
+      }
+      .date {
+        margin: 0;
+      }
+    }
+  }
+}
+.no-dev {
+  .recommends-slider {
+    .slide {
+      opacity: .8;
+      transition: opacity .3s ease;
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }

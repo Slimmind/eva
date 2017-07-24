@@ -132,6 +132,7 @@ main {
 .underlined-title {
   display: inline-block;
   position: relative;
+  margin-bottom: 20px;
   padding-bottom: 3px;
   font: 18px/24px $font-medium;
   color: $color-deep-purple;
@@ -153,6 +154,7 @@ main {
     line-height: 72px;
   }
   .underlined-title {
+    margin-bottom: 40px;
     font: 24px/28px $font-medium;
   }
   .no-dev {

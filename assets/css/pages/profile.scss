@@ -8,6 +8,17 @@
 .wrapper {
   padding-top: 50px;
 }
+.profile-box {
+  margin-bottom: 30px;
+}
+.profile-avatar {
+  width: 240px;
+  height: 240px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  border: 4px solid $color-purple;
+  @include bg(center, center, cover);
+}
 .reviews {
   .review {
     margin-bottom: 40px;
@@ -33,6 +44,9 @@
   }
 }
 @include lap {
+  .profile-box {
+    margin-bottom: 50px;
+  }
   .reviews {
     .review {
       margin-bottom: 90px;
