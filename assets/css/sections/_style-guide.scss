@@ -132,6 +132,7 @@ input[type="checkbox"] + label {
   vertical-align: middle;
   width: 50px;
   height: 24px;
+  margin: 0 5px;
   border-radius: 12px;
   border: none;
   overflow: hidden;
@@ -163,6 +164,7 @@ label {
   transition: .3s ease;
 }
 .btn {
+  position: relative;
   display: inline-block;
   background-color: $color-purple;
   color: $color-white;
@@ -170,8 +172,48 @@ label {
   padding: 10px 20px;
   border-radius: 25px;
   cursor: pointer;
-  .btn-white {
-
+  will-change: transform;
+  &.small-btn {
+    padding: 5px 20px;
+  }
+  &.btn-white {
+    background-color: $color-white;
+    color: $color-purple;
+    box-shadow: inset 0 0 0 2px $color-purple;
+  }
+  &.settings-btn {
+    padding-left: 35px;
+    &:before {
+      content: "";
+      @include pos(absolute, 5px, 5px);
+      width: 20px;
+      height: 20px;
+      background: url('#{$path-svg}/icon-settings.svg') no-repeat center center / contain;
+      transition: transform .7s;
+    }
+  }
+  &.subscribe-btn {
+    padding-left: 35px;
+    &:before {
+      content: "";
+      @include pos(absolute, 5px, 10px);
+      width: 20px;
+      height: 20px;
+      background: url('#{$path-svg}/icon-purple-heart.svg') no-repeat center center / contain;
+      transition: transform .5s;
+    }
+  }
+  &.view-btn {
+    padding-left: 35px;
+    &:before {
+      content: "";
+      @include pos(absolute, 5px, 10px);
+      width: 20px;
+      height: 20px;
+      background: url('#{$path-svg}/icon-view.svg') no-repeat center center / contain;
+      transition: transform .5s;
+      
+    }
   }
 }
 @include lap {
@@ -198,6 +240,19 @@ label {
       background-color: $color-white;
       color: $color-purple;
       box-shadow: inset 0 0 0 2px $color-purple;
+    }
+    &.btn-white:hover {
+      background-color: $color-purple;
+      color: $color-white;
+    }
+    &.settings-btn:hover:before {
+      transform: rotate(360deg);
+    }
+    &.subscribe-btn:hover:before {
+      transform: rotateY(180deg);
+    }
+    &.view-btn:hover:before {
+      transform: rotateX(180deg);
     }
   }
 }
