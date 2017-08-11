@@ -10,6 +10,15 @@
 }
 .profile-box {
   margin-bottom: 30px;
+  .user-rate .value {
+    color: $color-purple;
+  }
+}
+.profile-controls {
+  strong, label {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 .profile-avatar {
   width: 240px;
@@ -46,7 +55,15 @@
 @include lap {
   .profile-box {
     margin-bottom: 50px;
+    font-size: 16px;
+    line-height: 24px;
   }
+  .profile-controls {
+    padding-top: 82px;
+    .form-row {
+      margin-bottom: 2px;
+    }
+  } 
   .reviews {
     .review {
       margin-bottom: 90px;
