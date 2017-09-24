@@ -10,6 +10,8 @@
 @import "sections/event-circle";
 @import "sections/footer";
 @import "sections/social-links";
+@import "sections/popups";
+@import "sections/popup-login";
 
 main {
   @include bg(center, center, cover);
@@ -31,6 +33,11 @@ main {
       opacity: 1;
       z-index: 1;
     }
+  }
+}
+.overlay {
+  main {
+    filter: blur(5px);
   }
 }
 .logo {

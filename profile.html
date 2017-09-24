@@ -27,7 +27,7 @@
 	        <li><a href="javascript:void(0)">Афиша</a></li>
 	        <li><a href="javascript:void(0)">Рецензии</a></li>
 	        <li><a href="javascript:void(0)">Рейтинги</a></li>
-	        <li class="login"><a href="javascript:void(0)">Войти</a></li>
+	        <li class="login"><a href="javascript:void(0)" class="popup-link" data-url="#popup-login">Войти</a></li>
 	      </ul>
 	    </nav>
 	    <div class="menu-btn">
@@ -736,7 +736,24 @@
 
 </main>
 <!-- WRAPPER END -->
-<div class="popups"></div>
+<div class="popups">
+	<div class="popup popup-login" id="popup-login">
+	  <div class="popup-content">
+	    <span class="popup-close"></span>
+	    <form action="/">
+	      <div class="form-row">
+	        <input type="text" class="form-control" name="login" id="login" placeholder="Login*">
+	      </div>
+	      <div class="form-row">
+	        <input type="password" class="form-control" name="password" id="password" placeholder="Password*">
+	      </div>
+	      <div class="controls">
+	        <button type="submit" class="btn">Login</button >
+	      </div>
+	    </form>
+	  </div>
+	</div>
+</div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="dist/js/global.js"></script>
 <script src="dist/js/profile.js"></script>

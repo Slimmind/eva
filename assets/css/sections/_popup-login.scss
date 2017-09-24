@@ -1,0 +1,30 @@
+.popup-login {
+  .popup-content {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    border-radius: 10px;
+    background-color: rgba($color-purple, .5);
+    box-shadow: 0 0 3px 0 rgba($color-deep-purple, .5);
+    .form-row {
+      margin-bottom: 20px;
+      box-shadow: 0 0 3px 0 rgba($color-deep-purple, .5);
+    }
+  }
+  .controls {
+    text-align: center;
+    .btn {
+      max-width: 160px;
+    }
+  }
+}
+@include tab {
+  .popup-login {
+    @include flex(column, center, center);
+    .popup-content {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+  }
+}
